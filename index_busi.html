@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>后台管理系统</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
+    <!-- basic styles -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css"/>
+    <![endif]-->
+
+    <!-- page specific plugin styles -->
+
+
+    <!-- ace styles -->
+
+    <link rel="stylesheet" href="assets/css/ace.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/busi_platform/business/product/index-root.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ace-ie.min.css"/>
+    <![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/diyUpload.css">
+    <!--图片上传控件-->
+    <link rel="stylesheet"href="plugins/timeControl/skin/jedate.css">
+    <!--时间控件样式-->
+
+    <script src="assets/js/ace-extra.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-default" id="navbar">
+    <script type="text/javascript">
+        try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <div class="index_layout">
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand">
+                    <small>
+                        <!-- <i class="icon-leaf"></i> -->
+                        <img src="images/base_platform/ESlogo2.png" style="height: 15px;width: 135px;margin-left:15px;">
+                    </small>
+                </a><!-- /.brand -->
+            </div><!-- /.navbar-header -->
+            <div class="navbar-header tabbable" role="navigation">
+                <ul class="nav ace-nav">
+                    <li class="black">
+                        <a data-toggle="tab" class="dropdown-toggle" href="#Shop">
+                            店铺
+                        </a>
+                    </li>
+                    <li class="black">
+                        <a data-toggle="tab" class="dropdown-toggle" href="#Goods">
+                            商品
+                        </a>
+                    </li>
+                    <li class="black">
+                        <a data-toggle="tab" class="dropdown-toggle" href="#Indent">
+                            订单
+                        </a>
+                    </li>
+                    <li class="black">
+                        <a data-toggle="tab" class="dropdown-toggle" href="#ApplyMarket">
+                            应用和营销
+                        </a>
+                    </li>
+                </ul><!-- /.ace-nav -->
+            </div><!-- /.navbar-header -->
+            <div class="navbar-header pull-right index_set">
+                <a href="#" class="navbar-brand navbar-brand_R">
+                    <small>
+                        Paraboot—设置
+                    </small>
+                    <i class="icon-cog"></i>
+                </a><!-- /.brand -->
+                <ul class="index_set_cont">
+                    <li>
+                        <a href="#Shop_set">店铺设置</a>
+                    </li>
+                    <li>
+                        <a href="#single_set">账号设置</a>
+                    </li>
+                    <li>
+                        <a href="#Secut_logout">安全退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</div>
+
+
+<div class="tab-content index-tab-cont">
+    <!-- 首页 -->
+    <div class="main_Shop tab-pane active mainMenu_left" id="Shop">
+        <div class="index_layout" id="merchantHomePage">
+        </div>
+    </div>
+
+    <!-- 商铺 -->
+    <div class="main_Shop tab-pane mainMenu_left" id="Shop_set">
+        <div class="index_layout" >
+            <div class="pull-left tabbable" id="Shop_Left">
+                <ul class="shop_details">
+                    <li>
+                        <div>
+                            <img src="" alt="" id="shop_left_logo">
+                            <p >店铺名称</p>
+                            <b id="shop_left_name">待设置啊待设置</b>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>创建时间</p>
+                            <b id="shop_left_time">时间啊时间</b>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p>店铺状态</p>
+                            <b id="shop_left_check"></b>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-left tab-content" id="Shop_Right">
+
+            </div>
+            <div style="clear: both;overflow: hidden;"></div>
+        </div>
+    </div>
+
+    <!--个人设置-->
+    <div class="snglesetting tab-pane" id="single_set">
+        <div class="index_layout" >
+
+        </div>
+    </div>
+
+    <!-- 商品 -->
+
+    <div class="main_Goods tab-pane mainMenu_left" id="Goods">
+        <div class="index_layout">
+            <div class="goods_btn">
+                <a data-toggle="tab" href="#PostTrade" id="Index_PostTd">发布商品</a>
+            </div>
+        </div>
+        <div class="index_layout">
+            <div class="pull-left tabbable">
+                <ul id="myTabI-1">
+                    <li>
+                        商品管理
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#onsale_goods">出售中的商品
+                            <i>&gt;</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#havesale_goods">已售完的商品
+                            <i>&gt;</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#onhome_goods">仓库中的商品
+                            <i>&gt;</i>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>品牌管理
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#MyBorand">我的品牌
+                            <i>&gt;</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#Brand_Apply">品牌申请
+                            <i>&gt;</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-left tab-content">
+                <div id="PostTrade" class="tab-pane col-sm-11">
+                    <div class="Index-Contain">
+                        <h4>
+                            商品>发布商品
+                        </h4>
+                        <div class="PostTd_nav" id="product_head">
+                            <ul class="">
+                                <li  class="active" data-id="1">
+                                    <a href="#Select_pin" >1.选择品类</a>
+                                </li>
+                                <li data-id="2">
+                                    <a href="#Select_class" >2.选择分类</a>
+                                </li>
+                                <li data-id="3">
+                                    <a href="#Select_brand"  >3.选择品牌</a>
+
+                                </li>
+                                <li data-id="4">
+                                    <a href="#make_basic"  >4.编辑基本信息</a>
+
+                                </li>
+                                <li data-id="5">
+                                    <a href="#make_gods"  >5.编辑商品详情</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="PostTd_cont tab-content" style="padding:0;">
+                            <!--<div id="Select_pin" class="tab-pane"></div>
+                            <div id="Select_class" class="tab-pane"></div>
+                            <div id="Select_brand" class="tab-pane"></div>-->
+                        </div>
+                        <div class="PostTd_nextBtn">
+                            <div>
+                                <a href="###" class="PostTd_nextBtn1">
+                                    下一步</a>
+                                <a href='###' onclick='Gods_Saved()' class='Gods_Saved btn-step-five'>上架</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="onsale_goods" class="tab-pane active col-sm-11">
+                    出售中的商品
+                </div>
+
+                <div id="havesale_goods" class="tab-pane col-sm-11">
+                    已售完的商品
+                </div>
+
+                <div id="onhome_goods" class="tab-pane col-sm-11">
+                    仓库中的商品
+                </div>
+                <div id="MyBorand" class="tab-pane col-sm-11">
+                    我的品牌
+                </div>
+                <div id="Brand_Apply" class="tab-pane col-sm-11">
+                    品牌申请
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 订单 -->
+    <div class="main_Indent tab-pane mainMenu_left" id="Indent">
+        <div class="index_layout">
+            <div class="pull-left tabbable">
+                <ul id="myTab_orders">
+                    <li>
+                        订单管理
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#Orders" class="order_style">所有订单</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#Refund_orders" class="order_style">退款订单</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#Refund_Goods" class="order_style">退货订单</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>客户服务
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#Evaluation_Manage" class="order_style">评价管理</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>交易及物流
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#Logistics_Tools" class="order_style">物流工具</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-left tab-content" style="width:81%;margin-left: 10px;">
+                <div id="Orders" class="tab-pane in active">
+
+                </div>
+
+                <div id="Refund_orders" class="tab-pane">
+
+                </div>
+
+                <div id="Refund_Goods" class="tab-pane">
+
+                </div>
+                <div id="Evaluation_Manage" class="tab-pane">
+
+                </div>
+                <div id="Logistics_Tools" class="tab-pane">
+
+                </div>
+                <div id="Settlement_Manage" class="tab-pane">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 应用 -->
+    <div class="main_ApplyMarket tab-pane" id="ApplyMarket">
+        <div class="index_layout">
+            <div class="pull-left tabbable">
+                <ul id="myTab4">
+                    <li>
+                        优惠活动
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#discount_limit">
+                            限时折扣
+                            <i>&gt;</i>
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#freight_set">
+                            邮费设置
+                            <i>&gt;</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-left tab-content Market_Event">
+                <div id="discount_limit" class="tab-pane in active">
+                </div>
+                <div id="freight_set" class="tab-pane">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src='assets/js/jquery-2.0.3.min.js'></script>
+
+<!--图片上传插件及时间上传控件-->
+<script type="text/javascript" src="plugins/diyUpload/js/webuploader.html5only.min.js"></script>
+<script type="text/javascript" src="plugins/diyUpload/js/diyUpload.js"></script>
+<script type="text/javascript" src="plugins/timeControl/jedate.min.js"></script>
+
+<!--<script type="text/javascript">
+    window.jQuery || document.write(""+"<"+"script>");
+</script>-->
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"script>");
+</script>
+<![endif]-->
+
+<script type="text/javascript">
+    if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"script>");
+</script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/typeahead-bs2.min.js"></script>
+
+<!-- page specific plugin scripts -->
+
+<!--[if lte IE 8]>
+<script src="assets/js/excanvas.min.js"></script>
+<![endif]-->
+
+<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+<script src="assets/js/jquery.slimscroll.min.js"></script>
+<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+<script src="assets/js/jquery.sparkline.min.js"></script>
+<script src="assets/js/flot/jquery.flot.min.js"></script>
+<script src="assets/js/flot/jquery.flot.pie.min.js"></script>
+<script src="assets/js/flot/jquery.flot.resize.min.js"></script>
+
+<!-- ace scripts -->
+
+<script src="assets/js/ace-elements.min.js"></script>
+<script src="assets/js/ace.min.js"></script>
+
+<!-- inline scripts related to this page -->
+
+<script type="text/javascript">
+    jQuery(function($) {
+        $('.easy-pie-chart.percentage').each(function(){
+            var $box = $(this).closest('.infobox');
+            var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+            var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+            var size = parseInt($(this).data('size')) || 50;
+            $(this).easyPieChart({
+                barColor: barColor,
+                trackColor: trackColor,
+                scaleColor: false,
+                lineCap: 'butt',
+                lineWidth: parseInt(size/10),
+                animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
+                size: size
+            });
+        })
+
+        $('.sparkline').each(function(){
+            var $box = $(this).closest('.infobox');
+            var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+            $(this).sparkline('html', {tagValuesAttribute:'data-values', type: 'bar', barColor: barColor , chartRangeMin:$(this).data('min') || 0} );
+        });
+
+        var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
+        var data = [
+            { label: "social networks",  data: 38.7, color: "#68BC31"},
+            { label: "search engines",  data: 24.5, color: "#2091CF"},
+            { label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
+            { label: "direct traffic",  data: 18.6, color: "#DA5430"},
+            { label: "other",  data: 10, color: "#FEE074"}
+        ]
+//        function drawPieChart(placeholder, data, position) {
+//            $.plot(placeholder, data, {
+//                series: {
+//                    pie: {
+//                        show: true,
+//                        tilt:0.8,
+//                        highlight: {
+//                            opacity: 0.25
+//                        },
+//                        stroke: {
+//                            color: '#fff',
+//                            width: 2
+//                        },
+//                        startAngle: 2
+//                    }
+//                },
+//                legend: {
+//                    show: true,
+//                    position: position || "ne",
+//                    labelBoxBorderColor: null,
+//                    margin:[-30,15]
+//                }
+//                ,
+//                grid: {
+//                    hoverable: true,
+//                    clickable: true
+//                }
+//            })
+//        }
+//        drawPieChart(placeholder, data);
+
+        /**
+         we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+         so that's not needed actually.
+         */
+        /*placeholder.data('chart', data);
+        placeholder.data('draw', drawPieChart);
+
+        var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
+        var previousPoint = null;
+
+        placeholder.on('plothover', function (event, pos, item) {
+            if(item) {
+                if (previousPoint != item.seriesIndex) {
+                    previousPoint = item.seriesIndex;
+                    var tip = item.series['label'] + " : " + item.series['percent']+'%';
+                    $tooltip.show().children(0).text(tip);
+                }
+                $tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+            } else {
+                $tooltip.hide();
+                previousPoint = null;
+            }
+
+        });
+
+        var d1 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+            d1.push([i, Math.sin(i)]);
+        }
+
+        var d2 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.5) {
+            d2.push([i, Math.cos(i)]);
+        }
+
+        var d3 = [];
+        for (var i = 0; i < Math.PI * 2; i += 0.2) {
+            d3.push([i, Math.tan(i)]);
+        }
+        var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
+        $.plot("#sales-charts", [
+            { label: "Domains", data: d1 },
+            { label: "Hosting", data: d2 },
+            { label: "Services", data: d3 }
+        ], {
+            hoverable: true,
+            shadowSize: 0,
+            series: {
+                lines: { show: true },
+                points: { show: true }
+            },
+            xaxis: {
+                tickLength: 0
+            },
+            yaxis: {
+                ticks: 10,
+                min: -2,
+                max: 2,
+                tickDecimals: 3
+            },
+            grid: {
+                backgroundColor: { colors: [ "#fff", "#fff" ] },
+                borderWidth: 1,
+                borderColor:'#555'
+            }
+        });*/
+
+
+        $('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+        function tooltip_placement(context, source) {
+            var $source = $(source);
+            var $parent = $source.closest('.tab-content')
+            var off1 = $parent.offset();
+            var w1 = $parent.width();
+
+            var off2 = $source.offset();
+            var w2 = $source.width();
+
+            if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+            return 'left';
+        }
+        $('.dialogs,.comments').slimScroll({
+            height: '300px'
+        });
+        //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+        //so disable dragging when clicking on label
+        var agent = navigator.userAgent.toLowerCase();
+        if("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+            $('#tasks').on('touchstart', function(e){
+                var li = $(e.target).closest('#tasks li');
+                if(li.length == 0)return;
+                var label = li.find('label.inline').get(0);
+                if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+            });
+
+        $('#tasks').sortable({
+                    opacity:0.8,
+                    revert:true,
+                    forceHelperSize:true,
+                    placeholder: 'draggable-placeholder',
+                    forcePlaceholderSize:true,
+                    tolerance:'pointer',
+                    stop: function( event, ui ) {//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+                        $(ui.item).css('z-index', 'auto');
+                    }
+                }
+        );
+        $('#tasks').disableSelection();
+        $('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+            if(this.checked) $(this).closest('li').addClass('selected');
+            else $(this).closest('li').removeClass('selected');
+        });
+    })
+</script>
+<script type="text/javascript" src="js/common/conf.js"></script>
+<script type="text/javascript" src="js/busi_platform/common/busi_common.js"></script>
+<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+<script type="text/javascript" src="js/busi_platform/business/product/Goods_PostTrade.js"></script>
+<script type="text/javascript" src="assets/js/jsRender.js"></script>
+<script type="text/javascript" src="plugins/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="plugins/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+</body>
+</html>

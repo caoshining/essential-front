@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.themeList{
+    width: 100%;
+}
+body{
+    font-size: 14px;
+}
+.themeList h5{
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.themeList .themeScreening{
+    width: 100%;
+    height: 154px;
+    position: relative;
+    background: #f2f2f2;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 20px;
+}
+.screeningBox{
+
+   height: 100%;
+}
+.screeningBox .activityTitle,.screeningBox .activityStatus{
+    float: left;
+    font-size: 14px;
+    color: #000;
+    margin-left: 90px;
+    margin-top: 28px;
+}
+.screeningBox .activityStatus{
+    margin-left: 106px;
+}
+.screeningBox .activityStatus{
+    float: right;
+    margin-right: 100px;
+}
+.screeningBox input,.status{
+    width: 200px;
+    height: 40px;
+    background: white;
+    border: 1px solid #e4e4e4;
+    border-radius: 6px !important;
+}
+.screeningBox .listScreeningBtn{
+    width: 60px;
+    height: 30px;
+    color: white;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -34px;
+}
+.themeListBox{
+    width: 100%;
+    border: 1px solid #e4e4e4;
+}
+.themeListBox td{
+    height: 70px;
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+    color: #333333;
+}
+.themeListBox td p{
+    color: #0066ff;
+    cursor: pointer;
+}
+.themeListBox .time{
+    color: #999;
+}
+.themeListBox th{
+    border: none;
+    line-height: 50px;
+    text-align: center;
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.pagination1 span,.pagination1 em,.pagination1 a{
+    margin-right: 2px;
+    margin-left: 2px;
+}

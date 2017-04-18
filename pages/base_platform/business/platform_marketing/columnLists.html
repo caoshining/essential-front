@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>专栏列表</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_marketing/columnLists.css">
+</head>
+<body>
+<div class="column">
+    <h5>营销推广>发现管理>专栏列表</h5>
+    <div class="columnSearch">
+        <div class="FilterContent">
+            <label>文章标题：<input type="text" id="articleTitle"></label>
+            <label>专栏：
+                <select id="columns">
+                    <option value="0">- - -</option>
+                </select>
+            </label>
+        </div>
+        <span class="columnFilter">筛选</span>
+    </div>
+    <div class="columnList">
+        <table>
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>标题</th>
+                    <th>专栏</th>
+                    <th>文章作者</th>
+                    <th>创建时间</th>
+                    <th>发布时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="columnTab"></tbody>
+        </table>
+        <div class="pagination"></div>
+    </div>
+</div>
+
+<!--专栏列表渲染-->
+<script type="text/x-jsrender" id="columnList_Tmp">
+    {{for contentList}}
+        <tr data-articleid="{{:articleId}}">
+            <td>{{:articleId}}</td>
+            <td>{{:articleName}}</td>
+            <td>{{:groupName}}</td>
+            <td>{{:author}}</td>
+            <td width="100px;">{{:createTime}}</td>
+            <td width="100px;">{{:sendTime}}</td>
+            <td><a href="javascript:;" class="editArticle">编辑</a><br><a href="javascript:;" class="delArticle">删除</a></td>
+        </tr>
+    {{/for}}
+</script>
+
+<script src="js/base_platform/platform_marketing/columnLists.js"></script>
+
+<!--The plug-in -->
+<script src="plugins/jquery.paging.min.js"></script>
+<!--The plug-in -->
+</body>
+</html>

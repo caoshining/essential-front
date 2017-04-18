@@ -1,0 +1,172 @@
+
+<div class="tab-pane active" id="make_basic">
+	<head>
+		<link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/webuploader.css">
+
+	</head>
+	<ul>
+		<li>
+			<dl>
+				<dd>基本信息</dd>
+				<dt class="Basic_title">
+					商品类目:<span>{{SeltClass}}</span>-<span>{{SeltName}}</span>-<span>{{SeltBrand}}</span>
+				</dt>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>库存/规格</dd>
+				<dt>
+					<div id="speciDiv" class="ProducStandard">
+						<dl>
+							<dd>商品规格：</dd>
+							<dt>
+								<div>
+									<div class="Product_Select">
+										<select name='' class='Pro_standard'></select>
+										<ul></ul>
+									</div>
+									<div class="Product_btn">
+										<a href="###" id="Make_GuigeBtn">添加规格项目</a>
+										<a href="###" id="Make_Mean">生成表单</a>
+									</div>
+								</div>
+							</dt>
+						</dl>
+					</div>
+					<div class="ProducStock">
+						<dl>
+							<dd>
+								商品库存：
+							</dd>
+							<dt>
+								<table>
+							        <thead>
+							          <tr id="theadTmpl">
+									  </tr>
+							        </thead>
+									<tbody id="list">
+									</tbody>
+
+								 </table>
+							<div class="tfoot_div">
+								<p>批量设置:</p>
+								<div style="display: none;" class="Lot_size1">
+									<input type="tel" data-name="pice" value="" maxlength="50"/>
+									<div class="Lottotal_content">
+										<a href="###" class="Lotsize1_btnR">确认</a>
+										<a href="###" class="Lotsize1_cncle">取消</a>
+									</div>
+								</div>
+								<div class="Lot_size2">
+									<a href="###" data-name="pice">价格</a>
+									<a href="###" data-name="repertory">库存</a>
+									<a href="###" data-name="GodCode">商品代码</a>
+								</div>
+							</div>
+							</dt>
+						</dl>
+					</div>
+					<div class="TotalStock">
+						<dl>
+							<dd>
+								总库存:
+								<a href="javascript:void(0);" class="total-repertory">0</a>
+							</dd>
+							<dt class="TotalStock_content">
+								<p class="TotalStock_p">总库存为0时，会上架到已售罄商品列表里发布会商品同步更新，以库存数字为准</p>
+							</dt>
+						</dl>
+					</div>
+				</dt>
+			</dl>
+		</li>
+		<li>
+			<dl>
+				<dd>商品信息</dd>
+				<dt>
+					<div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 
+									<span class="mostimportant">*</span>商品代码
+								</label>
+								<div class="col-sm-9">
+									<input type="text" placeholder="" id="articleNumber" class="col-xs-10 col-sm-5">
+								</div>
+								<label class="col-sm-3 control-label no-padding-right"  for="form-field-1">
+									<span class="mostimportant">*</span>商品名称：
+								</label>
+								<div class="col-sm-9">
+									<input type="text" id="Make_productName" maxlength="20" placeholder="商品名名称最多支持20个字" class="col-xs-10 col-sm-5">
+								</div>
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 
+									<span class="mostimportant">*</span>价格：
+								</label>
+								<div class="col-sm-9 price_content">
+									<span class="price_log">
+										¥
+									</span>
+									<input type="text" id="Make_productPrice"  disabled="disabled" value="0" class="col-xs-10 col-sm-5">
+								</div>
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 
+									<span class="mostimportant">*</span>商品主图：
+								</label>
+								<div class="col-sm-12">
+									<div id="box">
+										<div id="MakeInfm_img"></div>
+										<div id="test" ></div>
+									</div>
+								</div>
+								<label class="col-sm-3 control-label no-padding-right" for="form-field-1">
+									<span class="mostimportant">*</span>关键词：
+								</label>
+								<div class="col-sm-5 Make_keywords_content">
+									<textarea name="" id="Make_keywords" cols="25" rows="5" maxlength="100"></textarea>
+									<span class="Make_keywords_count"><span id="Make_keywords_Lastcount">0</span>/100</span>
+									<p class="Make_keywords_wram">字数限制在100字符以内,关键词之间请用","隔开</p>
+								</div>
+								
+								<div class="col-sm-9">
+									<p>
+										物流/其他:
+									</p>
+									<ul id="Make_yunfei">
+										<li>
+											<label for="youfei1">
+											<input type="radio" name="gender" id="youfei1">
+											统一邮费
+											<input type="number" value="" id="freightPrice">
+											</label>
+										</li>
+										<li>
+											<input type="radio" name="gender" id="youfei2">
+											<label for="youfei2">运费模板</label>
+											<select name="" id="youfeiMB">
+											</select>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+					</div>
+				</dt>
+			</dl>
+		</li>
+	</ul>
+	<script type="text/javascript" src="assets/js/jsRender.js"></script>
+
+	<script id="testTheadTmpl" type="text/x-jsrender">
+	  <th>{{:thead}}</th>
+	</script>
+
+	<script id="testTrTmpl" type="text/x-jsrender">
+	  <tr></tr>
+	</script>
+
+	<script id="testTdTmpl" type="text/x-jsrender">
+			<td>{{:tdText}}</td>
+	</script>
+	<script type="text/javascript" src="plugins/Drag/jquery.dragsort-0.5.2.min.js"></script>
+	<script type="text/javascript" src="js/busi_platform/business/product/MakeBasicInfm.js"></script>
+</div>
+

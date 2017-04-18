@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/platform_Brand.css">
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/addBrand.css">
+
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/diyUpload.css">
+</head>
+<body>
+<div id="HotBrand_details">
+
+    <!--热门品牌-->
+    <div class="HotBrand_List">
+        <h5>商品管理>品牌管理>热门品牌</h5>
+        <ul class="WhetherIf" id="WhetherIf"></ul>
+    </div>
+
+    <div class="platform_layout">
+        <!--品牌搜索-->
+        <div class="platform_BrandSearch">
+            <label>品牌搜索：<input type="text" id="searchHotBrand"></label>
+            <span class="HotBrand_search">搜索</span>
+        </div>
+        <!--品牌搜索-->
+
+        <!--品牌列表-->
+        <div class="platform_BrandList">
+            <table id="HotBrand_table" style="width: 100%;">
+                <thead id="tHead">
+                    <tr>
+                        <th style="display: none;">品牌id</th>
+                        <th style="width: 80px;">品牌名称</th>
+                        <th>品牌logo</th>
+                        <th style="width: 90px;">关联品类</th>
+                        <th style="width: 80px;">一句话描述</th>
+                        <th>关注人数</th>
+                        <th style="width: 100px;">创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="BrandTab"></tbody>
+            </table>
+            <div class="pagination"></div>
+        </div>
+        <!--品牌列表-->
+    </div>
+</div>
+
+<!--热门品牌信息模板-->
+<script type="text/x-jsrender" id="HotBrand_details_Tmple">
+<div class="addBrand">
+    <h6>商品管理>品牌管理>品牌列表>查看</h6>
+    <form action="" method="post">
+        <div class="addBrandContent">
+            <table>
+                <tr>
+                    <td class="leftTd">品牌名称:</td>
+                    <td class="rightTd">
+                        <input type="text" class="inputClass" readonly="true" value="{{:brandName}}">
+                        <span class="addBrand_error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">关联品类:</td>
+                    <td class="rightTd" id="check_class">
+                        {{for brandCategoryVoList}}
+                            <input type="checkbox" checked class="check_class" disabled>{{:categoryName}}
+                            <span class="aboutClass"></span>
+                        {{/for}}
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">品牌logo上传:</td>
+                    <td class="rightTd upload">
+                        <img src="{{:logoPath}}" alt="" style="width:50px;height:50px;">
+                        <div id="Brand_logoPath"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">品牌背景图上传:</td>
+                    <td class="rightTd upload">
+                        <img src="{{:picPath}}" alt="" style="width: 80px;height: 80px;">
+                        <div id="Brand_BgPath"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd" >一句话描述:</td>
+                    <td class="rightTd">
+                        <input type="text" class="inputClass" readonly="true" placeholder="10个字以内" style="text-align: center" maxlength="10" id="wordDesc" value="{{:pageDesc}}">
+                        <span class="dec_error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">详细介绍:</td>
+                    <td class="rightTd">
+                        <textarea rows="5" cols="30" id="detailDesc" readonly="true">{{:detailedDesc}}</textarea>
+                        <span class="detailDesc"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">官网地址:</td>
+                    <td class="rightTd">
+                        <input type="text" class="inputClass" id="webAddress" value="{{:remark1}}" readonly="true">
+                        <span class="webAddress"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</div>
+</script>
+
+
+<!--热门品牌列表-->
+<script type="text/x-jsrender" id="HotBrand_Tmple">
+{{for brandVoList}}
+    <li data-brandid={{:brandId}}>
+        <img src="{{:logoPath}}">
+        <span>{{:brandName}}</span>
+        <span>取消选择</span>
+    </li>
+{{/for}}
+</script>
+
+<!--品牌列表-->
+<script type="text/x-jsrender" id="HotBrand_List_Tmp">
+{{for brandVoList}}
+    <tr  data-index="{{:#index}}">
+        <td>{{:brandName}}</td>
+        <td><img src="{{:logoPath}}"></td>
+        <td>
+            {{for brandCategoryVoList}}
+                {{:categoryName}}
+            {{/for}}
+        </td>
+        <td>{{:pageDesc}}</td>
+        <td>{{:collectionCount}}</td>
+        <td>{{:modifyTime}}</td>
+        <td>
+            <span class="checkHotBrand_details checkStyle">查看</span>
+            {{if action===1}}
+                <span class="checkStyle IfChoose">取消选择</span>
+                {{else}}
+                    <span class="checkStyle IfChoose">选择</span>
+            {{/if}}
+        </td>
+    </tr>
+{{/for}}
+</script>
+
+
+
+<!--The plug-in -->
+<script type="text/javascript" src="plugins/diyUpload/js/webuploader.html5only.min.js"></script>
+<script type="text/javascript" src="plugins/diyUpload/js/diyUpload.js"></script>
+<script src="plugins/jquery.paging.min.js"></script>
+<!--The plug-in -->
+
+<script src="js/base_platform/platformBusiness/HotBrand_List.js"></script>
+</body>
+</html>

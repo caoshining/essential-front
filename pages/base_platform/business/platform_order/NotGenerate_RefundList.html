@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>未生成退款单</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_order/NotGenerate_RefundList.css">
+</head>
+<body>
+<div id="NotGenerate_layout">
+    <h5>订单>退款单管理>未生成退款单</h5>
+    <div class="filterMethod">
+        <div>
+            <label class="labFilter">商品名称:<input type="text" id="filter_shopName"></label>
+            <label class="applyTime labFilter">申请时间:<input type="text" id="startApply_Time">
+                到<input type="text" id="endApply_Time"></label>
+            <a href="javascript:;" class="nearlyTime">近7天</a>
+            <a href="javascript:;" class="nearlyTime">近30天</a>
+            <label class="labFilter">买家名字:<input type="text" id="filter_userName"></label>
+            <label class="labFilter">退款单号:<input type="text" id="filter_RefundNumber"></label>
+            <label class="labFilter">订单编号:<input type="text" id="filter_orderNumber"></label>
+            <label class="labFilter">支付方式:<select id="filter_payMethod">
+                    <option value="">全部</option>
+                    <option value="1">支付宝</option>
+                    <option value="2">微信</option>
+                    <option value="3">银联</option>
+                </select>
+            </label>
+            <label class="labFilter">商家名称:<input type="text" id="filter_GodsName"></label>
+        </div>
+        <span class="RefundOrder_Filter">筛选</span>
+    </div>
+    <div class="NotGenerate_List">
+        <table>
+            <thead>
+                <tr>
+                    <th>商品信息</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>售后</th>
+                    <th>买家</th>
+                    <th>商家</th>
+                    <th>退款金额</th>
+                    <th>支付方式</th>
+                </tr>
+                <tr style="height: 15px;">
+                    <th colspan="8"></th>
+                </tr>
+            </thead>
+            <tbody id="NotGenerate_Tab"></tbody>
+        </table>
+        <div class="pagination"></div>
+    </div>
+</div>
+<script type="text/x-jsrender" id="NotGenerateList_Tmp">
+{{for returnRefundOrderVos}}
+    <tr style="height:10px;">
+        <td colspan="8"></td>
+    </tr>
+    <tr class="firstTr" data-index="{{:#index}}">
+        <td colspan="6">
+           <span>订单号:{{:orderNumber}}</span>
+            <span>退款单号:{{:returnRefundOrderNumber}}</span>
+            <span>申请时间:{{:createTime}}</span>
+        </td>
+        <td colspan="2">
+            <a href="javascript:;" class="checkRefund_Details">查看详情</a>
+            <a href="javascript:;">备注</a>
+        </td>
+    </tr>
+    {{for orderProducts ~name=name ~payType=payType ~userNickname=userNickname ~refundTotalMoney=refundTotalMoney}}
+
+        <tr>
+            <td>
+                <img src="{{:productPic}}">
+                <a href="javascript:;">
+                    <span>{{:productName}}</span>
+                    <span>{{:productSpecification}}</span>
+                    <span>商品代码：{{:articleNumber}}</span>
+                </a>
+            </td>
+            <td>￥{{:productPrice}}</td>
+            <td>{{:productCount}}</td>
+            <td>
+                {{if returnRefundStatus%10===4}}
+                    <span>待平台退款</span>
+                    <a href="javascript:;"  class="createRefund_List">生成退款单</a>
+                {{/if}}
+            </td>
+            <td>{{:~userNickname}}</td>
+            <td>{{:~name}}</td>
+            <td>￥{{:~refundTotalMoney}}</td>
+            {{if ~payType===1}}
+                <td>支付宝</td>
+                {{else ~payType===2}}
+                    <td>微信</td>
+                    {{else ~payType===3}}
+                        <td>银联</td>
+            {{/if}}
+        </tr>
+    {{/for}}
+{{/for}}
+
+</script>
+
+<script src="js/base_platform/platform_order/NotGenerate_RefundList.js"></script>
+</body>
+</html>

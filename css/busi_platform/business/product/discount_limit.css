@@ -1,0 +1,224 @@
+.fl{
+    float:left;
+}
+.Apply_Market,.Make_newDiscount,.Set_discount{
+    overflow:hidden;
+}
+.Apply_Market h4{
+    font-size:16px;
+}
+.Apply_Market ul{
+    overflow:hidden;
+}
+.Apply_Market ul li,.Sel_Gods>ul>li{
+    float:left;
+    list-style: none;
+    width: 25%;
+    text-align: center;
+    background: #eeeeee;
+    padding: 10px 0;
+    border: 1px solid #dcdcdc;
+    border-right:none;
+    cursor: pointer;
+}
+.Apply_Market ul li.active{
+    background: white;
+    border-bottom: white;
+}
+.Apply_Market ul li:last-child,.Sel_Gods>ul>li:last-child{
+    border-right:1px solid #dcdcdc;
+}
+.Make_newDiscount{
+    margin: 1% 0;
+}
+.Make_newDiscount>div{
+    float:right;
+    margin-right: 5%;
+}
+.Make_newDiscount>a{
+    margin-left: 5%;
+    text-decoration: none;
+    display: block;
+    background: #0e64f5;
+    color: white;
+    text-align: center;
+    float: left;
+    padding: 6px 4px;
+    border-radius: 5px;
+    width: 12%;
+}
+.Set_discount>p{
+    font-size: 14px;
+    background: #eeeeee;
+    padding: 8px;
+    color: #5d5d5d;
+}
+.Set_discount>div.Set_Infm>ul{
+    padding-left: 2%;
+}
+.Set_discount>div.Set_Infm>ul>li{
+    margin:2% 0;
+}
+.Set_discount>div.Set_Infm>ul>li>label>i{
+    font-style:normal;
+}
+.Set_discount>div.Set_Infm>ul>li:nth-child(2),
+.Set_discount>div.Set_Infm>ul>li:nth-child(3),
+.Set_discount>div.Set_Infm>ul>li:nth-child(4){
+    padding-left:1%;
+}
+.Set_discount>div>ul>li:nth-child(5){
+    padding-left:11%;
+}
+.Sel_Gods>ul{
+    overflow:hidden;
+}
+
+.Sel_Gods_Detail>div{
+    overflow:hidden;
+}
+.Sel_Gods_Detail>div>span{
+    margin: 10px 5px;
+    display: block;
+}
+.Sel_Gods_Detail>div>span>a{
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 8px;
+    background: #0e64f5;
+    color: white;
+    border-radius: 6px;
+}
+.Sel_Gods_Detail>div>div{
+    text-align: center;
+    line-height: 30px;
+    padding: 10px;
+   overflow: hidden;
+}
+.Sel_Gods_add>div input{
+    width:40px;
+}
+
+.discount_limit_table table{
+    width:100%;
+}
+/*.discount_table_btm{
+    overflow:hidden;
+}*/
+.discount_next_step a{
+    display:block;
+    margin:0 auto;
+    background-color:#e50003;
+    color:white;
+    width: 10%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 4px 5px;
+}
+.discount_limit_table table tr td:nth-child(1){
+    position:relative;
+}
+.discount_limit_table table tr td:nth-child(1) input{
+    margin: 0;
+    position: absolute;
+    float: left;
+    width: auto;
+    left: 3%;
+    top: 41%;
+    height: 15px;
+    width: 15px;
+}
+
+.discount_limit_table table tr td:nth-child(1) figure{
+    overflow: hidden;
+    float: left;
+    margin-left: 8%;
+}
+.discount_limit_table table tr td:nth-child(1) figure img{
+    width: 50px;
+    height: 50px;
+}
+.Sel_Gods_add{
+    display:none;
+}
+.discount_limit_table i{
+    font-style:normal;
+}
+.input_discout_price{
+    width:50%;
+}
+.Set_discount,.Set_Right_cancle{
+    display:none;
+}
+#discount_sel_gods>li{
+    cursor: pointer;
+}
+#discount_sel_gods>li.active{
+    background:#ffffff;
+}
+#discout_all_join{
+    height: 15px;
+    width: 15px;
+}
+.discount_table_btm input{
+    height:15px;
+    width:15px;
+}
+.look_discount_table table,.look_discount_table div{
+    width: 90%;
+    margin: 0 auto;
+}
+.discount_tag{
+    background: red;
+    border: none;
+    padding: 6px;
+    color: white;
+    width: 80%;
+}
+a.have_add{
+    color: #393939;
+    text-decoration: none;
+}
+a.add_discount{
+    display: inline-block;
+    color: #fff;
+    background-color: #07d;
+    border-color: #006cc9;
+    padding: 4px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+a.cancle_discount{
+    color: #fff;
+    display: inline-block;
+    background-color: #d00;
+    border-color: #c50000;
+    padding: 4px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.pagination em{
+    margin: 0 2px;
+}
+.pagination{
+    float: right;
+    margin-top: 0px;
+    margin-right: 5px;
+}
+#pageTotal{
+    text-align: right;
+    margin-right: 5px;
+}
+.look_total_content{
+    width: auto !important;
+    float: left;
+}
+.discount_total_cont{
+    float: right;
+    width: auto  !important;
+    margin-right: 4%  !important;
+}

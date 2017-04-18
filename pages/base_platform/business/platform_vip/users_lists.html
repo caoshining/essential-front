@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="plugins/pagination/pagination_c.css">
+    <link rel="stylesheet" href="css/base_platform/business/platform_vip/users_lists.css">
+</head>
+<body>
+    <div class="users_lists">
+        <h5>会员管理>用户管理>用户列表</h5>
+        <div class="screening_box clear">
+            <table class="screening_left">
+                <tbody>
+                    <tr>
+                        <td>账号 : </td>
+                        <td><input type="text" class="screening_account"></td>
+                    </tr>
+                    <tr>
+                        <td>性别 : </td>
+                        <td>
+                            <select class="screening_sex">
+                                <option selected="selected">全部</option>
+                                <option>男</option>
+                                <option>女</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>状态 : </td>
+                        <td>
+                            <select class="screening_state">
+                                <option selected="selected">全部</option>
+                                <option>正常</option>
+                                <option>禁用</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="screening_right">
+                <tbody>
+                <tr>
+                    <td>昵称 : </td>
+                    <td><input type="text" class="screening_name"></td>
+                </tr>
+                <tr>
+                    <td>用户类型 : </td>
+                    <td>
+                        <select class="user_types">
+                            <option selected="selected">全部</option>
+                            <option>手机用户</option>
+                            <option>QQ用户</option>
+                            <option>微信用户</option>
+                            <option>微博用户</option>
+                        </select>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="screening_btn">筛选</button>
+        </div>
+        <p class="total">总计1482</p>
+        <table class="lists">
+            <thead>
+                <tr>
+                    <th>头像</th>
+                    <th>账号</th>
+                    <th>昵称</th>
+                    <th>个人简介</th>
+                    <th>性别</th>
+                    <th>用户类型</th>
+                    <th>注册时间</th>
+                    <th>交易情况</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <div id="Pagination" class="pagination" style="text-align: right;width: 100%"></div>
+    </div>
+    <div class="new_push_msg" style="display: none">
+        <h6>会员管理>用户管理>用户列表>交易情况</h6>
+        <table class="look_user">
+            <thead>
+                <tr class="new_push_msg_title" style="margin-bottom: 20px">
+                    <th>商品信息</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>售后</th>
+                    <th>买家</th>
+                    <th>订单状态</th>
+                    <th>实付金额</th>
+                </tr>
+            </thead>
+            <tbody class="order_details_box">
+                <!--<tr class="order_details_title clear">
+                    <td colspan="7" style="margin-bottom: 20px">
+                        <p class="title_l"><span>订单号:123123123123123</span><span>下单时间:2016-03-24 13:20:42</span></p>
+                        <p class="title_r"><a href="#">查看详情</a>   <a href="#">备注</a></p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td  style="width: 364px">
+                        <img src="../../../../images/base_platform/vip1.jpg">
+                        <div>经典款经典款经典款经典款经典款经典款经典款经典款经典款</div>
+                    </td>
+                    <td  style="width: 80px">￥2880</td>
+                    <td style="width: 68px">1</td>
+                    <td style="width: 68px"></td>
+                    <td rowspan="2"  style="width: 96px">买家名字呢</td>
+                    <td rowspan="2" style="width: 118px">
+                        <p>等待买家付款</p>
+                        <p><button>取消订单</button></p>
+                    </td>
+                    <td rowspan="2" style="width: 120px">
+                        <p>￥5740</p>
+                        <p>(含快递20元)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td  style="width: 364px">
+                        <img src="../../../../images/base_platform/vip1.jpg">
+                        <div>经典款经典款经典款经典款经典款经典款经典款经典款经典款</div>
+                    </td>
+                    <td  style="width: 80px">￥2880</td>
+                    <td style="width: 68px">1</td>
+                    <td style="width: 68px"></td>
+
+                </tr>-->
+            </tbody>
+        </table>
+        <div id="Pagination1" class="pagination1" style="text-align: right;width: 100%"></div>
+        <p class="return"><button>返回</button></p>
+    </div>
+    <script type="text/javascript" src = "js/common/conf.js"></script>
+
+    <script type="text/javascript" src = "plugins/pagination/jquery.pagination.js"></script>
+    <script src = "js/base_platform/common/base_common.js"></script>
+    <script src = "js/base_platform/platform_vip/users_list.js"></script>
+    <!--<script>
+        $("#Pagination").pagination(10, {
+            num_edge_entries: 1, //边缘页数
+            num_display_entries: 4, //主体页数
+            callback: pageselectCallback,
+            items_per_page:6 //每页显示6项
+        });
+        function  pageselectCallback(page_index){
+            console.log(page_index)
+        }
+    </script>-->
+</body>
+</html>

@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+}
+.Delivery_layout{
+    width:100%;
+    padding:0 20px;
+    min-height: 100px;
+    margin:0 auto;
+}
+.Delivery_layout .Delivery_messages{
+    width:100%;
+    margin-bottom: 35px;
+    min-height: 100px;
+    clear: both;overflow: hidden;
+    font-family: "微软雅黑";
+}
+.Delivery_layout .Delivery_messages .allDelivery_messages{
+    width:35%;
+    min-height:310px;
+    background: #eee;
+    margin-right: 5px;
+    float: left;
+    padding:15px 15px;
+    margin-top: 5px;
+    font-family: "微软雅黑";
+}
+.Delivery_layout .Delivery_messages .allDelivery_messages div{
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.Delivery_layout .Delivery_messages .allDelivery_messages div span{
+    display:block;
+    margin-bottom: 5px;
+}
+.Delivery_layout .Delivery_messages .allDelivery_messages div>h4{
+    font-size: 14px;
+    font-weight: bolder;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages{
+    width:64%;
+    min-height:342px;
+    background: #eee;
+    float: right;
+    padding:25px 30px;
+    text-align: center;
+    margin-top: 5px;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages h3{
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages table{
+    width:100%;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages table td{
+    border:0;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages table tr>td:first-child{
+    text-align: right;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages table tr>td:last-child{
+    text-align: left;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages table td input{
+    width:180px;
+    height:35px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    text-align: center;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages table td select{
+    width:180px;
+    height:35px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages button{
+    border:0;
+    width: 80px;
+    height:30px;
+    background: red;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/*待发货商品列表*/
+.delivery_List{
+    width:100%;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.delivery_List h5{
+    font-weight: bold;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.delivery_List table thead tr{
+    border-bottom: 0;
+    background: #eee;
+    height:35px;
+    border:1px #e9e9e9 solid;
+}
+.delivery_List table thead tr th{
+    border:0;
+    text-align: center;
+}
+.delivery_List table tbody tr.deliveryProduct td:nth-of-type(1) img{
+    width:80px;
+    height:80px;
+}
+.delivery_List table tbody tr.deliveryProduct td:nth-of-type(1) a{
+    display: inline-block;
+    width:120px;
+    color: #333;
+    font-size: 12px;
+    margin-left: 10px;
+}
+.delivery_List table tbody tr.deliveryProduct td:nth-of-type(1) a span{
+    display: block;
+}
+.delivery_List table tbody tr.deliveryProduct td:nth-of-type(1) a span:nth-of-type(3){
+    color: #999;
+}
+
+.delivery_List table tr td{
+    border:0;text-align: center;
+}
+.delivery_List table tr td{
+    border:1px #e9e9e9 solid;
+}
+
+
+/*物流动态信息*/
+.Delivery_layout .logisticsMsg{
+    width:100%;
+    height:50px;
+    line-height: 30px;
+    background: #eee;
+    margin: 5px 0;
+    font-size: 14px;
+    padding:10px 20px;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages .platform_logistic{
+    position:absolute;
+    width:52%;
+    height:40%;
+    overflow:auto
+}
+.Delivery_layout .Delivery_messages .Logistics_messages li{
+    clear: both;
+    overflow: hidden;
+}
+
+.Delivery_layout .Delivery_messages .Logistics_messages span{
+    display:block;
+    margin-bottom: 10px;
+}
+.Delivery_layout .Delivery_messages .Logistics_messages span.deliveryTime{
+     float: left;
+     width:180px;
+ }
+.Delivery_layout .Delivery_messages .Logistics_messages span.deliveryText{
+    float: right;
+    width:265px;
+    text-align: left;
+}

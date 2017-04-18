@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建发现</title>
+    <link rel="stylesheet" type="text/css" href="css/busi_platform/business/discovery/htmleaf-demo.css"/>
+    <link rel="stylesheet" type="text/css" href="css/busi_platform/business/discovery/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="css/busi_platform/business/discovery/style.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/base_platform/business/platform_marketing/newDiscovery.css"/>
+
+</head>
+<body>
+<div class="discovery_layout">
+    <h5>营销推广>发现管理>专栏列表>编辑</h5>
+    <div class="discoveryContent">
+
+        <!--Tab选项卡-->
+        <ul class="tabUl">
+            <li class="selected li1">基本信息</li>
+            <li class="li2">正文内容</li>
+            <li class="li3">相关商品</li>
+        </ul>
+        <!--基本信息-->
+        <div class="content1 discoveryDiv">
+        </div>
+
+        <!--富文本内容-->
+        <div class="content2 discoveryDiv">
+            <script id="editor2" type="text/plain" style="width:801px;height:300px;"></script>
+        </div>
+
+        <!--相关商品-->
+        <div class="content3 discoveryDiv" id="shopHtml">
+            <div class="linkShop">
+                <span class="add" id="EditAddEssential_shop">添加奕赏商品</span>
+                <span class="add" id="EditAddOutChains">添加外链商品</span>
+            </div>
+
+            <!--添加商品列表显示-->
+            <div id="DiscoveryShop" class="DiscoveryShop" style="display: none;"></div>
+
+            <!--添加奕赏商品-->
+            <div id="EditRelationProductList" style="display: none;">
+                <div class="mainDiv">
+                    <div class="productSearch">
+                        <div class="productInput">
+                            <label>商品名称:<input type="text" id="EditProductName"></label>
+                            <label>商品代码:<input type="text" id="commodityCode"></label>
+                            <label>商品分类:<select id="EditCategory">
+                                    <option value="">所有分类</option>
+                                </select>
+                            </label>
+                            <label>商家名称:<select id="EditShopName">
+                                    <option value="">所有名称</option>
+                                </select>
+                            </label>
+                            <label>商品品牌:<select id="EditAllBrands">
+                                    <option value="">所有品牌</option>
+                                </select>
+                            </label>
+                            <label>价格区间:<input type="text" style="width: 65px;"> 到 <input type="text" style="width:65px;;"></label>
+                            <label>是否自营:<select id="EditSelf">
+                                    <option value="">所有状态</option>
+                                    <option value="1">是</option>
+                                    <option value="0">否</option>
+                                </select>
+                            </label>
+                            <span class="FilterProduct">筛选</span>
+                        </div>
+                    </div>
+                    <div class="productList">
+                        <table class="gridtable">
+                            <thead>
+                            <tr>
+                                <th>商品信息</th>
+                                <th>商品品牌</th>
+                                <th>分类</th>
+                                <th>商家</th>
+                                <th>库存</th>
+                                <th>销量</th>
+                                <th>创建时间</th>
+                                <th>商品状态</th>
+                                <th>是否自营</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="Essential_Lists">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination"></div>
+                </div>
+            </div>
+
+            <!--添加外链商品-->
+            <div id="EditOutProducts" class="outChains">
+                <table>
+                    <tr>
+                        <td>外链商品名称：</td>
+                        <td><input type="text" placeholder="10字以内" class="productName"></td>
+                    </tr>
+                    <tr>
+                        <td>价格：</td>
+                        <td><input type="text" class="marketPrice"> 元</td>
+                    </tr>
+                    <tr>
+                        <td>商品品牌：</td>
+                        <td><input type="text" class="brandName"></td>
+                    </tr>
+                    <tr>
+                        <td>商品主图：</td>
+                        <td>
+                            <img src="" style="width: 80px;height: 80px;" id="EditOutProductPic">
+                            <p>请上传jpg，jpeg，bmp格式，<br>文件大小小于1M，图像尺寸330*330</p>
+                            <div id="product_MasterPic"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>渠道：</td>
+                        <td><input type="text" class="linkPlatform"></td>
+                    </tr>
+                    <tr>
+                        <td>链接地址：</td>
+                        <td><input type="text" style="width: 280px;" class="linkUrl"></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!--点击步骤-->
+    <div class="nextNew">
+        <span class="EditNextTab" id="EditPrevSpan">上一步</span>
+        <span class="EditNextTab" id="EditNext1">下一步</span>
+        <span class="add_shop EditEssential" id="add_shop" style="display: none;">确定</span>
+        <span class="returnPrev EditEssential" style="display: none;background: #fff;color: #333;">返回</span>
+        <span class="EditSaveArticle" id="EditSave" style="display: none;background: #fff; color: #333;">保存</span>
+        <span class="EditSaveArticle" id="EditRelease" style="display: none;">发布</span>
+    </div>
+
+    <!--基本信息渲染-->
+    <script type="text/x-jsrender" id="baseMessage_Tmp">
+         <table>
+                <tr>
+                    <td>标题:</td>
+                    <td><input type="text" class="EditTitle" placeholder="标题长度20字以内" value="{{:articleName}}"/></td>
+                </tr>
+                <tr>
+                    <td>专栏:</td>
+                    <td>
+                        <select name="Special" id="EditColumn">
+                            <option>- - -</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>专栏logo:</td>
+                    <td>
+                        <img src="{{:thumbnailPath}}" style="width: 80px;height: 80px;" class="columnLogo">
+                        <div id="Edit_columnLogo"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>作者:</td>
+                    <td>
+                        <input type="text" class="author" value="{{:author}}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>添加主图:</td>
+                    <td>
+                        <img src="{{:mainPath}}" style="width: 80px;height: 80px;" class="mainPic">
+                        <div id="Edit_AddMasterPic"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>关键词:</td>
+                    <td class="articlekeyWords_content">
+                       <textarea class="articlekeyWords" placeholder="100字以内"  maxlength="100" rows="5" cols="30">{{:attr1}}</textarea>
+                        <span class="Make_keywords_count"><span id="article_keywords_Lastcount">0</span>/100</span>
+                        <!--<p class="Make_keywords_wram">字数限制在100字符以内,关键词之间请用","隔开</p>-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>文章摘要:</td>
+                    <td>
+                        <textarea class="articleSummary" placeholder="40字以内" rows="5" cols="30">{{:articleAbstract}}</textarea>
+                    </td>
+                </tr>
+            </table>
+    </script>
+
+    <!--商品列表渲染-->
+    <script type="text/x-jsrender" id="EssentialTmp">
+        {{for productPlatformList}}
+            <tr data-index="{{:#index}}">
+                <td>
+                    <img src="{{:path}}">
+                    <a style="float:right; width:60px;">
+                        <span>{{:productName}}</span>
+                        {{if linkUrl==="1"}}
+                            <span>￥{{:discountPrice}}</span>
+                            <span style="text-decoration: line-through;">￥{{:costPrice}}</span>
+                            <span>折</span>
+                            {{else linkUrl==="0"}}
+                                <span>￥{{:costPrice}}</span>
+                        {{/if}}
+                    </a>
+                </td>
+                <td>{{:brandName}}</td>
+                <td>{{:categoryName}}</td>
+                <td>{{:shopName}}</td>
+                <td>{{:stock}}</td>
+                <td>{{:saleNum}}</td>
+                <td><span>{{:createTime}}</span></td>
+                <td>{{:productStatusName}}</td>
+                <td>{{:selfName}}</td>
+                <td><a href='javascript:;' class='checkEssential'>查看</a><br><a href='javascript:;' class='addEssentialGods'>添加</a></td>
+            </tr>
+        {{/for}}
+    </script>
+
+    <!-- 外链商品渲染 -->
+    <script type="text/x-jsrender" id="outGoodsTmp">
+        <table>
+           <thead>
+                <tr>
+                    <th style="display: none;">外链商品id</th>
+                    <th>外部商品信息</th>
+                    <th>价格</th>
+                    <th>商品品牌</th>
+                    <th>渠道</th>
+                    <th>链接地址</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-productid="{{:productId}}" data-islinkproduct="1">
+                    <td style="display: none;">{{:productId}}</td>
+                    <td class='EsProductInfo'>
+                        <img src="{{:path}}" class="outProductPic"/>
+                        <span>{{:productName}}</span>
+                    </td>
+                    <td>{{:marketPrice}}</td>
+                    <td>{{:brandName}}</td>
+                    <td>{{:linkFrom}}</td>
+                    <td class='outLinkUrl'><a href="javascript:void(0);">{{:linkUrl}}</a></td>
+                    <td><a href="javascript:;" class="delProduct">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </script>
+
+    <!-- 奕赏商品渲染 -->
+    <script type="text/x-jsrender" id="esGoodsTmp">
+        <table>
+            <thead>
+                <tr>
+                    <th style="display: none;">商品id</th>
+                    <th>奕赏商品信息</th>
+                    <th>商品品牌</th>
+                    <th>分类</th>
+                    <th>商家</th>
+                    <th>库存</th>
+                    <th>销量</th>
+                    <th>创建时间</th>
+                    <th>商品状态</th>
+                    <th>是否自营</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr data-productid="{{:productId}}" data-islinkproduct="0">
+                    <td style="display: none;">{{:shopId}}</td>
+                    <td class='EsProductInfo'>
+                        <img src="{{:path}}">
+                        <span>{{:productName}}</span>
+                        <span>￥{{:costPrice}}</span>
+                    </td>
+                    <td>{{:brandName}}</td>
+                    <td>{{:categoryName}}</td>
+                    <td>{{:shopName}}</td>
+                    <td>{{:stock}}</td>
+                    <td>{{:saleNum}}</td>
+                    <td style="width:120px;">{{:createTime}}</td>
+                    <td>{{:productStatusName}}</td>
+                    <td>{{:selfName}}</td>
+                    <td>
+                        <a href="javascript:;">查看</a><br/>
+                        <a  href='javascript:;' class="delProduct">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </script>
+
+    <!--奕赏商品列表所有品牌渲染-->
+    <script type="text/x-jsrender" id="editBrandsTmp">
+
+        {{for brandVoList}}
+            <option value={{:brandId}}>{{:brandName}}</option>
+        {{/for}}
+    </script>
+
+    <!--奕赏商品列表所有品类渲染-->
+    <script type="text/x-jsrender" id="EditCategoryTmp">
+        {{for info}}
+            <option value={{:categoryId}}>{{:categoryName}}</option>
+        {{/for}}
+    </script>
+
+    <!--奕赏商品列表所有商家渲染-->
+    <script type="text/x-jsrender" id="EditShopTmp">
+        {{for info}}
+            <option value={{:name}}>{{:name}}</option>
+        {{/for}}
+    </script>
+</div>
+
+<script type="text/javascript" src="js/busi_platform/business/discovery/jquery.multipurpose_tabcontent.js"></script>
+<script type="text/javascript" src="js/base_platform/platform_marketing/editArticle.js"></script>
+
+<!--The plug-in -->
+<script src="plugins/jquery.paging.min.js"></script>
+<script src="plugins/pagination/jquery.page.js"></script>
+<!--The plug-in -->
+
+
+</body>
+</html>

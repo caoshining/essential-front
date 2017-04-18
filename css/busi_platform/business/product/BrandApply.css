@@ -1,0 +1,89 @@
+.BrandApply{
+    font-size: 14px;
+    width:860px;
+}
+.BrandApply .BrandApply_List{
+    width:100%;
+    background: #eee;
+    padding: 20px 0;
+}
+.BrandApply .BrandApply_List table{
+    width:100%;
+    border:0;
+}
+.BrandApply .BrandApply_List table tr>td{
+    border:0;
+}
+.BrandApply .BrandApply_List table tr td.uploadBrand_logo{
+    position: relative;
+    font-size: 12px;
+}
+.BrandApply .BrandApply_List table tr td.uploadBrand_logo p{
+    position: absolute;
+    left:100px;
+    top:0;
+}
+.BrandApply .BrandApply_List table tr td span.error{
+    color: red;
+    font-size: 12px;
+}
+.BrandApply .BrandApply_List table tr>td>span{
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.BrandApply .BrandApply_List table tr>td>span.NewBrand{
+    background: blue;
+    color: #fff;
+    padding:5px 10px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
+.BrandApply .BrandApply_List table tr>td>span.NewBrand:hover{
+    background: #1a67bd;
+}
+.BrandApply .BrandApply_List table tr>td input{
+    width:180px;
+    height:35px;text-align: center;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
+.BrandApply .BrandApply_List table tr>td textarea{
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
+.BrandApply .BrandApply_List table tr>td:first-child{
+    text-align: right;
+    width:40%;
+}
+.BrandApply .BrandApply_List table tr>td:last-child{
+    text-align: left;
+    width:60%;
+}
+.BrandApply .applyAudit{
+    width:100%;
+    height:40px;
+    background: #eee;
+    margin-top:20px;
+    text-align: center;
+    line-height: 40px;
+}
+.BrandApply .applyAudit span{
+    display: inline-block;
+    width:70px;
+    height:30px;
+    background: red;
+    color: #fff;
+    line-height:30px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin:0 auto;
+    cursor: pointer;
+}
+.BrandApply .applyAudit span:hover{
+    background: firebrick;
+}

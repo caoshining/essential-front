@@ -1,0 +1,38 @@
+/*清浮动*/
+.clear:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.clear{
+    zoom: 1;
+}
+h5{
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.feed_back{
+    width: 100%;
+}
+.feed_back .feed_back_centent{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+.feed_back table{
+    width: 100%;
+}
+.feed_back th{
+    height: 50px;
+    background: #eeeeee;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+.feed_back td{
+    height: 70px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    -padding-left: 70px;
+}

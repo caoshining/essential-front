@@ -1,0 +1,73 @@
+#Onsave-Gods{
+    width:100%;
+    background-color:white;
+}
+.Onsave_gods_top{
+    background-color:#eeeeee;
+    overflow:hidden;
+    padding:2% 5%;
+}
+.Onsave_gods_top>div{
+    overflow:hidden;
+}
+.Onsave_gods_top>div>div{
+    float:left;
+    width:50%;
+    padding:1% 0 0 4%;
+}
+.Onsave_gods_top>div>div select,.Onsave_gods_top>div>div input{
+    width:50%;
+}
+#Onsave_Pric1,#Onsave_Pric2{
+    width:19%;
+}
+.Onsave_Sear{
+    text-align: center;
+    padding: 25px;
+    position:relative;
+}
+.Onsave_Sear>a{
+    position:absolute;
+    text-decoration:none;
+    color:white;
+    width:13%;
+    border-radius: 4px;
+    display:block;
+    background:red;
+    padding:2px 4px;
+    left: 42.5%;
+    bottom: 22%;
+}
+.Onsale_gods_btm .Img_Load,
+.Onsave_gods_btm .Img_Load,
+.Onsellout_gods_btm .Img_Load{
+    margin:auto 50%;
+}
+.pagination em{
+    font-style: normal;
+}
+/*#Onsave_Brand{
+    border: solid 1px #000;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+    padding-right: 14px;
+}
+#Onsave-Gods select::-ms-expand { display: none; }
+*/
+/*
+对下拉框样式修改*/
+
+/*#Onsave_Brand{
+    border: solid 1px #000;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+    padding-right: 14px;
+}
+#Onsave-Gods select::-ms-expand { display: none; }
+*/
+/*
+对下拉框样式修改*/

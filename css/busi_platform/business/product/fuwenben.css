@@ -1,0 +1,81 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body,html,.index{
+	height:100%;
+	width: 100%;
+	font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif;
+	line-height: 1.5;
+    font-size: .16rem;
+}
+a{
+    text-decoration: none;
+}
+li{
+    position: relative;
+    list-style: none;
+}
+@media screen and (max-width:319px) {
+    html{
+        font-size:90px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width:359px){
+    html{
+        font-size:90px;
+    }
+}
+@media screen and (min-width:360px) and (max-width:374px) {
+    html{
+        font-size: 96px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 383px) {
+    html{
+        font-size:100px;
+    }
+}
+@media screen and (min-width: 384px) and (max-width: 399px) {
+    html {
+        font-size: 102.4px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 413px) {
+    html {
+        font-size: 106.66667px;
+    }
+}
+
+@media screen and (min-width: 414px) {
+    html {
+        font-size: 110.4px;
+    }
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.index,.mengban1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.mengban1{
+    display: block;
+    background-color:#abacac;
+    opacity: 0.6;
+}
+.mengban1,.mengban2{
+    display: none;
+}
+header{
+    width: 100%;
+}
+img{
+    width:100%;
+}

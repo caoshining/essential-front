@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href=product/index-root.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../../css/busi_platform/business/discovery/htmleaf-demo.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../../css/busi_platform/business/discovery/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../../css/busi_platform/business/discovery/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../../css/busi_platform/business/discovery/add.css"/>
+    <title>Title</title>
+</head>
+<body>
+
+<h2>新建发现</h2>
+<div class="contentMain">
+    <ul class="tabUl">
+        <li id="1"  class="selected">基本信息</li>
+        <li id="2">正文内容</li>
+        <li id="3">相关商品</li>
+    </ul>
+
+    <div class="content1">
+
+        标题<input type="text" id="title"/>
+        <br><br>专栏logo
+        <button type="button" id="newButton" name="modifySpecial">修改</button>
+
+        <br><br> <select name="Special" id="column">
+
+    </select>
+
+        <br><br>作者<input type="text" id="author"/>
+        <br><br>添加主图<input type="text" id="mainPic"/>
+        <br><br>文章摘要<textarea id="articelSummary"></textarea>
+
+
+    </div>
+    <div class="content2">
+        <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+        <button onclick="getAllHtml()">获得整个html的内容</button>
+        <button onclick="getContent()">获得内容</button>
+
+    </div>
+    <div class="content3">
+        <ul>
+            <li>
+                <button type="button" id="save" onclick="saveData()">保存</button>
+                链接平台 <input type="text" id="linkFrom"/>
+               商品名称<input type="text" id="productName"/>
+                品牌名称<input type="text" id="brandName"/>
+                商品图片<input type="text" id="path"/>
+                市场价 <input type="text" id="marketPrice"/>
+                链接路径<input type="text" id="linkUrl"/>
+                <button type="button" id="saveExternalProduct" onclick="saveExternalProduct()">保存外联商品</button>
+            </li>
+
+            <li id="relationProductList"></li>
+
+
+        </ul>
+
+    </div>
+
+</div>
+
+<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+<script type="text/javascript"
+        src="../../../../js/busi_platform/business/discovery/jquery.multipurpose_tabcontent.js"></script>
+<script type="text/javascript" src="../../../../js/common/conf.js"></script>
+<script type="text/javascript" src="../../../../js/busi_platform/business/discovery/add.js"></script>
+<script type="text/javascript" src="../../../../plugins/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="../../../../plugins/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="../../../../plugins/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" src="../../../../plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        getSpecial();
+        loadExternalProductList();
+    });
+</script>
+<script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/busi_platform/business/order/deliveryGoods.css">
+</head>
+<body>
+<div class="checkLogistics_message Delivery_layout" id="checkLogistics">
+
+</div>
+<script type="text/x-jsrender" id="Logistics_Tmp">
+    <h5>订单>订单管理>所有订单>物流动态</h5>
+    <div class="logisticsMsg">
+        <span>物流公司：{{:logistic}}</span>
+        <span>运单号码：{{:logisticNumber}}</span>
+        <span>发货人：{{:attr2}}</span>
+        <span>发货时间：{{:modifyTime}}</span>
+    </div>
+    <div class="Delivery_messages">
+        <div class="allDelivery_messages">
+            <div>
+                <h4>订单信息</h4>
+                <span>订单编号：{{:orderNumber}}</span>
+                <span>下单时间：{{:createTime}}</span>
+                <span>订单金额：{{:finalPrice}}元</span>
+            </div>
+            <div>
+                <h4>收货信息</h4>
+                <span>收货人：{{:addresse}}</span>
+                <span>联系电话：{{:userPhone}}</span>
+                <span>收货地址：{{:address}}</span>
+            </div>
+            <div style="margin-bottom: 0">
+                <h4>留言/备注</h4>
+                <span>买家留言：{{:buyerNote}}</span>
+                <span>商家备注：{{:returnRefundAttr2}}</span>
+            </div>
+
+        </div>
+        <div class="Logistics_messages">
+            <h3>物流动态</h3>
+            <div id="logisticDiv" class="platform_logistic"></div>
+        </div>
+    </div>
+    <div class="delivery_List">
+        <h5 style="margin-left: 10px;">商品信息</h5>
+        <div class="tab GoodsMessage_List">
+            <table cellspacing="0" cellpadding="0" class="col-lg-12">
+                <thead>
+                    <tr>
+                        <th class="col-lg-4">商品信息</th>
+                        <th class="col-lg-1">单价</th>
+                        <th class="col-lg-1">数量</th>
+                        <th class="col-lg-1">售后</th>
+                        <th class="col-lg-1">买家</th>
+                        <th class="col-lg-2">订单状态</th>
+                        <th class="col-lg-2">实付金额</th>
+                    </tr>
+                </thead>
+                <tbody id="GoodsMessage_List">
+                {{for orderProducts ~length=orderProducts.length ~userNickname=userNickname ~finalPrice=finalPrice ~orderStatus=orderStatus ~orderStatusItemName=orderStatusItemName}}
+                <tr>
+                    <td>
+                        <img src="{{:productPic}}" style="width:50px;height:50px;"/>
+                        <a href="javascript:;">{{:productName}}</a>
+                        <a href="javascript:;">{{:productSpecification}}</a>
+                        <a href="javascript:;">{{:articleNumber}}</a>
+                    </td>
+                    <td>￥{{:productPrice}}</td>
+                    <td>{{:productCount}}</td>
+                    <td>{{:returnRefundStatus%10===1?"待商家审核"
+                                :returnRefundStatus%10===2?"商家驳回"
+                                :returnRefundStatus%10===3?"待平台审核"
+                                :returnRefundStatus%10===4?"待平台处理"
+                                :returnRefundStatus%10===5?"平台驳回"
+                                :returnRefundStatus%10===6?"退款完成"
+                                :returnRefundStatus%10===7?"待买家发货"
+                                :returnRefundStatus%10===8?"待商家收货"
+                                :returnRefundStatus%10===9?"商家驳回"
+                                :returnRefundStatus%10===0?"无"
+                                :returnRefundStatus%10===999?"无":"无"}}</td>
+                    {{if #index===0}}
+                        <td rowspan="{{:~length}}">{{:~userNickname}}</td>
+                        <td rowspan="{{:~length}}">{{:~orderStatusItemName}}</td>
+                        <td rowspan="{{:~length}}">￥{{:~finalPrice}}</td>
+                    {{/if}}
+                </tr>
+                {{/for}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</script>
+<script type="text/x-jsrender" id="logisticTmpl">
+    <li>
+        <span class="deliveryTime">{{:time}}</span>
+        <span class="deliveryText">{{:context}}</span>
+    </li>
+</script>
+<script>
+    var logisticsHtml = $("#Logistics_Tmp").render(orderIndex);
+    $("#checkLogistics").append(logisticsHtml);
+</script>
+</body>
+</html>

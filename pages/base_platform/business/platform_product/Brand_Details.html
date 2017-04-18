@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/addBrand.css">
+</head>
+<body>
+<div id="Brand_detailsInfo">
+</div>
+<!--查看详情模板-->
+<script type="text/x-jsrender" id="Brand_details_Tmple">
+<div class="addBrand">
+<h6>商品管理>品牌管理>品牌列表>查看</h6>
+    <div class="addBrandContent">
+        <table>
+            <tr>
+                <td class="leftTd">品牌名称:</td>
+                <td class="rightTd">
+                    <input type="text" class="inputClass" disabled id="brandName" value="{{:brandName}}">
+                    <span class="addBrand_error"></span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="leftTd">关联品类:</td>
+                    <td class="rightTd" id="check_class">
+                    {{for brandCategoryVoList}}
+                        <input type="checkbox" checked class="check_class" disabled>{{:categoryName}}
+                        <span class="aboutClass"></span>
+                    {{/for}}
+                    </td>
+                </tr>
+            <tr>
+                <td class="leftTd">品牌logo上传:</td>
+                <td class="rightTd upload">
+                    <img src="{{:logoPath}}" alt="" style="width:50px;height:50px;">
+                    <div id="Brand_logoPath"></div>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="leftTd">品牌背景图上传:</td>
+                <td class="rightTd upload">
+                    <img src="{{:picPath}}" alt="" style="width: 80px;height: 80px;">
+                    <div id="Brand_BgPath"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="leftTd" >一句话描述:</td>
+                <td class="rightTd">
+                    <input type="text" class="inputClass" disabled placeholder="10个字以内" style="text-align: center" maxlength="10" id="wordDesc" value="{{:pageDesc}}">
+                    <span class="dec_error"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="leftTd">详细介绍:</td>
+                <td class="rightTd">
+                    <textarea rows="5" cols="30" id="detailDesc" disabled>{{:detailedDesc}}</textarea>
+                    <span class="detailDesc"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="leftTd">官网地址:</td>
+                <td class="rightTd">
+                    <input type="text" class="inputClass" id="webAddress" value="{{:remark1}}" disabled>
+                    <span class="webAddress"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</script>
+<!--查看详情模板-->
+
+<script>
+    var html = $("#Brand_details_Tmple").render(BrandIndex);
+    $("#Brand_detailsInfo").append(html);
+</script>
+</body>
+</html>

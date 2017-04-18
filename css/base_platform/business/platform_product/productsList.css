@@ -1,0 +1,194 @@
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.shopList_layout{
+    width:100%;
+    padding:0 20px;
+}
+.shopList_layout h5{
+    font-weight: bold;
+    margin-bottom:10px;
+}
+
+/*商品搜索*/
+.shopList_layout .Product_search{
+    width:100%;
+    background: #eee;
+    min-height:250px;
+    padding:28px 90px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.shopList_layout .Product_search div:nth-of-type(1){
+    clear: both;
+    overflow: hidden;
+}
+.shopList_layout .Product_search label{
+    margin-bottom: 10px;
+}
+.shopList_layout .Product_search label input{
+    width:200px;
+    height:35px;
+    text-align: center;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    margin-left: 10px;
+}
+.shopList_layout .Product_search label select{
+    width:200px;
+    height:35px;
+    text-align: center;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    margin-left: 10px;
+}
+.shopList_layout .Product_search label input.priceRange{
+    width:86px;
+}
+.shopList_layout .Product_search span.shopFilter{
+    display: block;
+    width:60px;
+    height:30px;
+    line-height: 30px;
+    background: red;
+    color: #fff;
+    text-align: center;
+    margin:10px auto 0;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    cursor: pointer;
+}
+.shopList_layout .Product_search span.shopFilter:hover{
+    background: crimson;
+}
+.shopList_layout .Product_search>div label:nth-of-type(even){
+    margin-left: 125px;
+}
+
+/*商品列表*/
+.shopList_layout .productLists{
+    margin-top: 10px;
+    width:100%;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.shopList_layout .productLists table{
+    width:100%;
+    /*font-family: "微软雅黑";*/
+    /*font-size: 14px;*/
+}
+.shopList_layout .productLists table thead tr{
+    background: #eee;
+    height:50px;
+}
+.shopList_layout .productLists table thead tr th{
+    border:0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.shopList_layout .productLists table tbody tr td{
+    border:0;
+    text-align: center;
+    border-bottom: 1px #eee solid;
+}
+.shopList_layout .productLists table tbody tr td:nth-of-type(1){
+    padding:10px 14px;
+}
+.shopList_layout .productLists table tbody tr td>div{
+    /*width:100%;*/
+    min-height:50px;
+    clear: both;
+    overflow: hidden;
+}
+
+.shopList_layout .productLists table tbody tr td>div a span:nth-of-type(4){
+    width:20px;
+    height:20px;
+    background: red;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+}
+.shopList_layout .productLists table tbody tr td img{
+    width:80px;
+    height:80px;
+}
+.shopList_layout .productLists table tbody tr td:nth-of-type(1) a{
+    display: block;
+    text-align: left;
+    color: #333;
+    margin-left: 10px;
+    font-size:12px;
+}
+.shopList_layout .productLists table tbody tr td:nth-of-type(1) a:hover{
+    text-decoration: none;
+}
+.shopList_layout .productLists table tbody tr td:nth-of-type(1) a span{
+    display: inline-block;
+}
+.shopList_layout .productLists table tbody tr td:nth-of-type(1) a span:nth-of-type(1){
+    display: block;
+}
+.shopList_layout .productLists table tbody tr td:nth-of-type(1) a span:nth-of-type(2){
+    color: red;
+    margin-top: 10px;
+}
+.shopList_layout .productLists table tbody tr td:nth-of-type(1) p{
+    text-align: left;
+}
+
+/*分页*/
+.pages{
+    margin:0 2px;
+}
+.pagination{
+    float: right;
+}
+
+/*下架原因*/
+.index-tab-cont .forceShelves{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 99;
+    background: #000;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    display: block;
+}
+.ShelvesReason{
+    color: #fff;
+    position: absolute;
+    left:40%;
+    top:10%;
+    z-index: 100;
+    text-align: center;
+}
+.ShelvesReason span{
+    display: inline-block;
+    width: 50px;
+    height:25px;
+    line-height:25px;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.ShelvesReason span:nth-of-type(1){
+    background: red;
+    color: #fff;
+    margin-right:10px;
+}
+.ShelvesReason span:nth-of-type(2){
+    background: #fff;
+    color: #000;
+}

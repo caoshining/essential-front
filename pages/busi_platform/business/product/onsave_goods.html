@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/busi_platform/business/product/onsale_goods.css">
+</head>
+<body>
+<div id="Onsave-Gods">
+    <h4>商品>仓库中的商品</h4>
+    <div class="Onsave_gods_top">
+        <div>
+            <div>
+                <label for="Onsave_Name">
+                    商品名称：
+                </label>
+                <input maxlength="50" type="text" id="Onsave_Name">
+            </div>
+            <div>
+                <label for="Onsave_Code">
+                    商品代码：
+                </label>
+                <input maxlength="50" type="text" id="Onsave_Code">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="Onsave_Selt">
+                    商品分类：
+                </label>
+                <select name="" id="Onsave_Selt">
+                    <option value="">所有分类</option>
+                </select>
+            </div>
+            <div cal>
+                <label for="Onsave_Pric1">
+                    价格区间：
+                </label>
+                <input maxlength="50" type="text" id="Onsave_Pric1" maxlin>
+                <label for="Onsave_Pric2">
+                    到
+                </label>
+                <input maxlength="50" type="text" id="Onsave_Pric2">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="Onsave_Brand">
+                    商品品牌：
+                </label>
+                <select name="" id="Onsave_Brand">
+                    <option value="">所有品牌</option>
+                </select>
+            </div>
+            <div>
+                <label for="Onsave_State">商品状态：</label>
+                <select name="Onsave_State" id="Onsave_State">
+                    <option value="">所有分类</option>
+                    <option value="0">下架</option>
+                    <option value="2">强行下架</option>
+                </select>
+            </div>
+        </div>
+        <div class="Onsave_Sear">
+            <a href="###">筛选</a>
+        </div>
+    </div>
+    <div class="Onsave_gods_btm">
+        <table>
+            <thead>
+            <th style="width:1%;" class="Chek_btn">
+                <input type="checkbox">
+            </th>
+            <th style="width:25%;">
+                商品
+            </th>
+            <th style="width:9%;">
+                商品品牌
+            </th>
+            <th style="width:5%;">
+                分类
+            </th>
+            <th style="width:10%;">
+                库存
+            </th>
+            <th style="width:10%;">
+                销量
+            </th>
+            <th style="width:11%;">
+                创建时间
+            </th>
+            <th style="width:9%;">
+                商品状态
+            </th>
+            <th style="width:5%;">
+                备注
+            </th>
+            <th style="width:5%;">
+                操作
+            </th>
+            </thead>
+            <tbody id="Onsave_GodsList">
+
+            </tbody>
+        </table>
+        <div>
+            <div class="action_btn">
+                <input type="checkbox" id="all_selt_save">
+                <label for="all_selt">全选</label>
+                <a href="###" class="gods_putup" id="Onsavegods_putup">
+                    上架
+                </a>
+                <a href="###" class="delet_btn">
+                    删除
+                </a>
+            </div>
+            <div class="pagination"></div>
+        </div>
+    </div>
+</div>
+<script src="js/busi_platform/business/product/onsave_goods.js" type="text/javascript"></script>
+<script src="plugins/jquery.paging.min.js"></script>
+</body>
+</html>
+

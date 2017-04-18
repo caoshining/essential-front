@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/platform_Brand.css">
+    <link rel="stylesheet" href="plugins/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/diyUpload.css">
+</head>
+<body>
+<div>
+
+    <div class="platform_layout">
+        <h5>商品管理>品牌管理>品牌列表</h5>
+        <!--品牌搜索-->
+        <div class="platform_BrandSearch">
+            <label>品牌搜索：<input type="text" id="searchBrand"></label>
+            <span class="brand_search">搜索</span>
+        </div>
+        <!--品牌搜索-->
+
+        <!--品牌列表-->
+        <div class="platform_BrandList">
+            <table id="brand_table" style="width: 100%;">
+                <thead id="tHead">
+                    <tr>
+                        <th style="width: 80px;">品牌名称</th>
+                        <th style="width: 90px;">关联品类</th>
+                        <th>品牌logo</th>
+                        <th style="width: 80px;">一句话描述</th>
+                        <th>关注人数</th>
+                        <th style="width: 100px;">创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="BrandBody"></tbody>
+            </table>
+            <div class="pagination"></div>
+        </div>
+        <!--品牌列表-->
+    </div>
+    <script id="Brand_ListTmpl" type="text/x-jsrender">
+        {{for brandVoList}}
+            <tr data-index="{{:#index}}">
+                <td>{{:brandName}}</td>
+                <td>
+                    {{for brandCategoryVoList}}
+                        {{:categoryName}}
+                    {{/for}}
+                </td>
+                <td><img src="{{:logoPath}}"></td>
+                <td>{{:pageDesc}}</td>
+                <td>{{:collectionCount}}</td>
+                <td>{{:modifyTime}}</td>
+                <td>
+                    <a href="javascript:;" class="checkBrand_details">查看</a>
+                    <br>
+                    <a href="javascript:;" class="editBrand_details">编辑</a>
+                </td>
+            </tr>
+        {{/for}}
+    </script>
+</div>
+
+
+
+
+<!--The plug-in -->
+<script type="text/javascript" src="plugins/diyUpload/js/webuploader.html5only.min.js"></script>
+<script type="text/javascript" src="plugins/diyUpload/js/diyUpload.js"></script>
+
+<script src="plugins/jquery.paging.min.js"></script>
+<!--The plug-in -->
+<script src="js/base_platform/platformBusiness/brandList.js"></script>
+
+</body>
+</html>

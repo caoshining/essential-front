@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_recommend/theme_list.css">
+</head>
+
+<body>
+<div class="themeList">
+    <h5>营销管理>商品推荐专题>专题列表</h5>
+    <div class="themeScreening">
+        <div class="screeningBox">
+            <div class="activityTitle">
+                活动标题：<input type="text" class="title">
+            </div>
+            <div class="activityStatus">
+                活动状态：<select  class="status">
+                    <option value="">全部状态</option>
+                    <option value="1">上线</option>
+                    <option value="0">下线</option>
+                </select>
+            </div>
+            <button class="listScreeningBtn">筛选</button>
+        </div>
+    </div>
+    <table class="themeListBox">
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>活动标题</th>
+                <th>创建人</th>
+                <th>状态</th>
+                <th>创建时间</th>
+                <th>上线时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+           <!-- <tr>
+                <td>001</td>
+                <td>春季出行到底要穿什么</td>
+                <td>Stella</td>
+                <td>上线</td>
+                <td>2016-03-24</td>
+                <td>2016-03-24</td>
+                <td>
+                    <p class="lookTheme">查看</p>
+                    <p class="editor">编辑</p>
+                    <p class="offline">下线</p>
+                </td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>春季出行到底要穿什么</td>
+                <td>Stella</td>
+                <td>上线</td>
+                <td>2016-03-24</td>
+                <td>2016-03-24</td>
+                <td>
+                    <p class="lookTheme">查看</p>
+                    <p class="editor">编辑</p>
+                    <p class="offline">下线</p>
+                </td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>春季出行到底要穿什么</td>
+                <td>Stella</td>
+                <td>上线</td>
+                <td>2016-03-24</td>
+                <td>2016-03-24</td>
+                <td>
+                    <p class="lookTheme">查看</p>
+                    <p class="editor">编辑</p>
+                    <p class="offline">下线</p>
+                </td>
+            </tr>-->
+        </tbody>
+    </table>
+    <div style="text-align: right;margin-top: 10px;"><span class="pagination_span" style="font-size: 12px;margin-right: 10px"></span><div class="pagination1" style="display: inline-block"></div></div>
+</div>
+<script src = "js/common/conf.js"></script>
+<script src="plugins/jquery.paging.min.js"></script>
+<script type="text/javascript" src = "js/base_platform/platform_recommend/theme_list.js"></script>
+</body>
+</html>

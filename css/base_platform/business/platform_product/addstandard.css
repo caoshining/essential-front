@@ -1,0 +1,84 @@
+/*清浮动*/
+.clear:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.clear{
+    zoom: 1;
+}
+.add-standard .first-class{
+    margin-bottom: 20px;
+
+}
+body{
+    font-size: 14px;
+}
+.add-standard h5{
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.first-class .item{
+    width: 130px;
+    line-height: 40px;
+    border: 1px solid #dbdbdb;
+    float: left;
+    margin-left: 27px;
+    text-align: center;
+    cursor: pointer;
+}
+.first-class .selected{
+    background: #3173c1;
+    color: white;
+    border: 1px solid #3173c1;
+}
+.first-class .garment{
+    margin-left: 0;
+}
+.set-standard{
+    border: 1px solid #e0e0e0;
+}
+.set-standard .standard-msg{
+    width: 100%;
+    line-height: 48px;
+
+    border: none;
+    border-bottom: 1px solid  #e0e0e0;
+    padding-left: 20px;
+    background: #eeeeee;
+    color: #6a6a6a;
+    font-size: 14px;
+}
+.add-subtract{
+    padding: 20px 0 20px 20px;
+}
+.add-subtract .import-value{
+    width: 88px;
+    height: 38px;
+    border: 1px solid #dadada;
+    padding: 0 12px;
+}
+.add-subtract button{
+    width: 60px;
+    height: 30px;
+    background: #3173c1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+.add-standard .confirm-box{
+    line-height: 30px;
+    background: #eeeeee;
+    text-align: center;
+    padding: 7px 0;
+}
+.add-standard .confirm{
+    width: 60px;
+    height: 30px;
+    background: #ea0000;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}

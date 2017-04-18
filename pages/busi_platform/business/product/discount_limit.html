@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/busi_platform/business/product/discount_limit.css">
+
+</head>
+<body>
+    <div class="Apply_Market">
+        <h4>应用和营销>限时折扣</h4>
+        <ul>
+            <li class="active">所有促销</li>
+            <li>未开始</li>
+            <li>进行中</li>
+            <li>已结束</li>
+        </ul>
+    </div>
+    <div class="Make_newDiscount">
+        <a href="###" id="Make_new_discount">新建限时折扣</a>
+        <div>
+            <i></i>
+            <input type="text" placeholder="搜索" id="search_discount">
+        </div>
+    </div>
+    <div class="Look_discount">
+        <div class="look_discount_table">
+
+            <table>
+                <thead>
+                    <th>活动名称</th>
+                    <th>有效时间</th>
+                    <th>活动标签</th>
+                    <th>活动状态</th>
+                    <th>操作</th>
+                </thead>
+                <tbody id="look_discount_tables">
+
+                </tbody>
+            </table>
+            <div class="discount_total_cont">
+                <div class="look_total_content">
+                    <span id="look_total_pages"></span>
+                    <span id="look_each_total"></span>
+                </div>
+                <div class="pagesContent look_total_content">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="Set_discount">
+        <p>设置限时折扣</p>
+        <div class="Set_Infm">
+            <ul>
+                <li>活动信息</li>
+                <li>
+                    <label for="">
+                        <i>*</i>
+                        活动名称：
+                    </label>
+                    <input type="text" id="discount-input-name" data-promotionId="" placeholder="填写活动名称">
+                </li>
+                <li>
+                    <label for="">
+                        <i>*</i>
+                        生效时间：
+                    </label>
+                    <input type="text" placeholder="" id="discount-input-time1" >
+                    <label for="">至</label>
+                    <input type="text" id="discount-input-time2" >
+                </li>
+                <li>
+                    <label for="">
+                        <i style="visibility: hidden;">*</i>
+                        活动标签：
+                    </label>
+                    <input type="text" placeholder="" id="discount-input-tag">
+                </li>
+                <li>
+                    <p>活动期间展示于商品于商品详情的价格旁边，2至5个字符。</p>
+                </li>
+            </ul>
+        </div>
+        <div class="Sel_Gods">
+            <p>选择活动商品</p>
+            <ul id="discount_sel_gods">
+                <li class="active">选择商品</li>
+                <li>设置折扣</li>
+            </ul>
+            <div class="Sel_Gods_Detail">
+                <div class="Sel_Gods_look">
+                    <div style="overflow: hidden;">
+                        <span class="fl">
+                            <label for="">
+                                商品名称：
+                            </label>
+                            <input type="text" data-name="gods_name">
+                            <label for="">
+                                商品编码：
+                            </label>
+                            <input type="text" data-name="gods_code">
+                            <a href="###" data-action="search_btn">搜索</a>
+                        </span>
+                    </div>
+                    <div class="discount_limit_table" id="discount_limit_table1">
+
+                    </div>
+                    <div class="discount_table_btm">
+                        <div class="fl">
+                            <input type="checkbox" id="discout_all_join">
+                            <label for="">全选</label>
+                            <a href="###" id="manyGodsAttend">批量参加</a>
+                        </div>
+                        <div class="fr" id="page_cont">
+                            <div id="pageTotal">
+                                <span id="total_pages"></span>
+                                <span id="each_total"></span>
+                                <div class="pagination"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="Sel_Gods_add">
+                    <div>
+                        <div class="fl">
+                            <p class="fl">批量设置：</p>
+                            <span class="Set_Right_cancle fl">
+                                <label for="">
+                                    <input type="text" id="allDiscountInput">
+                                    折
+                                </label>
+                                <a href="###" market-data-act="save">
+                                    保存
+                                </a>
+                                <a href="###" market-data-act="cancle">
+                                    取消
+                                </a>
+                            </span>
+                            <a href="###" class="fl" market-data-act="discount">折扣</a>
+                        </div>
+                    </div>
+                    <div class="discount_limit_table discount_div_change">
+                        <table style="width:100%;">
+                            <thead>
+                                <th style="width: 45%;">商品信息</th>
+                                <th style="width: 15%;">原价</th>
+                                <th style="width: 15%;">折扣</th>
+                                <th style="width: 15%;">活动价</th>
+                                <th style="width: 18%;">操作</th>
+                            </thead>
+                            <tbody id="discount_limit_change">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="discount_table_btm">
+                        <div class="fl">
+                            <input type="checkbox" id="discout_all_reback">
+                            <label for="discout_all_reback">全选</label>
+                            <a href="###" id="all_reback">批量撤销</a>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="discount_next_step">
+                <a href="#" discount-next="0">
+                    下一步
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!--新建选择商品模板-->
+<script id="seletGodsTmpl" type="text/x-jsrender">
+{{for promotionProductVoList}}
+    <tr data-type-productOrShopId='{{:productId}}'>
+        <td>
+            {{if producteStatusName == "该商品已参加其他活动"}}
+                <input type='checkbox' class='checkbtn' disabled="disabled">
+                {{else producteStatusName == "已参加"}}
+                     <input type='checkbox' class='checkbtn' disabled="disabled">
+                {{else}}
+                    <input type='checkbox' class='checkbtn' >
+            {{/if}}
+            <figure>
+                <img src="{{:path}}" action-name='img' />
+                <figcaption action-name='article_number'>
+                    {{:articleNumber}}
+                </figcaption>
+            </figure>
+            <dl>
+                <dt action-name='product_name'>
+                    {{:productName}}
+                </dt>
+                <dd action-name='price'>
+                    {{:costPrice}}
+                </dd>
+            </dl>
+        </td>
+        <td action-name='stock'>
+            {{:stock}}
+        </td>
+        <td market-status="{{:promotionType}}">
+            {{if producteStatusName === "该商品已参加其他活动"}}
+                    <p>该商品已参加其他活动</p>
+                {{else producteStatusName === "已参加"}}
+                    <a href="###"  class="have_add">已参加</a>
+                    <!--<a href='###' class='cancle_discount'>取消参加折扣</a>-->
+                {{else producteStatusName ===null}}
+                    <a href="###" class="add_discount">
+                        参加折扣
+                    </a>
+            {{/if}}
+        </td>
+    </tr>
+{{/for}}
+</script>
+
+<!--新建设置商品模板-->
+<script id="setGodsTmpl" type="text/x-jsrender">
+{{for info}}
+    <tr productOrShopId='{{:productId}}' productRomotionId='{{:productRomotionId}}'>
+        <td>
+            <input type='checkbox'>
+            <figure>
+                <img src="{{:path}}" action-name='img' />
+                <figcaption setaction-name='article_number'>
+                    {{:articleNumber}}
+                </figcaption>
+            </figure>
+            <dl>
+                <dt setaction-name='product_name'>{{:productName}}</dt>
+                <dd setaction-name='stock'>库存：{{:stock}}</dd>
+            </dl>
+        </td>
+        <td setaction-name='price'>
+            {{:costPrice}}
+        </td>
+        <td setaction-name='discout' >
+            <input type='text' maxlength='' class='input_discout' value='{{:discountPercent}}'>折
+        </td>
+        <td setaction-name='discoutprice'>
+            <div>
+                <i>￥</i>
+                <input type='text' style='width:50%;' class='input_discout_price' value='{{:discountMoney}}'>
+            </div>
+        </td>
+        <td >
+            <a href='###' class="cancle_discount" action-btn='edit_cancle' data-promotionType='{{:promotionType}}'>撤销</a>
+        </td>
+    </tr>
+{{/for}}
+</script>
+
+<!--编辑活动时商品列表模板-->
+<script id="editGodsTmpl" type="text/x-jsrender">
+{{for promotionProductList}}
+    <tr productOrShopId='{{:productId}}' productRomotionId='{{:productRomotionId}}'>
+        <td>
+            <input type='checkbox'>
+            <figure>
+                <img src="{{:path}}" action-name='img' />
+                <figcaption setaction-name='article_number'>
+                    {{:articleNumber}}
+                </figcaption>
+            </figure>
+            <dl>
+                <dt setaction-name='product_name'>{{:productName}}</dt>
+                <dd setaction-name='stock'>库存：{{:stock}}</dd>
+            </dl>
+        </td>
+        <td setaction-name='price'>
+            {{:costPrice}}
+        </td>
+        <td setaction-name='discout' >
+            <input type='text' maxlength='' class='input_discout' value='{{:discountPercent}}'>折
+        </td>
+        <td setaction-name='discoutprice'>
+            <div>
+                <i>￥</i>
+                <input type='text' style='width:50%;' class='input_discout_price' value='{{:discountPrice}}'>
+            </div>
+        </td>
+        <td >
+            <a href='#' class="edit_cancle" action-btn='edit_cancle' data-promotionType='{{:promotionType}}'>撤销</a>
+        </td>
+    </tr>
+{{/for}}
+</script>
+
+<!--活动列表模板-->
+<script id="discountTableTmpl" type="text/x-jsrender">
+{{for promotionAutoList}}
+    <tr>
+        <td width="10%" class="order_shop">
+            {{:promotionName}}
+        </td>
+        <td width="32%">
+             <time>{{:startTime}}</time>至  <time>{{:endTime}}</time>
+        </td>
+        <td width="10%" style="text-align:center;">
+               <button class="discount_tag">{{:tag}}</button>
+        </td>
+        <td width="10%">
+                {{if promotionStatus==0}}
+                        未开始
+                    {{else promotionStatus===1}}
+                        进行中
+                    {{else promotionStatus===2}}
+                        已结束
+                {{/if}}
+        </td>
+        <td width="20%">
+            <a href="#"  class="edit_promotion" data-btn-action="edit" data-promotionid="{{:promotionId}}">编辑</a>
+            <span>-</span>
+            {{if isValidate==1}}
+                <a href="#"  >已失效</a>
+                {{else}}
+                <a href="#" data-btn-action="invalid" data-promotionid="{{:promotionId}}">使失效</a>
+            {{/if}}
+            <span>-</span>
+            <a href="#" data-btn-action="delet" data-promotionid="{{:promotionId}}">删除</a>
+        </td>
+    </tr>
+{{/for}}
+</script>
+<script src="js/busi_platform/business/product/discountLimit.js"></script>
+<!--<script src="js/busi_platform/business/product/discount_limit.js"></script>-->
+<script src="plugins/jquery.paging.min.js"></script>
+</body>
+</html>

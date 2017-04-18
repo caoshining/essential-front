@@ -1,0 +1,64 @@
+.set_index{
+    background: white;
+    min-height: 400px;
+    position: relative;
+    margin-top: 20px;
+}
+#single_set h4{
+    position: absolute;
+    top: -20px;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.set_index_action{
+    position: absolute;
+    left: 33%;
+    right: 33%;
+    margin: 12% auto;
+    top: 0;
+    text-align: center;
+    font-size: 18px;
+}
+.set_index_action div{
+    overflow: hidden;
+    margin-top: 25px;
+}
+.set_content{
+    position: absolute;
+    left: 33%;
+    right: 33%;
+    margin: 12% auto;
+    top: 0;
+    text-align: center;
+    font-size: 18px;
+}
+.set_content label{
+    position: relative;
+}
+
+.set_getAuthcode{
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+#Set_modificationCode,#Set_unwrapPhone{
+    font-size: 16px;
+    display: block;
+    padding: 5px 25px;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.set_unwrap,.set_changecode,
+#set_unwrap_step1,#set_unwrap_step2,
+#set_changecode_step1,#set_changecode_step2{
+    display: none;
+}
+#set_changecode_phone2{
+    margin-left: 28px;
+}

@@ -1,0 +1,21 @@
+/*清浮动*/
+.clear:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.clear{
+    zoom: 1;
+}
+button{
+    width: 60px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    background: red;
+    color: white;
+}
+h5{
+    font-weight: bold;
+    margin-bottom: 12px;
+}

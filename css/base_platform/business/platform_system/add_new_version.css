@@ -1,0 +1,66 @@
+.add_version{
+    width: 100%;
+}
+h5{
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.add_version .content{
+    display: inline-block;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    padding: 20px 200px;
+}
+.add_version td{
+    height: 50px;
+}
+.add_version .version_number{
+    width: 198px;
+    height: 36px;
+    border:1px solid #ccc;
+    border-radius: 5px !important;
+}
+.add_version .New_features{
+    width: 266px;
+    height: 200px;
+    border:1px solid #ccc;
+    border-radius: 5px !important;
+    max-width: 266px;
+    max-height: 200px;
+}
+.add_version .upload,.content .Select_file,.add_version .submit_content{
+    width: 66px;
+    height: 30px;
+    border: none;
+    background: #2e71bf;
+    color: white;
+    border-radius: 6px !important;
+}
+.add_version .Select_file{
+    position: absolute;
+    top: -19px;
+}
+#file{
+    height: 30px;
+    width: 70px;
+    position: absolute;
+    top: -10px;
+    opacity: 0;
+}
+.add_version .file_box{
+    display: inline-block;
+    position: relative;
+    margin-right: 140px;
+}
+.add_version p{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.add_version table td{
+    border: none;
+}
+/*
+.parentFileBox>.fileBoxUl>li{
+    margin-left: -40px;
+}*/

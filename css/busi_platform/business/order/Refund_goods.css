@@ -1,0 +1,223 @@
+*{
+    margin:0;padding: 0;}
+ul li{list-style: none;}
+.fl{
+    float: left;}
+.fr{
+    float: right;}
+
+#RefundGods_Manage{
+    width:100%;
+    padding:0 20px;
+    font-family: "微软雅黑";;
+}
+
+/*订单*/
+#RefundGods_Manage .RefundGods_content .RefundGods_content_r{
+    width:100%;
+    min-height:300px;
+    background: #fff;
+    padding:0 20px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+/*订单筛选*/
+#RefundGods_Manage .RefundGods_content_r .search_RefundGods{
+    width:100%;
+    min-height: 230px;
+    background: #eeeeee;
+    padding:28px 30px;
+    margin-bottom: 20px;
+}
+#RefundGods_Manage .search_RefundGods span{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+#RefundGods_Manage .search_RefundGods span input{
+    background: #fff;
+    border: 1px #ddd solid;
+    height:40px;
+    -webkit-border-radius:6px !important;
+    -moz-border-radius:6px !important;
+    border-radius:6px !important;
+}
+
+#RefundGods_Manage .search_RefundGods span .ipt{
+    width: 200px;
+    margin-left: 14px;
+}
+
+#RefundGods_Manage .search_RefundGods span .time{
+    width:90px;
+}
+#RefundGods_Manage .search_RefundGods select{
+    width:200px;
+    height: 40px;
+    background: #fff;
+    border:1px #ddd solid;
+    -webkit-border-radius:6px !important;
+    -moz-border-radius:6px !important;
+    border-radius:6px !important;
+}
+#RefundGods_Manage .search_RefundGods span:nth-of-type(even){
+    margin-left: 70px;
+}
+
+#RefundGods_Manage .search_RefundGods  a.ipts{
+    display: inline-block;
+    margin-left: 10px;
+}
+#RefundGods_Manage .search_RefundGods  a.ipts:nth-of-type(2){
+    margin-left: 14px;
+}
+
+#RefundGods_Manage .search_RefundGods .RefundGods_filter{
+    display: block;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    background: red;
+    border-radius:5px;
+    margin:10px auto 0;
+    border: none;
+    color: #fff;
+}
+#RefundGods_Manage .search_RefundGods a.RefundGods_filter:hover{
+    text-decoration: none;
+}
+
+/*订单导航*/
+
+#RefundGods_Manage  ul li a{
+    color: #333;
+    padding:8px 11.2px;
+    height: 50px;
+    text-align: center;
+    border:1px #ccc solid;
+    cursor: pointer;
+    font-size: 14px;
+    border-bottom:0;
+    box-shadow: none;
+    border-right: 0;
+}
+#RefundGods_Manage  ul li a:nth-of-type(10){
+    border-right: 1px #eee solid;
+}
+#RefundGods_Manage  ul li.active a{
+    box-shadow: none;
+    border-bottom: 0;
+    background: #ffffff;
+    font-weight: 600;
+}
+#RefundGods_Manage h5{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 900;
+}
+#RefundGods_Manage .RefundGods_content_r .nav-tabs{
+    border-bottom: 0;
+    border-right: 1px #ccc solid;
+}
+
+
+/*订单列表*/
+#RefundGods_Manage .tab-content .RefundGods{
+    width:103%;
+}
+#RefundGods_Manage .RefundGods .tabs{
+    width:100%;
+    margin-bottom: 10px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+#RefundGods_Manage .RefundGods .tabs thead tr:nth-of-type(1) th{
+    height:20px;
+    border:0;
+}
+#RefundGods_Manage .RefundGods .tabs thead tr:nth-of-type(3) th{
+    height:10px;
+    border:0;
+}
+#RefundGods_Manage .RefundGods .tabs thead tr:nth-of-type(2) th{
+    border:0;
+    background: #eee;
+    text-align: center;
+    height:50px;
+}
+#RefundGods_Manage .RefundGods .tabs tr.order_title{
+    background: #eee;
+    height: 40px;
+    border-bottom: 0;
+}
+#RefundGods_Manage .RefundGods .tabs tbody td{
+    border:1px #ddd solid;
+    text-align: center;
+    border-top: 0;
+    border-left: 0;
+}
+
+#RefundGods_Manage .RefundGods .tabs tbody a.details{
+    font-size: 12px;
+}
+
+/*取消订单*/
+#RefundGods_Manage .RefundGods .tabs tbody .cancel{
+    display: block;
+    background: #fff;
+    border:1px #ddd solid;
+    width: 70px;
+    padding:3px;
+    margin:0 auto;
+}
+a:hover{
+    text-decoration: none;
+}
+
+#RefundGods_Manage .RefundGods_image{
+    width:80px;
+    height:80px;
+}
+#RefundGods_Manage .RefundGods .tabs tbody td.RefundGods_shop{
+    padding:5px 3px 5px 8px;
+    text-align: left;
+}
+#RefundGods_Manage .RefundGods .tabs tbody td.RefundGods_shop p a{
+    display: inline-block;
+    width:120px;
+    font-size: 12px;
+    color: #333;
+    margin-left: 10px;
+}
+#RefundGods_Manage .RefundGods .tabs tbody td.RefundGods_shop p a span{
+    display: block;
+}
+#RefundGods_Manage .RefundGods .tabs tbody td.RefundGods_shop p a span:nth-of-type(2){
+    color: #999;
+}
+
+.wizard-steps li.error:before{
+    border-color: red;
+}
+.wizard-steps li.error .step{
+    border-color: red;
+    background: red;
+    color: white;
+}
+.wizard-steps li.error:after{
+    border-color:#ced1d6;
+}
+
+#RefundGods_Manage  .pagination{
+    float: right;
+    margin: 10px 0;
+}
+#RefundGods_Manage .RefundGodsexcel_content{
+    overflow: hidden;
+}
+#RefundGods_Manage .RefundGods_Make_excel{
+    float: right;
+    margin: 10px;
+    text-decoration: none;
+}
+

@@ -1,0 +1,60 @@
+.create_coupon_box{
+    width: 100%;
+}
+.create_coupon input{
+    width: inherit;
+}
+.create_coupon_box .create_coupon{
+    width: 100%;
+}
+.create_coupon td{
+    border: none;
+    padding: 5px 0;
+    font-size: 14px;
+}
+.create_coupon td:nth-child(n){
+    text-align: right;
+    padding-right: 5px;
+}
+.create_coupon td:nth-child(2n){
+    text-align: left;
+}
+.create_coupon .coupon_name{
+    width: 130px;
+    height: 26px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.create_coupon .time_f,.create_coupon .time_t{
+    width: 70px;
+    height: 26px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.create_coupon .meet,.create_coupon .amount{
+    width: 50px;
+    height: 26px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.create_coupon .conversion_code{
+    width: 112px;
+    height: 26px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.btn_group{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.btn_group button{
+   width: 72px;
+    height: 32px;
+    background: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:0 50px;
+}

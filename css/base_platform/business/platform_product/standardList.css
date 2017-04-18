@@ -1,0 +1,132 @@
+
+/*清浮动*/
+.clear:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.clear{
+    zoom: 1;
+}
+.standard-list{
+    width: 100%;
+}
+body{
+    font-size: 14px;
+}
+.standard-list h5{
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.standard-list h6{
+    margin: 0;
+    margin-bottom: 13px;
+}
+.list-con{
+    width: 100%;
+    border: 1px solid #dbdbdb;
+}
+.list-con .standard-nav{
+    margin-bottom: 20px;
+}
+.standard-nav .item{
+    width: 20%;
+    line-height: 48px;
+    border-left: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 14px;
+    float: left;
+    text-align: center;
+    cursor:pointer;
+    background: #eeeeee;
+}
+.standard-nav .selected{
+    background: white;
+    border: none;
+    border-left: 1px solid #dbdbdb;
+}
+.standard-nav .garment{
+    border-left: none;
+}
+.commodity-size{
+    width: 100%;
+    display: none;
+}
+.commodity-size .size-title{
+    line-height: 48px;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    background: #eeeeee;
+    padding: 0 19px;
+}
+.commodity-size .size-title-name{
+    float: left;
+}
+.commodity-size .unfold-hide{
+    float: right;
+    background: url("../../../../images/base_platform/size-up.gif") no-repeat 0 center;
+    padding-left: 24px;
+}
+.commodity-size .Hide{
+    background: url("../../../../images/base_platform/size-down.gif") no-repeat 0 center;
+}
+.standard-list .size-value{
+    padding-top: 20px;
+    padding-left: 5px;
+    display: none;
+}
+.size-value a{
+    float: left;
+    width: 88px;
+    line-height: 38px;
+    text-align: center;
+    border:1px solid #e0e0e0;
+    margin:0 40px 40px 0;
+}
+.size-value .import-size{
+    text-align: center;
+    border:1px solid #e0e0e0;
+    width: 88px;
+    height: 40px;
+    padding: 12px;
+    margin:0 40px 40px 0;
+    font-size: 14px;
+    display: none;
+    cursor: pointer;
+    float: left;
+}
+.size-value .add-size{
+    text-align: center;
+    border:1px solid #e0e0e0;
+    margin:0 40px 40px 0;
+    width:60px;
+    float: left;
+    line-height: 38px;
+    background: #3173c1;
+    color: white;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    cursor: pointer;
+}
+.size-value .enter{
+   display: none;
+}
+.standard-list .standard-input{
+    width: 180px;
+    border-radius: 5px !important;
+    display: none;
+    padding-left: 10px;
+}
+.standard-list .standard-enter,.standard-list .standard-cancel{
+    display: inline-block ;
+    width: 78px;
+    line-height: 30px;
+    background: #3173c1;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+    color: white;
+}

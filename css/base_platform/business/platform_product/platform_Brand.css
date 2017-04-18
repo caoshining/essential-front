@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.platform_layout{
+    width:100%;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    padding:0 20px;
+}
+.platform_layout h5{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+/*品牌搜索*/
+.platform_layout .platform_BrandSearch{
+    width:100%;
+    height:96px;
+    background: #eee;
+    margin-bottom: 20px;
+    padding:28px 40px;
+}
+
+.platform_layout .platform_BrandSearch label input{
+    border:1px #ddd solid;
+    height:40px;
+    width:200px;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+}
+.platform_layout .platform_BrandSearch span{
+    display: inline-block;
+    width:60px;
+    line-height: 30px;
+    height:30px;
+    background: #3b97d7;
+    color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+/*品牌搜索*/
+
+/*品牌列表*/
+.platform_layout .platform_BrandList table th{
+    text-align: center;
+    height: 50px;
+ }
+.platform_layout .platform_BrandList table td{
+    text-align: center;
+    border: 0;
+    height:70px;
+}
+.platform_layout .platform_BrandList table td img{
+    width:48px;
+    height:48px;
+}
+.platform_layout .platform_BrandList table tr{
+    border-right: 1px #eee solid;
+    border-left: 1px #eee solid;
+    border-bottom: 1px #eee solid;
+}
+.platform_layout .platform_BrandList table span.checkStyle{
+    display: block;color: #00b7ee;
+    cursor: pointer;
+}
+.platform_layout .platform_BrandList table span.checkStyle:hover{
+    color: #0b6cbc;
+}
+.platform_layout .platform_BrandList table thead{
+    background: #eee;
+}
+.platform_layout .platform_BrandList table thead th{
+    border:0;
+}
+.platform_layout .platform_BrandList table .ImgSize{
+    width:50px;
+    height:50px;
+}
+
+/*分页*/
+.pages{
+    margin:0 2px;
+}
+.pagination{
+    float: right;
+}
+
+/*审核品牌列表*/
+.Audit_List{
+    width:100%;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    padding:0 20px;
+}
+.Audit_List h5{
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+.Audit_List table td{
+    border:0;
+    text-align: center;
+}
+.Audit_List table thead th{
+    border:0;
+    height:50px;
+    background: #eee;
+    text-align: center;
+}
+.Audit_List table tr{
+    border-right: 1px #eee solid;
+    border-left: 1px #eee solid;
+    border-bottom: 1px #eee solid;
+}
+
+/*热门品牌样式添加*/
+.HotBrand_List{
+    width:100%;
+    padding:0 20px;
+    margin-bottom: 20px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.HotBrand_List h5{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.HotBrand_List .WhetherIf{
+    width:100%;
+    min-height:50px;
+    clear: both;
+    overflow: hidden;
+
+}
+.HotBrand_List .WhetherIf li{
+    float: left;
+    width:92px;
+    text-align: center;
+    position: relative;
+    min-height:130px;
+    margin-right:16px;
+}
+
+.HotBrand_List .WhetherIf li img{
+    width:90px;
+    height: 90px;
+    border:1px #eee solid;
+
+}
+.HotBrand_List .WhetherIf li span{
+    color: #333;
+}
+.HotBrand_List .WhetherIf li:last-child{
+    margin-right: 0;
+}
+
+.HotBrand_List .WhetherIf li span:nth-of-type(2){
+    display: none;
+    width:78px;
+    height:78px;
+    position: absolute;
+    left:2px;  top:2px;
+    background: #000;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    opacity:0.6;line-height: 78px;color: #fff;
+    cursor: pointer;
+}

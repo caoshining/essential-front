@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/busi_platform/business/order/orders.css">
+</head>
+<body>
+<div id="Refund_money_checkOrder_Info">
+</div>
+<script type="text/x-jsrender" id="Refund_OrderMessage_Tmple">
+        <!--订单流程-->
+        <div class="OrderProcess" id="fuelux-wizard">
+            <ul class="wizard-steps refund-details">
+                <li class="active">
+                    <span class="wizeard-Top">买家提交退款申请</span>
+                    <span class="step">1</span>
+                    <span class="title"><time>{{:createTime}}</time></span>
+                </li>
+                <li>
+                    {{if returnRefundLatestStatus==2}}
+                        <span class="wizeard-Top">商家驳回退款申请</span>
+                    {{/if}}
+                    {{if returnRefundLatestStatus!=2}}
+                        <span class="wizeard-Top">商家同意退款申请</span>
+                    {{/if}}
+                    <span class="step">2</span>
+                    <span class="title"><time></time></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">平台同意申请付款</span>
+                    <span class="step">3</span>
+                    <span class="title"><time></time></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">退款完成</span>
+                    <span class="step">4</span>
+                    <span class="title"><time></time></span>
+                </li>
+            </ul>
+        </div>
+            <!--订单流程-->
+            <!--订单信息-->
+        <div class="Order_Messages">
+            <div class="fl OrderDetail_Messages">
+                <div>
+                    <h4>退款信息</h4>
+                    <span>申请退货时间：<time>{{:createTime}}</time></span>
+                    <span>退款金额：￥{{:refundTotalMoney}}</span>
+                    <span data-Order="{{:returnRefundOrderId}}" class="Refund_Mony_order">退款单号：{{:returnRefundOrderNumber}}</span>
+                    <span>退款理由：{{:returnRefundAttr1}}</span>
+                    {{if returnRefundStatusItemId!=8&&picIdentity==1}}
+                        <a href="plugins/lookimage/index.html?returnRefundOrderId={{:returnRefundOrderId}}" target="view_window" href="###" data-img="{{:returnRefundOrderId}}" id="refundorder_look_img">查看图片</a>
+                    {{/if}}
+                </div>
+                <div>
+                    <h4>订单信息</h4>
+                    <span >订单编号：{{:orderNumber}}</span>
+                    <span>成交时间：<time>{{:modifyTime}}</time></span>
+                    <span>收件人：{{:addresse}}</span>
+                    <span>联系电话：{{:userPhone}}</span>
+                    <span>收货地址：{{:address}}</span>
+                </div>
+            </div>
+            <div class="fl OrderStatus_note">
+                <div class="Order_Status">
+                    <h4>订单状态：
+                        {{if returnRefundLatestStatus==1}}
+                            <span>待商家审核</span>
+                            {{else returnRefundLatestStatus==2}}
+                                <span>商家驳回 </span>
+                            {{else returnRefundLatestStatus==3}}
+                                <span>平台审核中</span>
+                            {{else returnRefundLatestStatus==4}}
+                                <span>平台处理中</span>
+                            {{else returnRefundLatestStatus==5}}
+                                <span>平台驳回</span>
+                            {{else returnRefundLatestStatus==6}}
+                                <span>退款完成</span>
+                            {{else returnRefundLatestStatus==7}}
+                                <span>待买家发货</span>
+                            {{else returnRefundLatestStatus==8}}
+                                <span>待商家收货</span>
+                            {{else returnRefundLatestStatus==9}}
+                                <span>货品驳回</span>
+                        {{/if}}
+                    </h4>
+                    <span></span>
+                    {{if returnRefundLatestStatus===1}}
+                        <a href="###" class="fl" id="Plat_MonyCheck_pass">通过</a>
+                        <a href="###" class="fl" id="Plat_MonyCheck_refuse">驳回</a>
+                    {{/if}}
+                     <!--{{if returnRefundLatestStatus===3}}
+                            <h4>订单状态：<span>{{:returnRefundStatusItemName}}</span></h4>
+                            <a href="###" class="fl" id="Busic_MonCheck_pass">通过</a>
+                            <a href="###" class="fl" id="Busic_MonCheck_refuse">驳回</a>
+                     {{/if}}-->
+                     {{if returnRefundLatestStatus===2}}
+                            <span>驳回理由：{{:returnRefundRejectReason}}</span>
+                     {{/if}}
+
+                </div>
+                <div class="Message_note">
+                    <h4>留言/备注</h4>
+                    <p>买家留言：{{:buyerNote}}</p>
+                    <p>商家备注：{{:returnRefundAttr2}}</p>
+                    <a class="Refundorder_Remark" style="position: absolute;right: 10px;top:10px;">备注</a>
+                </div>
+            </div>
+        </div>
+            <!--订单信息-->
+            <!--订单列表-->
+        <div class="ShopMessage_List">
+                <h5>商品信息</h5>
+            <div class="tab GoodsMessage_List">
+                <table cellspacing="0" cellpadding="0" class="col-lg-12">
+                    <thead>
+                        <tr>
+                            <th class="col-lg-4">商品信息</th>
+                            <th class="col-lg-1">单价</th>
+                            <th class="col-lg-1">数量</th>
+                            <th class="col-lg-1">售后</th>
+                            <th class="col-lg-1">买家</th>
+                            <!--<th class="col-lg-2">订单状态</th>-->
+                            <th class="col-lg-2">退款金额</th>
+                        </tr>
+                    </thead>
+                    <tbody id="GoodsMessage_List">
+                    {{for orderProducts ~length=orderProducts.length ~userNickname=userNickname ~refundTotalMoney=refundTotalMoney ~orderStatus=orderStatus ~returnRefundStatusItemName=returnRefundStatusItemName}}
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src="{{:productPic}}" class="fl order_image">
+                                    <a class="fr" href="javascript:;">
+                                        <span>{{:brandName}}</span>
+                                        <span>{{:productName}}</span>
+                                        <span>{{:productSpecification}}</span>
+                                    </a>
+                                </p>
+                                <p>商品代码:{{:articleNumber}}</p>
+                            </td>
+                            <td>￥{{:productPrice}}</td>
+                            <td>{{:productCount}}</td>
+                            <td>{{:~returnRefundStatusItemName}}</td>
+                            {{if #index===0}}
+                                <td rowspan="{{:~length}}">{{:~userNickname}}</td>
+                                <!--<td rowspan="{{:~length}}">{{:~orderStatusItemName}}</td>-->
+                                <td rowspan="{{:~length}}">￥{{:~refundTotalMoney}}</td>
+                            {{/if}}
+                        </tr>
+                        {{/for}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--订单列表-->
+
+</script>
+<script src="js/busi_platform/business/order/Refund_money_detail.js"></script>
+</body>
+</html>

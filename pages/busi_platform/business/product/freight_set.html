@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/busi_platform/business/product/freight_set.css">
+    <link rel="stylesheet" href="plugins/timeControl/skin/jedate.css">
+</head>
+
+<body>
+<h5>应用和营销>活动邮费设置</h5>
+<div class="Freight_box">
+    <table class="Freight_set">
+        <tbody>
+        <tr>
+            <td width="43%">
+                活动名
+            </td>
+            <td>
+                <input type="text" class="Freight_name" maxlength="10" placeholder="10个字以内">
+            </td>
+        </tr>
+        <!--<tr>-->
+            <!--<td>有效时间</td>-->
+            <!--<td>-->
+                <!--<input type="text" class="time_f" id="Refund_modifyStartTime">至<input type="text" class="time_t" id="Refund_modifyEndTime">-->
+            <!--</td>-->
+        <!--</tr>-->
+        <tr>
+            <td>
+                满
+            </td>
+            <td>
+                <input type="number" class="Freight_totalprice" name="scope">元   免邮费
+            </td>
+        </tr>
+        <tr>
+            <td>活动标签</td>
+            <td>
+                <input type="text" class="Freight_tag" name="coupon_type" >
+            </td>
+        </tr>
+        <tr class="Freight_statusDiv">
+            <td>活动状态:
+            </td>
+            <td class="Freight_status">
+                <span class="Freight_status_p">
+                    失效
+                </span>
+                <button class="Makelose_btn" data-flag="0">使失效</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="btn_group">
+        <button class="save_set" data-id="">保存</button>
+        <button class="cancel_btn">取消</button>
+    </p>
+</div>
+<script src="plugins/jquery.paging.min.js"></script>
+<script type="text/javascript" src="plugins/timeControl/jedate.min.js"></script>
+<script src="js/busi_platform/business/product/freight_set.js"></script>
+</body>
+</html>

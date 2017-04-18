@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/productsList.css">
+</head>
+<body>
+<div class="shopList_layout">
+    <h5>商品管理>商品管理>商品列表</h5>
+    <div class="Product_search">
+        <div>
+            <label>商品名称:<input type="text" id="productsName"></label>
+            <label>商品代码:<input type="text" id="articleNumber"></label>
+            <label>商品分类:<select class="allCategory">
+                    <option value="">所有分类</option>
+                </select>
+            </label>
+            <label>商家名称:<select id="AllShops">
+                    <option value="">所有商家</option>
+                </select>
+            </label>
+            <label>商品品牌:<select class="AllBrands">
+                    <option value="">所有品牌</option>
+                </select>
+            </label>
+            <label>价格区间:<input type="text" class="priceRange" id="firstPrice">
+                到<input type="text" class="priceRange" id="secondPrice">
+            </label>
+            <label>是否自营:<select id="IfSelf">
+                    <option value="">所有状态</option>
+                    <option value="1">是</option>
+                    <option value="0">否</option>
+                </select>
+            </label>
+            <label>商品状态:<select id="shopStatus">
+                    <option value="">所有状态</option>
+                    <option value="1">上线</option>
+                    <option value="0">下线</option>
+                </select>
+            </label>
+        </div>
+        <span class="shopFilter">筛选</span>
+    </div>
+    <div class="productLists">
+        <table>
+            <thead>
+                <tr>
+                    <th>商品信息</th>
+                    <th>商品品牌</th>
+                    <th>分类</th>
+                    <th>商家</th>
+                    <th>库存</th>
+                    <th>销量</th>
+                    <th>创建时间</th>
+                    <th>商品状态</th>
+                    <th>是否自营</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="shopList_Tab"></tbody>
+        </table>
+        <div class="pagination"></div>
+    </div>
+</div>
+<!--商品列表渲染-->
+<script type="text/x-jsrender" id="shopList_Tmp">
+{{for productPlatformList}}
+    <tr data-index="{{:#index}}">
+        <td>
+            <div>
+                <img src="{{:path}}" class="fl">
+                <a class="fl">
+                    <span>{{:productName}}</span>
+                    {{if linkUrl==="1"}}
+                        <span>￥{{:discountPrice}}</span>
+                        <span style="text-decoration: line-through;">￥{{:costPrice}}</span>
+                        <span>折</span>
+                        {{else linkUrl==="0"}}
+                            <span>￥{{:costPrice}}</span>
+                    {{/if}}
+                </a>
+            </div>
+            <p>{{:articleNumber}}</p>
+        </td>
+        <td>{{:brandName}}</td>
+        <td>{{:categoryName}}</td>
+        <td>{{:shopName}}</td>
+        <td>{{:stock}}</td>
+        <td>{{:saleNum}}</td>
+        <td style="width:100px;">{{:createTime}}</td>
+        <td class="productStatusName">{{:productStatusName}}</td>
+        <td>{{:selfName}}</td>
+        <td>
+            <a href="javascript:;" class="checkGodsDetails">查看</a><br/>
+            {{if selfName==="是"}}
+                <a href="javascript:;" class="setProprietary">取消自营</a><br/>
+                {{else selfName==="否"}}
+                <a href="javascript:;" class="setProprietary">设为自营</a><br/>
+            {{/if}}
+
+            <a href="javascript:;" class="forceShelvesBtn">强制下架</a>
+        </td>
+
+    </tr>
+{{/for}}
+</script>
+
+<!--所有品牌-->
+<script type="text/x-jsrender" id="shop_BrandsTmp">
+    {{for brandVoList}}
+        <option value="{{:brandId}}">{{:brandName}}</option>
+    {{/for}}
+</script>
+
+<!--所有分类-->
+<script type="text/x-jsrender" id="shopCategory_Tmp">
+    {{for info}}
+        <option value="{{:categoryId}}">{{:categoryName}}</option>
+    {{/for}}
+</script>
+
+<!--所有商家-->
+<script type="text/x-jsrender" id="shopName_Tmp">
+    {{for info}}
+        <option value="{{:name}}">{{:name}}</option>
+    {{/for}}
+</script>
+
+<script src="js/base_platform/platformBusiness/productsList.js"></script>
+</body>
+</html>

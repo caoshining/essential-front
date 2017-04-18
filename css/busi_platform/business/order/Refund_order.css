@@ -1,0 +1,246 @@
+*{
+    margin:0;padding: 0;}
+ul li{list-style: none;}
+.fl{
+    float: left;}
+.fr{
+    float: right;}
+
+#Refund_Manage{
+    width:100%;
+    padding:0 20px;
+    font-family: "微软雅黑";
+}
+#Refund_Manage h5{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+    /*订单*/
+#Refund_Manage .Refund_content .Refund_content_r{
+    width:100%;
+    min-height:300px;
+    background: #fff;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+/*订单筛选*/
+#Refund_Manage .Refund_content_r .search_Refund{
+    width:100%;
+    min-height: 200px;
+    background: #eeeeee;
+    padding:28px 30px;
+    margin-bottom: 20px;
+}
+#Refund_Manage .search_Refund span{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+#Refund_Manage .search_Refund a.searchTime{
+    display: inline-block;
+    margin-left: 10px;
+}
+#Refund_Manage .search_Refund a.searchTime:nth-of-type(2){
+    margin-left: 14px;
+}
+#Refund_Manage .search_Refund span:nth-of-type(even){
+    margin-left: 70px;
+}
+#Refund_Manage .search_Refund span input{
+    background: #fff;
+    border: 1px #ddd solid;
+    height:40px;
+    -webkit-border-radius:6px !important;
+    -moz-border-radius:6px !important;
+    border-radius:6px !important;
+
+}
+
+#Refund_Manage .search_Refund span .ipt{
+    width: 200px;
+    margin-left: 14px;
+}
+#Refund_Manage .search_Refund span .time{
+    width:90px;
+}
+#Refund_Manage .search_Refund select{
+    width:200px;height: 40px;
+    background: #fff;
+    border:1px #ddd solid;
+    -webkit-border-radius:6px !important;
+    -moz-border-radius:6px !important;
+    border-radius:6px !important;
+}
+#Refund_Manage .search_Refund .Refund_filter{
+    display: block;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    background: red;
+    border-radius:5px;
+    margin:10px auto 0;
+    border: none;
+    color: #fff;
+}
+#Refund_Manage .search_Refund a.Refund_filter:hover{
+    text-decoration: none;
+}
+
+/*订单导航*/
+
+#Refund_Manage  ul li a{
+    color: #333;
+    width:119px;
+    height: 50px;
+    text-align: center;
+    border:1px #ccc solid;
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 14px;
+    border-bottom:0;
+    box-shadow: none;
+}
+#Refund_Manage  ul li.active a{
+    box-shadow: none;
+    border-bottom: 0;
+    background: #ffffff;
+    font-weight: 600;
+}
+#Refund_Manage h5{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 900;
+}
+#Refund_Manage .Refund_content_r .nav-tabs{
+    border-bottom: 0;
+}
+
+
+/*订单列表*/
+#Refund_Manage .tab-content .Refund{
+    width:103%;
+}
+#Refund_Manage .Refund .tabs{
+    width:100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+#Refund_Manage .Refund .tabs tr.order_title{
+    background: #eee;
+    height: 50px;
+}
+#Refund_Manage .Refund .tabs tr.order_title td:nth-of-type(1){
+    text-align:left;
+    padding-left:10px;
+    border-right:0;
+    border-top: 0;
+    border-bottom: 0;
+}
+#Refund_Manage .Refund .tabs tr.order_title td:nth-of-type(1) span:nth-of-type(1){
+    margin-right: 15px
+}
+#Refund_Manage .Refund .tabs tr.order_title td:nth-of-type(2){
+    border-right: 0;
+    text-align: left;
+    border-top: 0;
+    border-bottom: 0;
+}
+#Refund_Manage .Refund .tabs tr.order_title td:nth-of-type(2) a{
+    display: inline-block;
+}
+#Refund_Manage .Refund .tabs tr.order_title td:nth-of-type(2) a:nth-of-type(1){
+    margin:0 16px 0 18px;
+}
+#Refund_Manage .Refund .tabs thead tr th{
+    border:0;
+}
+#Refund_Manage .Refund .tabs thead tr:nth-of-type(1){
+    height:20px;
+    background: #fff;
+}
+#Refund_Manage .Refund .tabs thead tr:nth-of-type(3){
+    height:10px;
+    background: #fff;
+}
+#Refund_Manage .Refund .tabs thead tr:nth-of-type(2) th{
+    text-align: center;
+    height:50px;
+    background: #eee;
+}
+#Refund_Manage .Refund .tabs tbody td{
+    border:1px #ddd solid;
+    text-align: center;
+    border-top: 0;
+    border-left: 0;
+}
+
+#Refund_Manage .Refund .tabs tbody a.details{
+    font-size: 12px;
+}
+
+/*取消订单*/
+#Refund_Manage .Refund .tabs tbody .cancel{
+    display: block;
+    background: #fff;
+    border:1px #ddd solid;
+    width: 70px;
+    padding:3px;
+    margin:0 auto;
+}
+a:hover{
+    text-decoration: none;
+}
+
+#Refund_Manage .Refund_image{
+    width:80px;
+    height:80px;
+}
+#Refund_Manage .Refund .tabs tbody td.Refund_shop{
+    text-align: left;
+}
+#Refund_Manage .Refund .tabs tbody td.Refund_shop p a{
+    display: block;
+    width:130px;
+    color: #333;
+    margin-left: 10px;
+    font-size: 12px;
+}
+#Refund_Manage .Refund .tabs tbody td.Refund_shop p a span{
+    display: block;
+}
+#Refund_Manage .Refund .tabs tbody td.Refund_shop p a span:nth-of-type(2){
+    color: #999;
+}
+
+/*流程样式*/
+.wizard-steps li.error:before{
+    border-color: red;
+}
+.wizard-steps li.error .step{
+    border-color: red;
+    background: red;
+    color: white;
+}
+.wizard-steps li.error:after{
+    border-color:#ced1d6;
+}
+/*流程样式*/
+
+
+
+
+#Refund_Manage  .pagination{
+    float: right;
+    margin: 10px 0;
+}
+#Refund_Manage .Refundorderexcel_content{
+    overflow: hidden;
+}
+#Refund_Manage .Refundorder_Make_excel{
+    float: right;
+    margin: 10px;
+    text-decoration: none;
+}
+

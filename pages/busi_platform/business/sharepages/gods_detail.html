@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="gods_detail.css">
+    <link rel="stylesheet" href="swiper-3.3.1.min.css">
+    <!--<script type="text/javascript" src="spring_com.js"></script>-->
+</head>
+<body>
+    <div id="testApp">
+        <dl>
+            <dt>
+                <img id="gods_logoimg" src="img/logo1.png"  alt="">
+            </dt>
+            <dd id="testApp_title">
+                奕赏
+            </dd>
+            <dd id="testApp_contend">
+                物·质鉴赏家
+            </dd>
+        </dl>
+        <a href="#" id="run_app">
+            下载APP
+        </a>
+
+
+
+    </div>
+    <header>
+        <ul>
+            <li>
+                <a href="#" class="active">商品</a>
+            </li>
+            <li>
+                <a href="#">详情</a>
+            </li>
+            <li>
+                <a href="#">售后</a>
+            </li>
+        </ul>
+    </header>
+
+    <div id="Gods_index">
+        <div id="gods_shop">
+            <!--<dl>
+                <dt>
+
+                </dt>
+                <dd id="gods_shopName">
+
+                </dd>
+                <dd id="gods_shop_descri">
+
+                </dd>
+            </dl>-->
+        </div>
+        <div class="Gods_Infms">
+            <ul>
+                <li>
+                    <h4 id="gods_title">Title位置</h4>
+                </li>
+
+                <li>
+                    <span>￥<a href="###" id="present_price"></a></span>
+                    <span id="discount_type">折扣类型</span>
+                    <span><del class="pasent_price"></del></span>
+                </li>
+
+                <li id="discount_time">
+
+                </li>
+
+                <input type="text" style="display: none;" id="timebox"/>
+
+            </ul>
+        </div>
+        <div class="gods_slet">
+            <a href="###">选择颜色</a>
+            <a href="###">尺码</a>
+            <img src="img/standard_logo.png" alt="">
+        </div>
+
+        <div id="gods_discuss">
+            <h5>商品评论(<i id="commentCount"></i>)</h5>
+            <ul>
+                <li>
+                    <img src="" alt="" class="RecommendComment_Logo">
+                    <p class="RecommendComment_Name"></p>
+                </li>
+                <li>
+                    <p class="RecommendComment_cotent"></p>
+                </li>
+                <li class="color_999">
+                    <span class="RecommendComment_time"></span>
+                    <span class="RecommendComment_color"></span>
+                </li>
+            </ul>
+            <a href="###" class="look_all_discuss">查看所有评论</a>
+
+        </div>
+
+        <div id="relate_gods">
+            <h5>相关商品</h5>
+
+        </div>
+        <div class="footer">
+            <ul>
+                <li>
+                    <i></i>
+                    <a href="###">客服</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="###">收藏</a>
+                </li>
+                <li>
+                    <i></i>
+                    <a href="###">品牌</a>
+                </li>
+                <li>
+                    加入购物袋
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="gods_details">
+
+    </div>
+    <div id="after_sale">
+
+    </div>
+
+<!--    <%
+            if(data.length>0){
+            for(var i=0;i<data.length;i++){
+            var _data = data[i]
+            }
+        }
+    %>
+<div><%= _data.name %></div>
+<span><%= _data.sex %></span>
+<script>
+    _commentBox = document.createElement("div");
+    _templateControl = new $.Base.TemplateBox({
+        template: _template,
+        data: null,
+        box: _commentBox
+    });
+    _contentBox.append(_commentBox);
+</script>-->
+
+<script type="text/javascript" src="zepto.min.js"></script>
+<script type="text/javascript" src="../../../../js/common/conf.js"></script>
+<script type="text/javascript" src="swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript" src="gods_detail.js"></script>
+
+<script>
+    $(document).ready(function(){
+        var productId= GetQueryString("productId");
+        var brandId=GetQueryString("brandId");
+        get_Inms(productId);
+
+    });
+</script>
+</body>
+</html>

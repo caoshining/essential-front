@@ -1,0 +1,79 @@
+
+.discovery_layout{
+    width:850px;
+    padding:0 10px;
+}
+.discovery_layout h3{
+    font-size: 14px;
+}
+.discovery_layout .discoveryContent{
+    width:100%;
+}
+.discovery_layout .discoveryContent .tabUl{
+    width:100%;
+    margin:0 auto;
+}
+.discovery_layout .discoveryContent .tabUl li{
+    width:33%;
+    line-height: 48px;
+    border-left: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 14px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    background: #eeeeee;
+}
+
+.discovery_layout .discoveryContent .tabUl li.selected{
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-bottom: 0;
+}
+/*.content0{*/
+    /*background: white;*/
+    /*border: 1px solid #dbdbdb;*/
+    /*height: 500px;*/
+    /*width: 100%;*/
+    /*padding: 10px;*/
+/*}*/
+
+
+.content1{
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-top: 0;
+    width: 99%;
+    float: left;
+}
+.content2{
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-top: 0;
+    width: 99%;
+    float: left;
+    display: none;
+}
+.content3{
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-top: 0;
+    width: 99%;
+    float: left;
+    display: none;
+}
+#newButton,#saveExternalProduct,#save
+{
+  border-radius: 6px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    background:blue;
+    color: white;
+}
+.content3 ul
+{
+    float: left;
+
+}
+

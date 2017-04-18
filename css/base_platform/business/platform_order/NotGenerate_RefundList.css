@@ -1,0 +1,234 @@
+
+#NotGenerate_layout{
+    width:100%;
+    padding:0 20px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+#NotGenerate_layout h5{
+    font-weight:bold;
+    margin-bottom: 10px;
+}
+#NotGenerate_layout .filterMethod{
+    width:100%;
+    background: #eee;
+    min-height:250px;
+    padding:28px 30px;
+}
+#NotGenerate_layout .filterMethod>div:nth-of-type(1){
+    clear: both;
+    overflow: hidden;
+}
+#NotGenerate_layout .filterMethod label{
+    margin-bottom: 10px;
+}
+#NotGenerate_layout .filterMethod a.nearlyTime{
+    display: inline-block;
+    margin-left: 16px;
+}
+#NotGenerate_layout .filterMethod a.nearlyTime:nth-of-type(2){
+    margin-left: 18px;
+}
+#NotGenerate_layout .filterMethod label.applyTime input{
+    width:86px;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+}
+#NotGenerate_layout .filterMethod label input{
+    width:200px;
+    height:40px;
+    text-align: center;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    margin-left: 14px;
+}
+#NotGenerate_layout .filterMethod label.labFilter:nth-of-type(even){
+    margin-left: 70px;
+}
+#NotGenerate_layout .filterMethod label select{
+    width:200px;
+    height:40px;
+    text-align: center;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    margin-left: 13px;
+}
+#NotGenerate_layout .filterMethod span.RefundOrder_Filter{
+    display: block;
+    width:70px;
+    height:30px;
+    line-height: 30px;
+    background: red;
+    color: #fff;
+    text-align: center;
+    margin:10px auto 0;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    cursor: pointer;
+}
+#NotGenerate_layout .filterMethod span.RefundOrder_Filter:hover{
+    background: crimson;
+}
+
+/*未生成退款单*/
+#NotGenerate_layout .NotGenerate_List{
+    width:100%;
+    margin-top: 20px;
+}
+#NotGenerate_layout .NotGenerate_List table{
+    width:100%;
+    font-family: "微软雅黑";
+    font-size:14px;
+}
+#NotGenerate_layout .NotGenerate_List table thead tr th{
+    border:0;
+    text-align: center;
+    border-right: 1px #eee solid;
+    border-left:1px #eee solid;
+}
+#NotGenerate_layout .NotGenerate_List table thead tr:nth-of-type(1) th{
+    background: #eee;
+    height:40px;
+}
+#NotGenerate_layout .NotGenerate_List table tbody tr:nth-of-type(1) td{
+    border-top: 0;
+}
+#NotGenerate_layout .NotGenerate_List table tbody tr.firstTr{
+    background: #eee;
+    height:35px;
+}
+#NotGenerate_layout .NotGenerate_List table tbody tr.firstTr td:nth-of-type(1){
+    text-align: left;
+    padding-left: 10px;
+}
+#NotGenerate_layout .NotGenerate_List table tbody tr.firstTr td:nth-of-type(1) span{
+    margin-right: 15px;
+}
+#NotGenerate_layout .NotGenerate_List table tbody tr.firstTr td:nth-of-type(2) a{
+    font-size: 12px;
+}
+#NotGenerate_layout .NotGenerate_List table tbody tr.firstTr td:nth-of-type(2) a.checkRefund_Details{
+    margin-right: 14px;
+}
+#NotGenerate_layout .NotGenerate_List table tbody td{
+
+    text-align: center;
+    border: 1px #eee solid;
+}
+#NotGenerate_layout .NotGenerate_List table tbody td:nth-of-type(1){
+    clear: both;
+    overflow: hidden;
+}
+#NotGenerate_layout .NotGenerate_List table tbody td:nth-of-type(1) img{
+    width:50px;
+    height:50px;
+    float: left;
+}
+#NotGenerate_layout .NotGenerate_List table tbody td:nth-of-type(1) a{
+    display: block;
+    float: left;
+    margin-left: 10px;
+    text-align: left;
+    color: #333;
+    font-size: 12px;
+}
+#NotGenerate_layout .NotGenerate_List table tbody td:nth-of-type(1) a span{
+    display: block;
+}
+#NotGenerate_layout .NotGenerate_List table tbody td:nth-of-type(1) a span:nth-of-type(2){
+    color: #999;
+}
+#NotGenerate_layout .NotGenerate_List table tbody td .createRefund_List{
+    display: block;
+    width:80px;
+    padding:3px 5px;
+    margin:3px auto;
+    background: #1a67bd;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/*退款单*/
+.index-tab-cont .create_RefundTmp{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 99;
+    background: #000;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    display: block;
+}
+.create_RefundList{
+    width:400px;
+    height:500px;
+    background: #fff;
+    margin:5% auto;
+    z-index: 100;
+    position: absolute;
+    left:35%;
+    top:5%;
+}
+.create_RefundList h4{
+    width:100%;
+    height:35px;
+    line-height: 35px;
+    background: #eee;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-top: -15px;
+}
+.create_RefundList table{
+    width:100%;
+    font-size: 14px;
+    color: #000;
+}
+.create_RefundList table td{
+    border:0;
+}
+.create_RefundList table>tr td:first-child{
+    text-align: right;
+    width:50%;
+}
+.create_RefundList table>tr td:last-child{
+    text-align: left;
+    width:50%;
+}
+.create_RefundList .createRefund{
+    width:100%;
+    height:50px;
+    background: #eee;
+    text-align: center;
+    line-height: 50px;
+    margin-top:20px;
+}
+.create_RefundList .createRefund span{
+    display: inline-block;
+    width:50px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    cursor: pointer;
+}
+.create_RefundList .createRefund span:nth-of-type(1){
+    background: #f00;
+    color: #fff;
+    margin-right: 20px;
+}
+.create_RefundList .createRefund span:nth-of-type(2){
+    background: #fff;
+    color:#000;
+}
+

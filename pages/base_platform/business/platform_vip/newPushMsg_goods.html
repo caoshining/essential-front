@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="plugins/pagination/pagination_c.css">
+    <link rel="stylesheet" href="plugins/timeControl/skin/jedate.css">
+    <link rel="stylesheet" href="css/base_platform/business/platform_vip/newPushMsg_goods.css">
+<!--    <link rel="stylesheet" href="css/base_platform/business/platform_vip/newPushMsg_goods.css">-->
+</head>
+<body>
+    <div class="new_push_msg">
+        <h5>会员管理>推送消息>新建推送消息</h5>
+        <div class="push_type_change">
+            <table>
+                <tr>
+                    <td>标题：</td>
+                    <td><input  type="text" class="msgContent"></td>
+                </tr>
+                <tr>
+                    <td>消息类型：</td>
+                    <td>
+                        <select class="pushType">
+                            <option value="3">商品</option>
+                            <option value="0">专栏</option>
+                            <option value="1">推荐</option>
+                            <option value="5">品牌</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>创建人：</td>
+                    <td><input  type="text" class="createUser"></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="new_push_msg_goods">
+            <div class="push_screening">
+                <table class="screening_l">
+                    <tr>
+                        <td>商品名称：</td>
+                        <td><input type="text" class="product_name"></td>
+                    </tr>
+                    <tr>
+                        <td>商品分类：</td>
+                        <td>
+                            <select class="product_class">
+                                <option value="">所有分类</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>商品品牌：</td>
+                        <td>
+                            <select class="brand_class" >
+                                <option value="">所有品牌</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>是否自营：</td>
+                        <td>
+                            <select class="link_from">
+                                <option value="">所有状态</option>
+                                <option value="1">是</option>
+                                <option value="0">否</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <table class="screening_r">
+                    <tr>
+                        <td>商家名称：</td>
+                        <td><select class="shop_class">
+                            <option value="">所有商家</option>
+
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>价格区间：</td>
+                        <td>
+                            <input type="text" class="price_d">  到  <input type="text" class="price_g">
+                        </td>
+                    </tr>
+                </table>
+                <button class="screening_button screening_goods">筛选</button>
+            </div>
+            <div class="artiles_list_box">
+
+                <table>
+                    <thead>
+                        <th>商品信息</th>
+                        <th>商品品牌</th>
+                        <th>分类</th>
+                        <th>商家</th>
+                        <th>库存</th>
+                        <th>销量</th>
+                        <th>创建时间</th>
+                        <th>商品状态</th>
+                        <th>是否自营</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: right"><span class="pagination_span" style="font-size: 12px"></span><div class="pagination1"></div></div>
+        </div>
+        <div class="new_push_msg_articles" style="display: none">
+            <div class="push_screening" style="height: 200px">
+                <table class="screening_l">
+                    <tr>
+                        <td>文章标题：</td>
+                        <td><input type="text" class="article_content"></td>
+                    </tr>
+
+                </table>
+                <table class="screening_r">
+                    <tr>
+                        <td>专栏：</td>
+                        <td>
+                            <select class="article_group">
+                                <option value="0">全部专栏</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <button class="screening_button">筛选</button>
+            </div>
+            <div class="artiles_list_box1">
+
+                <table>
+                    <thead>
+                    <th>编号</th>
+                    <th>标题</th>
+                    <th>专栏</th>
+                    <th>文章作者</th>
+                    <th>创建时间</th>
+                    <th>发布时间</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: right"><span class="pagination_span1" style="font-size: 12px"></span><div class="pagination2"></div></div>
+        </div>
+
+        <div class="new_push_msg_brands" style="display: none;">
+            <div class="push_screening" style="height: 100px">
+                <p class="search_box" style="margin-left: 100px">
+                    品牌搜索：<input class="search" type="text">
+                </p>
+            </div>
+            <div class="artiles_list_box2">
+
+                <table>
+                    <thead>
+                    <th>品牌名称</th>
+                    <th>品牌Logo</th>
+                    <th>一句话描述</th>
+                    <th>关注人数</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: right"><span class="pagination_span2" style="font-size: 12px"></span><div class="pagination3"></div></div>
+        </div>
+        <div class="new_push_msg_theme" style="display: none">
+            <div class="push_screening" style="height: 200px">
+                <div class="search_box" style="margin-left: 100px">
+                    <div class="theme_search_title">
+                        标题：<input type="text">
+                    </div>
+                </div>
+
+                <button class="theme_screening">筛选</button>
+            </div>
+            <div class="artiles_list_box3">
+
+                <table>
+                    <thead>
+                        <th>编号</th>
+                        <th>标题</th>
+                        <th>创建人</th>
+                        <th>状态</th>
+                        <th>创建时间</th>
+                        <th>上线时间</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: right"><span class="pagination_span2" style="font-size: 12px"></span><div class="pagination4"></div></div>
+        </div>
+
+    </div>
+
+
+    <div class="send_box"><button class="send_btn">完成并发送</button><button class="cancle">取消</button></div>
+    <script type="text/javascript" src = "js/common/conf.js"></script>
+
+
+    <script src = "js/base_platform/common/base_common.js"></script>
+    <!--<script src="plugins/pagination/jquery.pagination.js"></script>-->
+    <script src="plugins/jquery.paging.min.js"></script>
+    <script type="text/javascript" src="plugins/timeControl/jedate.min.js"></script>
+    <script src = "js/base_platform/platform_vip/newPushMsg_goods.js"></script>
+
+</body>
+</html>

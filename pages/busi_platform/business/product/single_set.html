@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人设置</title>
+    <link href="css/busi_platform/business/product/single_set.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div class="set_index">
+    <h4>
+        设置>账号设置
+    </h4>
+    <div class="set_index_action">
+        <p>
+            登录手机号
+            <span id="phone_number"></span>
+        </p>
+        <div>
+
+            <a href="#" id="Set_modificationCode" class="fl">
+                修改密码
+            </a>
+
+            <a href="#" id="Set_unwrapPhone" class="fr">
+                解绑手机号
+            </a>
+
+        </div>
+    </div>
+    <div class="set_unwrap">
+        <div id="set_unwrap_step1">
+            <h4>
+                设置>账号设置>解绑手机号
+            </h4>
+            <div class="set_content">
+                <label>
+                    <i>*</i>
+                    登录手机号
+                    <input type="tel" id="set_unwrap_phone1" disabled="disabled">
+                </label>
+                <label>
+                    <i>*</i>
+                    短信验证码
+                    <input type="tel" placeholder="6位数字" id="set_unwrap_code" >
+                    <a href="#" class="set_getAuthcode">获取</a>
+                </label>
+                <div>
+                    <a href="#" id="Set_unwrap_next">
+                        下一步
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="set_unwrap_step2">
+            <h4>
+                设置>账号设置>解绑手机号
+            </h4>
+            <div class="set_content">
+                <label>
+                    <i>*</i>
+                    登录手机号
+                    <input type="tel" id="set_unwrap_phone2">
+                </label>
+                <label>
+                    <i>*</i>
+                    短信验证码
+                    <input type="tel" placeholder="6位数字" id="set_unwrap_code2">
+                    <a href="#" class="set_getAuthcode">获取</a>
+                </label>
+                <div>
+                    <a href="#" id="Set_unwrap_right">
+                        确认修改
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="set_changecode">
+        <div id="set_changecode_step1">
+            <h4>
+                设置>账号设置>修改密码
+            </h4>
+            <div class="set_content">
+                <label>
+                    <i>*</i>
+                    登录手机号
+                    <input type="tel" id="set_changecode_phone1" disabled="disabled">
+                </label>
+                <label>
+                    <i>*</i>
+                    短信验证码
+                    <input type="tel" placeholder="6位数字" id="set_changecode_code1">
+                    <a href="#" class="set_getAuthcode">获取</a>
+                </label>
+                <div>
+                    <a href="#" id="Set_change_next">
+                        下一步
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="set_changecode_step2">
+            <h4>
+                设置>账号设置>修改密码
+            </h4>
+            <div class="set_content">
+                <label>
+                    <i>*</i>
+                    手机号
+                    <input type="tel" disabled="disabled" id="set_changecode_phone2">
+                </label>
+                <label>
+                    <i>*</i>
+                    输入旧密码
+                    <input type="tel" id="set_old_pawsds">
+                </label>
+                <label>
+                    <i>*</i>
+                    设置新密码
+                    <input type="tel" id="set_new_pawsds1">
+                </label>
+                <label>
+                    <i>*</i>
+                    确认新密码
+                    <input type="tel" id="set_new_pawsds2">
+                </label>
+                <div>
+                    <a href="#" id="Set_changecode_right">
+                        确认修改
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/busi_platform/business/product/single_set.js"></script>
+</body>
+</html>

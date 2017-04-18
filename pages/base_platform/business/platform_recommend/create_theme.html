@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_recommend/create_theme.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/diyUpload.css">
+    <script type="text/javascript" src="plugins/diyUpload/js/webuploader.html5only.min.js"></script>
+    <script type="text/javascript" src="plugins/diyUpload/js/diyUpload.js"></script>
+</head>
+
+<body>
+<div class="createTheme">
+    <h5>营销管理>商品推荐专题>新建专题</h5>
+    <div class="createThemeBox">
+        <div class="createThemeTab clear">
+            <span class="selected">基本信息</span>
+            <span>相关商品</span>
+        </div>
+        <div class="goCreateTheme">
+            <table class="editorBox">
+                <tr>
+                    <td>创建人</td>
+                    <td>
+                        <input class="CreateThemeAuthor" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>标题</td>
+                    <td>
+                        <input class="CreateThemeTitle" placeholder="15字以内"" maxlength="15">
+                    </td>
+                </tr>
+                <tr>
+                    <td>样式选择</td>
+                    <td>
+                        <label><input type="radio" name="radioChoose" class="showStyle1" value="1" checked = checked>封面图</label>
+                        <label><input type="radio" name="radioChoose" class="showStyle2" value="2">封面图+简介</label>
+                        <label><input type="radio" name="radioChoose" class="showStyle3" value="3">封面图+产品</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>封面图</td>
+                    <td >
+<!--
+                        <img src="images/base_platform/fengmiantu.jpg" class="fengmiantu">
+-->
+                        <div id="addbrand_img2" class="fl">
+                            <img style="width:244px;height:128px;" src="" alt="" class="showImg1"/>
+                            <div id="addbrand_img3" ></div>
+                        </div>
+                        <div style="clear:both;overflow:hidden;"></div>
+                        <ul style="display: inline-block">
+                            <li>请上传jpg,jpeg,bmp,png格式</li>
+                            <li>文件大小小于1M;尺寸750*400</li>
+
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>简介</td>
+                    <td>
+                        <textarea class="CreateThemeAbstract" placeholder="50字以内" maxlength="50"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>主图</td>
+                    <td>
+
+                        <div id="addbrand_img4" class="fl">
+                            <img style="width:244px;height:128px" src="" alt="" class="showImg2"/>
+                            <div id="addbrand_img5" ></div>
+                        </div>
+                        <div style="clear:both;overflow:hidden;"></div>
+                        <ul style="display: inline-block">
+                            <li>请上传jpg,jpeg,bmp,png格式</li>
+                            <li>文件大小小于1M;尺寸750*400</li>
+
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>活动描述</td>
+                    <td>
+                        <textarea class="CreateThemeDescription" placeholder="200字以内" maxlength="200"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <p class="nextBox"><button class="nextButton">下一步</button></p>
+        </div>
+        <div class="goCreateTheme" style="display: none">
+            <div class="ProductsScreening">
+                <table class="screeningStyle">
+                    <tr>
+                        <td>
+                            产品名称
+                            <input type="text" class="productName">
+                        </td>
+                        <td>
+                            商品代码
+                            <input type="text" class="productCode">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            商品分类
+                            <select class="productClass">
+                                <option value="">所有分类</option>
+                            </select>
+                        </td>
+                        <td>
+                            商家名称
+                            <select class="shopName">
+                                <option value="">所有商家</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            商品品牌
+                            <select class="productBrand">
+                                <option value="">所有品牌</option>
+                            </select>
+                        </td>
+                        <td>
+                            价格区间
+                            <input type="text" class="price_d"> 到 <input type="text" class="price_g">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            是否自营
+                            <select class="isLink">
+                                <option value="">所有状态</option>
+                                <option value="1">是</option>
+                                <option value="0">否</option>
+                            </select>
+                        </td>
+                        <td>
+                            是否打折
+                            <select class="isDiscount">
+                                <option value="">全部商品</option>
+                                <option value="1">是</option>
+                                <option value="0">否</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <button class="screening">筛选</button>
+            </div>
+            <table class="relatedProductsList">
+                <thead>
+                    <tr>
+                        <th>商品信息</th>
+                        <th>商品品牌</th>
+                        <th>分类</th>
+                        <th>商家</th>
+                        <th>库存</th>
+                        <th>销量</th>
+                        <th>上架时间</th>
+                        <th>商品状态</th>
+                        <th>是否自营</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <!-- <tr>
+                        <td class="clear">
+                            <input type="checkbox" >
+                            <div class="imgBox">
+                                <img src="images/base_platform/img.jpg">
+                                <p>UE12312312</p>
+                            </div>
+                            <div class="describeBox" style="width: 180px">
+                                <p>我们的师傅那速度和发送的发生我们的师傅那速度和发送的发生</p>
+                                <p>￥2880.00<span class="discount_price">￥2880.00</span><span class="discount_icon">折</span></p>
+                            </div>
+                        </td>
+                        <td>Paraboot</td>
+                        <td>鞋履</td>
+                        <td>奕赏</td>
+                        <td>1000</td>
+                        <td>300</td>
+                        <td>2016/2/3 19:22:22</td>
+                        <td>上架</td>
+                        <td>是</td>
+                        <td>
+                            <p class="lookProduct">查看</p>
+                            <p class="add">已添加</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="clear">
+                            <input type="checkbox">
+                            <div class="imgBox">
+                                <img src="images/base_platform/img.jpg">
+                                <p>UE12312312</p>
+                            </div>
+                            <div class="describeBox" style="width: 180px">
+                                <p>我们的师傅那速度和发送的发生我们的师傅那速度和发送的发生</p>
+                                <p>￥2880.00</p>
+                            </div>
+                        </td>
+                        <td>Paraboot</td>
+                        <td>鞋履</td>
+                        <td>奕赏</td>
+                        <td>1000</td>
+                        <td>300</td>
+                        <td>2016/2/3 19:22:22</td>
+                        <td>上架</td>
+                        <td>是</td>
+                        <td>
+                            <p class="lookProduct">查看</p>
+                            <p class="add">已添加</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="clear">
+                            <input type="checkbox">
+                            <div class="imgBox">
+                                <img src="images/base_platform/img.jpg">
+                                <p>UE12312312</p>
+                            </div>
+                            <div class="describeBox" style="width: 180px">
+                                <p>我们的师傅那速度和发送的发生我们的师傅那速度和发送的发生</p>
+                                <p>￥2880.00</p>
+                            </div>
+                        </td>
+                        <td>Paraboot</td>
+                        <td>鞋履</td>
+                        <td>奕赏</td>
+                        <td>1000</td>
+                        <td>300</td>
+                        <td>2016/2/3 19:22:22</td>
+                        <td>上架</td>
+                        <td>是</td>
+                        <td>
+                            <p class="lookProduct">查看</p>
+                            <p class="add">已添加</p>
+                        </td>
+                    </tr>-->
+                </tbody>
+            </table>
+            <p class="allCheckedBox">
+                <label><input type="checkbox" class="allChecked">全选</label>
+            </p>
+            <div style="text-align: right;margin-top: 10px"><span class="pagination1_span" style="font-size: 12px;margin-right: 10px"></span><div class="pagination1" style="display: inline-block"></div></div>
+            <p class="prevBox"><button class="prevButton">上一步</button><button class="save">保存</button></p>
+           </div>
+    </div>
+</div>
+<script src = "js/common/conf.js"></script>
+<script src="plugins/jquery.paging.min.js"></script>
+<script type="text/javascript" src = "js/base_platform/platform_recommend/create_theme.js"></script>
+</body>
+</html>

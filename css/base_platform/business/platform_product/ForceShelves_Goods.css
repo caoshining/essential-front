@@ -1,0 +1,109 @@
+
+#forceShelves_layout{
+    width:100%;
+    padding:0 25px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+#forceShelves_layout h5{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/*商品搜索*/
+#forceShelves_layout .forceShelves_Gods{
+    width:100%;
+    background: #eee;
+    min-height:250px;
+    padding:25px 90px;
+    font-size: 14px;
+}
+#forceShelves_layout .forceShelves_Gods div:nth-of-type(1){
+    clear: both;
+    overflow: hidden;
+}
+#forceShelves_layout .forceShelves_Gods label{
+    margin-bottom: 10px;
+}
+#forceShelves_layout .forceShelves_Gods label input,
+#forceShelves_layout .forceShelves_Gods label select{
+    width:200px;
+    height:40px;
+    text-align: center;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    margin-left: 10px;
+}
+
+#forceShelves_layout .forceShelves_Gods label input.priceRange{
+    width:89px;
+}
+#forceShelves_layout .forceShelves_Gods label input.priceRange:nth-of-type(2){
+    margin-left: 0;
+}
+#forceShelves_layout .forceShelves_Gods span.forceShelves_Filter{
+    display: block;
+    width:60px;
+    height:30px;
+    line-height: 30px;
+    background: red;
+    color: #fff;
+    text-align: center;
+    margin:10px auto 0;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    cursor: pointer;
+}
+#forceShelves_layout .forceShelves_Gods span.forceShelves_Filter:hover{
+    background: crimson;
+}
+
+/*商品列表*/
+#forceShelves_layout .forceShelves_Lists{
+    margin-top: 10px;
+    width:100%;
+}
+#forceShelves_layout .forceShelves_Lists table{
+    width:100%;
+}
+#forceShelves_layout .forceShelves_Lists table thead tr{
+    background: #eee;
+    height:50px;
+}
+#forceShelves_layout .forceShelves_Lists table thead tr th{
+    border:0;
+    text-align: center;
+    font-weight: bold;
+}
+#forceShelves_layout .forceShelves_Lists table tbody tr td{
+    border:0;
+    text-align: center;
+    border-bottom: 1px #eee solid;
+}
+#forceShelves_layout .forceShelves_Lists table tbody tr td>div{
+    width:100%;
+    min-height:50px;
+}
+#forceShelves_layout .forceShelves_Lists table tbody tr td img{
+    width:50px;
+    height:50px;
+}
+#forceShelves_layout .forceShelves_Lists table tbody tr td:nth-of-type(1) a{
+    display: block;
+    /*width:120px;*/
+    text-align: left;
+    font-size: 12px;
+    color: #333;
+    margin-left: 10px;
+}
+#forceShelves_layout .forceShelves_Lists table tbody tr td:nth-of-type(1) a span{
+    display: block;
+}
+#forceShelves_layout .forceShelves_Lists table tbody tr td:nth-of-type(1) a span:nth-of-type(2){
+    color: red;
+}
+#forceShelves_layout .forceShelves_Lists table tbody tr td:nth-of-type(1) p{
+    text-align: left;
+}

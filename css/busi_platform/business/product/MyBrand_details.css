@@ -1,0 +1,57 @@
+.MyBrand_details{
+    width:100%;
+    background: #eee;
+    padding: 20px 0;
+}
+.MyBrand_details table{
+    width:100%;
+    border:0;
+}
+.MyBrand_details table tr>td{
+    border:0;
+    font-size: 14px;
+}
+.MyBrand_details table tr>td input{
+    width:180px;
+    height:35px;text-align: center;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
+.MyBrand_details table tr>td textarea{
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
+.MyBrand_details table tr>td:first-child{
+    text-align: right;
+    width:40%;
+}
+.MyBrand_details table tr>td:last-child{
+    text-align: left;
+    width:60%;
+}
+.returnBrand{
+    width:100%;
+    height:40px;
+    background: #eee;
+    margin-top:20px;
+    text-align: center;
+    line-height: 40px;
+}
+.returnBrand span{
+    display: inline-block;
+    width:50px;
+    height:30px;
+    background: red;
+    color: #fff;
+    line-height:30px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin:0 auto;
+    cursor: pointer;
+}
+.returnBrand span:hover{
+    background: firebrick;
+}

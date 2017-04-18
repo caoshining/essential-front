@@ -1,0 +1,49 @@
+.addbrand-List{
+    width: 100%;
+}
+body{
+    font-size: 14px;
+}
+.addbrand-List h5{
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.addbrand-List .first-class{
+    width: 198px;
+    height: 38px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px !important;
+    margin-bottom: 30px;
+}
+.addbrand-List .second-class{
+    width: 88px;
+    height: 38px;
+    border: 1px solid #dbdbdb;
+    padding-left: 10px;
+
+}
+.addbrand-List .add-dele{
+    width: 60px;
+    height: 30px;
+    border: none;
+    background: #3173c1;
+    color: white;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+.addbrand-List .enter-box{
+    width: 100%;
+    height: 44px;
+    background: #eeeeee;
+    margin-top: 40px;
+    text-align: center;
+}
+.enter-box .submit{
+    width: 60px;
+    height: 30px;
+    background: #ea0000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 7px;
+}

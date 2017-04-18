@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/addBrand.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/diyUpload.css">
+    <script type="text/javascript" src="plugins/diyUpload/js/webuploader.html5only.min.js"></script>
+    <script type="text/javascript" src="plugins/diyUpload/js/diyUpload.js"></script>
+</head>
+<body>
+<div id="Brand_Edit">
+
+</div>
+<!--编辑模板-->
+<script type="text/x-jsrender" id="Brand_edit_Tmple">
+<div class="addBrand">
+        <h6>商品管理>品牌列表>编辑</h6>
+        <form action="" method="post">
+            <div class="addBrandContent">
+                <table>
+                    <tr style="display:none;">
+                        <td class="leftTd">品牌id:</td>
+                        <td class="rightTd">
+                            <input type="text" class="inputClass" id="Edit_brandId" value="{{:brandId}}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="leftTd">品牌名称:</td>
+                        <td class="rightTd">
+                            <input type="text" class="inputClass" id="Edit_brandName" value="{{:brandName}}">
+                            <span class="addBrand_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="leftTd">关联品类:</td>
+                        <td class="rightTd" class="edit_class about_Edit">
+                            {{for brandCategoryVoList}}
+                                <input type="checkbox" {{if checked === true}}checked{{/if}} id="{{:categoryId}}" class="check_class">{{:categoryName}}
+                            {{/for}}
+                            <span class="aboutClass"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="leftTd">品牌logo上传:</td>
+                        <td class="rightTd upload">
+                            <img src="{{:logoPath}}" alt="" style="width:80px;height:80px;" class="BrandLogo">
+                            <p>请上传jpg,jpeg,bmp格式<br>文件大小小于1M,像素大于800*800</p>
+                            <div id="BrandEdit_logoPath"></div>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="leftTd">品牌背景图上传:</td>
+                        <td class="rightTd upload">
+                            <img src="{{:picPath}}" alt="" style="width:80px;height: 80px;" class="BrandPic">
+                            <p>请上传jpg,jpeg,bmp格式<br>文件大小小于1M,像素大于800*800</p>
+                            <div id="BrandEdit_BgPath"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="leftTd" >一句话描述:</td>
+                        <td class="rightTd">
+                            <input type="text" class="inputClass" placeholder="10个字以内" style="text-align: center" maxlength="10" id="Edit_wordDesc" value="{{:pageDesc}}">
+                            <span class="dec_error"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="leftTd">详细介绍:</td>
+                        <td class="rightTd">
+                            <textarea rows="5" cols="30" id="Edit_detailDesc">{{:detailedDesc}}</textarea>
+                            <span class="detailDesc"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="leftTd">官网地址:</td>
+                        <td class="rightTd">
+                            <input type="text" class="inputClass" id="Edit_webAddress" value="{{:remark1}}">
+                            <span class="webAddress"></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="saveCancel">
+                <input type="button" value="保存" class="brand_save" id="brandEdit_save">
+                <input type="button" value="取消" class="brand_cancel" id="brandEdit_cancel">
+            </div>
+        </form>
+    </div>
+</script>
+<script id="check_classTmpl" type="text/x-jsrender">
+    {{for info}}
+        <input type="checkbox" id="{{:categoryId}}" class="check_class"><label for="ck1">{{:categoryName}}</label>
+    {{/for}}
+</script>
+<script src="js/base_platform/platformBusiness/Brand_edit.js"></script>
+</body>
+</html>

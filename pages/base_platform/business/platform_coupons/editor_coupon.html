@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="plugins/timeControl/skin/jedate.css">
+    <link rel="stylesheet" href="css/base_platform/business/platform_coupons/create_cuupons.css">
+
+</head>
+
+<body>
+<h5>营销活动>营销活动>优惠券管理>新建优惠券</h5>
+<div class="create_coupon_box">
+    <table class="create_coupon">
+        <tbody>
+        <tr>
+            <td>优惠券名称</td>
+            <td><input type="text" class="coupon_name" maxlength="10" placeholder="10个字以内"></td>
+        </tr>
+        <tr>
+            <td>优惠券名称是否展示</td>
+            <td>
+                <input type="radio" value="0" name="show" checked="checked">否
+                <input type="radio" value="1" name="show">是
+            </td>
+        </tr>
+        <tr>
+            <td>有效时间</td>
+            <td>
+                <input type="text" class="time_f" id="Refund_modifyStartTime">至<input type="text" class="time_t" id="Refund_modifyEndTime">
+            </td>
+        </tr>
+        <tr>
+            <td>优惠券类型</td>
+            <td>
+                <input type="radio" value="1" name="coupon_type" checked="checked">满减 满<input type="text" class="meet" maxlength="20">元 可用
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" name="coupon_type" value="2">代金券</td>
+        </tr>
+        <tr>
+            <td>
+                优惠金额
+            </td>
+            <td>
+                <input type="text" class="amount" maxlength="20"> 元
+            </td>
+        </tr>
+        <tr>
+            <td>
+                发放范围
+            </td>
+            <td>
+                <input type="radio" name="scope" value="1" checked="checked">全部用户
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="radio" name="scope" value="2">新用户
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <input type="radio" name="scope" value="3">兑换   兑换码<input class="conversion_code" type="text" placeholder="12个字以内" maxlength="12">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="btn_group">
+        <button class="save_coupon">保存</button>
+        <button class="cancel_coupon">取消</button>
+    </p>
+
+</div>
+<script src="plugins/jquery.paging.min.js"></script>
+<script type="text/javascript" src="plugins/timeControl/jedate.min.js"></script>
+<script src="js/base_platform/platform_coupons/editor_coupon.js"></script>
+</body>
+</html>

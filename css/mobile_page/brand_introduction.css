@@ -1,0 +1,284 @@
+/*清浮动*/
+.clear:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.clear{
+    zoom: 1;
+}
+*{
+    margin:0;
+    padding: 0;
+}
+body,html,.index{
+    height:100%;
+    width: 100%;
+    font-family: 'STHeiti','Microsoft YaHei',Helvetica,Arial,sans-serif;
+    font-size: .16rem;
+}
+a{
+    text-decoration: none;
+}
+li{
+    position: relative;
+    list-style: none;
+}
+@media screen and (max-width:319px) {
+    html{
+        font-size:90px;
+    }
+}
+@media screen and (min-width: 320px) and (max-width:359px){
+    html{
+        font-size:90px;
+    }
+}
+@media screen and (min-width:360px) and (max-width:374px) {
+    html{
+        font-size: 96px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 383px) {
+    html{
+        font-size:100px;
+    }
+}
+@media screen and (min-width: 384px) and (max-width: 399px) {
+    html {
+        font-size: 102.4px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 413px) {
+    html {
+        font-size: 106.66667px;
+    }
+}
+
+@media screen and (min-width: 414px) {
+    html {
+        font-size: 110.4px;
+    }
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+#brand_introduction{
+    width: 100%;
+}
+#brand_introduction .head_introduction{
+    width: 100%;
+
+    position: relative;
+}
+.head_introduction img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.head_introduction h4{
+    font-size: 0.26rem;
+    position: absolute;
+    top: 14%;
+    left:0;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+}
+.head_introduction .cut-off-rule{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 26%;
+}
+.cut-off-rule span{
+    display: inline-block;
+    width: 45%;
+    height:1px;
+    background: white;
+}
+.head_introduction p{
+    width: 100%;
+    text-align: center;
+    font-size: 0.14rem;
+    position: absolute;
+    top: 40%;
+    color: white;
+
+}
+.head_introduction .introduction_msg{
+    width: 55%;
+    line-height: 0.18rem;
+    overflow: hidden;
+    height: 0.36rem;
+    position: absolute;
+    left: 20px;
+    color: white;
+    top: 67%;
+    font-size: 0.12rem;
+
+}
+
+.head_introduction .more_msg{
+    position: absolute;
+    left: 20px;
+    top: 86%;
+    color: white;
+    font-size: 0.12rem;
+
+}
+.head_introduction .attention{
+    width: 21%;
+    line-height: 0.26rem;
+    border: 1px solid #fff;
+    position: absolute;
+    right: 20px;
+    top:68%;
+    background: none;
+    color: white;
+    font-size: 0.13rem;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+}
+#brand_introduction .cut_off_rule{
+    width: 100%;
+    height: 6px;
+    background: #eeeeee;
+
+}
+.goods_list{
+    width: 100%;
+    box-sizing: border-box;
+}
+.goods_list .goods_list_item{
+    width: 100%;
+    margin-bottom: 82px;
+
+}
+.goods_list_item .single_good{
+    width: 50%;
+    float: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+}
+.single_good a{
+    display: inline-block;
+    width: 100%;
+
+}
+.single_good img{
+    width: 100%;
+    height: auto;
+}
+.single_good h5{
+    height: 0.3rem;
+    line-height:0.3rem;
+    font-size: 0.15rem;
+    text-align: center;
+    font-weight: normal;
+}
+.single_good p{
+    width: 100%;
+    height: 0.3rem;
+    line-height:0.3rem;
+    font-size: 0.13rem;
+    text-align: center;
+
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;
+}
+.single_good span{
+    height: 0.28rem;
+    line-height: 0.28rem;;
+    font-size: 0.14rem;
+    text-align: center;
+    display: block;
+}
+.single_good .discount_price{
+    color: #999999;
+    font-size: 0.12rem;
+    font-style: normal;
+    text-decoration: line-through;
+    margin-left: 3px;
+
+}
+
+
+
+/*app内打开*/
+
+#testApp{
+    background-color: black;
+    color: #ffffff;
+    overflow: hidden;
+
+}
+#top_cancle{
+    display: block;
+    float: right;
+    width: 0.4rem;
+    padding: 3% 1%;
+    margin-right: 1%;
+}
+#gods_shop>dl,#testApp>dl{
+    overflow: hidden;
+}
+#testApp>dl{
+    float: left;
+    width: 45%;
+}
+#gods_shop>dl>dt{
+    float: right;
+}
+#testApp>dl>dt{
+    float:left;
+}
+
+#gods_shop>dl>dt>img{
+    width: 0.68rem;
+    height: 0.68rem;
+    display: block;
+}
+#testApp>dl>dt>img{
+    width:0.6rem;
+    height: 0.6rem;
+    display: block;
+}
+#testApp>dl>dd{
+    margin-left: 0.4rem;
+}
+#testApp_title{
+    margin-top: 0.11rem;
+    font-size: 0.13rem;
+}
+#testApp_contend{
+    font-size: 0.12rem;
+}
+#testApp a{
+    text-decoration: none;
+    display: block;
+    float: right;
+    padding: 0 0.08rem;
+    border-radius: 5px;
+    border: 1px solid white;
+    height: 0.26rem;
+    line-height: 0.26rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-right: 6%;
+    color: white;
+    margin-top: 0.17rem;
+    font-size: 0.106rem
+;
+}

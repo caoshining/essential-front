@@ -1,0 +1,424 @@
+
+.discovery_layout{
+    width:830px;
+    padding:0 10px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.discovery_layout h5{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.discovery_layout .discoveryContent{
+    width:100%;
+    min-height: 300px;
+    clear: both;
+    overflow: hidden;
+}
+.discovery_layout .discoveryContent .tabUl{
+    width:101%;
+    margin:0 auto;
+}
+.discovery_layout .discoveryContent .tabUl li{
+    width:33%;
+    line-height: 48px;
+    border-left: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 14px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    background: #eeeeee;
+}
+
+.discovery_layout .discoveryContent .tabUl li.selected{
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-bottom: 0;
+}
+
+
+/*基本信息*/
+.discovery_layout .discoveryContent .content1{
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-top: 0;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding:20px 210px;
+}
+.discovery_layout .discoveryContent .content1 table{
+    width:100%;
+}
+.discovery_layout .discoveryContent .content1 table td{
+    border:0;
+}
+.discovery_layout .discoveryContent .content1 table td img.logoPic1{
+    width:80px;
+    height:80px;
+    border:0;
+}
+.discovery_layout .discoveryContent .content1 table td img.mainPic2{
+    width:150px;
+    height:84px;
+}
+.discovery_layout .discoveryContent .content1 table td input,
+.discovery_layout .discoveryContent .content1 table td select,
+.discovery_layout .discoveryContent .content1 table td textarea{
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    height:40px;
+}
+.discovery_layout .discoveryContent .content1 table tr:nth-of-type(1) td input{
+    width:300px;
+    text-align: center;
+}
+.discovery_layout .discoveryContent .content1 table tr:nth-of-type(4) td input{
+    width:200px;
+    text-align: center;
+}
+.discovery_layout .discoveryContent .content1 table td select{
+    width:200px;
+    text-align: center;
+}
+.discovery_layout .discoveryContent .content1 table td textarea{
+    width:300px;
+    height:100px;
+    text-align: left;
+}
+.discovery_layout .discoveryContent .content1 table tr td:nth-of-type(1){
+    text-align: right;
+}
+.discovery_layout .discoveryContent .content1 table tr td:nth-of-type(2){
+    text-align: left;
+}
+
+/*正文内容*/
+.content2{
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-top: 0;
+    width: 100%;
+    float: left;
+    display: none;
+    text-align: center;
+}
+
+/*相关商品*/
+.discovery_layout .discoveryContent .content3{
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-top: 0;
+    width: 100%;
+    float: left;
+    display: none;
+
+}
+.discovery_layout .discoveryContent .content3 span.add{
+    display: inline-block;
+    width:130px;
+    height:40px;
+    line-height: 40px;
+    background: #1a67bd;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    margin: 20px;
+
+}.discovery_layout .discoveryContent .content3 span.add:nth-of-type(2){
+    margin-left: 20px;
+ }
+.discovery_layout .discoveryContent .content3 span.add:hover{
+    background: #3b98d6;
+}
+#newButton,#saveExternalProduct,#save
+{
+    border-radius: 6px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    background:blue;
+    color: white;
+}
+.discovery_layout .discoveryContent .content3 .DiscoveryShop{
+    width:100%;
+}
+.discovery_layout .discoveryContent .content3 .DiscoveryShop table{
+    width:100%;
+    margin-bottom: 10px;
+    border-bottom:1px #DDDDDD solid;
+}
+.discovery_layout .discoveryContent .content3 .DiscoveryShop table tbody td,
+.discovery_layout .discoveryContent .content3 .DiscoveryShop table thead th
+{
+    border:0;
+    text-align: center;
+}
+.discovery_layout .discoveryContent .content3 .DiscoveryShop table thead tr th{
+    background: #eee;
+    color: #333;
+    height:50px;
+}
+
+.discovery_layout .discoveryContent .content3 .DiscoveryShop table tbody tr td.EsProductInfo img{
+    width:80px;
+    height:80px;
+    float: left;
+}
+.discovery_layout .discoveryContent .content3 .DiscoveryShop table tbody tr td.EsProductInfo span{
+    display: block;
+    margin-left: 10px;
+    width:120px;
+}
+.discovery_layout .discoveryContent .content3 .DiscoveryShop table tbody tr td.EsProductInfo span:nth-of-type(2){
+    color: red;
+    margin-top:20px;
+}
+.discovery_layout .discoveryContent .content3 .DiscoveryShop table tbody tr td.outLinkUrl{
+    max-width:120px;
+    text-align: center;
+}
+.discovery_layout .discoveryContent .content3 .DiscoveryShop table tbody tr td.outLinkUrl a{
+    display: inline-block;
+    width:100%;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*点击下一步*/
+.discovery_layout .nextNew{
+    width:100%;
+    background: #eee;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    margin-top:15px;
+}
+.discovery_layout .nextNew>span{
+    display: inline-block;
+    width:70px;
+    height:30px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin:auto;
+}
+.discovery_layout .nextNew>span{
+    background: red;
+    color: #fff;
+}
+/*.discovery_layout .nextNew>span:nth-of-type(1){*/
+    /*background: #fff;*/
+    /*color: #333;*/
+    /*margin-right: 20px;*/
+/*}*/
+/*.discovery_layout .nextNew>span:nth-of-type(2){*/
+    /*background: red;*/
+    /*color: #fff;*/
+/*}*/
+
+/*添加奕赏商品的商品列表界面*/
+
+
+.mainDiv{
+    width:100%;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.mainDiv .productSearch{
+    width:100%;
+    min-height:200px;
+    background: #eee;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding:28px 60px;
+}
+.mainDiv .productSearch .productInput{
+    width:100%;
+    min-height:200px;
+}
+.mainDiv .productSearch .productInput label:nth-of-type(odd){
+    margin-right:120px;
+}
+.mainDiv .productSearch .productInput label select,
+.mainDiv .productSearch .productInput label input{
+    width:200px;
+    height:40px;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    margin-bottom: 10px;
+    margin-left: 7px;
+}
+.mainDiv .productSearch .productInput span{
+    display: block;
+    width:60px;
+    height:30px;
+    line-height: 30px;
+    background: red;
+    color: #fff;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    margin:20px auto 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.mainDiv .productSearch .productInput span:hover{
+    background: crimson;
+}
+.mainDiv .productList{
+    width:100%;
+}
+.mainDiv .productList table{
+    width:100%;
+}
+.mainDiv .productList table thead tr{
+    background: #eee;
+}
+.mainDiv .productList table thead th{
+    border:0;
+    text-align: center;
+    height:40px;
+}
+.mainDiv .productList table tr{
+    border-bottom: 1px #eee solid;
+}
+.mainDiv .productList table tr td{
+    border:0;
+    text-align: center;
+}
+.mainDiv .productList table tbody tr td:nth-of-type(1){
+    clear: both;
+    overflow: hidden;
+    text-align: left;
+}
+.mainDiv .productList table tbody tr td:nth-of-type(1) img{
+    width:80px;
+    height:80px;
+}
+.mainDiv .productList table tbody tr td:nth-of-type(1) a{
+    display: inline-block;
+    color: #333;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.mainDiv .productList table tbody tr td:nth-of-type(1) a span{
+    display: block;
+}
+.mainDiv .productList table tbody tr td:nth-of-type(1) a span:nth-of-type(2){
+    color: red;
+}
+.mainDiv .productList table tbody tr td:nth-of-type(1) a span:nth-of-type(4){
+    width:20px;
+    height:20px;
+    background:red;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/*分页*/
+.mainDiv .tcdPageCode{
+    margin: 20px 15px;
+    float: right;
+}
+.mainDiv .tcdPageCode a{
+    display: inline-block;
+    color: #428bca;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    border-radius: 4px;
+    text-align: center;
+}
+.mainDiv .tcdPageCode a:hover{
+    text-decoration: none;
+    border: 1px solid #428bca;
+}
+.mainDiv .tcdPageCode span{
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 5px;
+    margin: 0 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+.mainDiv .tcdPageCode span.current{
+    color: #fff;
+    background-color: #428bca;
+    border: 1px solid #428bca;
+
+}
+.mainDiv .tcdPageCode span.disabled{
+    color: #bfbfbf;
+    background: #f2f2f2;
+    border: 1px solid #bfbfbf;
+}
+.pagination{
+    float: right;
+}
+
+/*添加外部商品*/
+.discovery_layout .discoveryContent .content3 .outChains{
+    width:100%;
+    display: none;
+    padding:20px 190px;
+}
+.discovery_layout .discoveryContent .content3 .outChains table{
+    width:100%;
+}
+.discovery_layout .discoveryContent .content3 .outChains table td{
+    border:0;
+    position: relative;
+}
+.discovery_layout .discoveryContent .content3 .outChains table tr td:nth-of-type(1){
+    text-align: right;
+}
+.discovery_layout .discoveryContent .content3 .outChains table tr td:nth-of-type(2){
+    text-align: left;
+}
+.discovery_layout .discoveryContent .content3 .outChains table tr td input{
+    width:200px;
+    height:40px;
+    -webkit-border-radius:6px !important;
+    -moz-border-radius:6px !important;
+    border-radius:6px !important;
+    text-align: center;
+}
+.discovery_layout .discoveryContent .content3 .outChains table tr td:nth-of-type(2) p{
+    position: absolute;
+    left:90px;
+    top:5px;
+}
+.discovery_layout .discoveryContent .content3 .outChains table tr td:nth-of-type(2) img{
+    /*display: none;*/
+}
+
+/*分页*/
+.pages{
+    margin:0 2px;
+}
+.articlekeyWords_content{
+    position: relative;
+}
+.Make_keywords_count{
+    position: absolute;
+    right: 15px;
+    bottom:2px;
+}

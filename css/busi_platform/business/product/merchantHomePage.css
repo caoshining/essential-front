@@ -1,0 +1,121 @@
+/*清浮动*/
+.clear:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.clear{
+    zoom: 1;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #cccccc;
+}
+.merchantHome{
+    width: 100%;
+}
+.merchantHome .merchantHome_left{
+    width: 15%;
+    background: white;
+    min-height: 350px;
+    margin-right: 1%;
+    float: left;
+    text-align: center;
+    padding-top: 15px;
+}
+.merchantHome .merchantHome_right_Not{
+    background: white;
+    float: left;
+    padding: 147px 302px;
+}
+.merchantHome .merchantHome_right_Yes{
+    background: white;
+    float: left;
+    border: 1px solid #c5d0dc;
+    padding: 16px 20px;
+    position: relative;
+    z-index: 11;
+}
+.merchantHome_right_Yes h4{
+    font-size: 14px;
+    font-weight: normal;
+}
+.merchantHome_right_Yes .classification_box{
+    width: 100%;
+    height: 130px;
+    padding: 18px 0;
+    background: #eeeeee;
+    padding-left: 62px;
+    box-sizing: border-box;
+}
+.merchantHome_right_Yes .Pending_orders{
+    float: left;
+    text-align: center;
+    margin-right: 100px;
+}
+.merchantHome .numerical{
+    font-size: 18px;
+    color: #c30000;
+    font-weight: bold;
+}
+.merchantHome .annotation{
+    font-size: 14px;
+
+}
+
+.merchantHome_right_Not .setStoreMsg{
+    width: 296px;
+    height: 146px;
+    border: 2px solid #999999;
+    text-align: center;
+
+}
+.setStoreMsg h3{
+    line-height: 82px;
+    padding: 0px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+.setStoreMsg a{
+    display: inline-block;
+    width: 88px;
+    line-height: 32px;
+    background: #0e64f5;
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    font-weight:600;
+}
+.merchantHome_left img{
+    width: 112px;
+    height: 112px;
+    margin-bottom: 8px;
+}
+.merchantHome_left .store_name,.merchantHome_left .store_name,.merchantHome_left .store_name{
+    display: block;
+    text-align: center;
+    line-height: 20px;
+}
+.merchantHome_left span{
+    font-size: 14px;
+    color: #969696;
+    line-height: 20px;
+}
+.merchantHome_left li{
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+.merchantHome_left .waitSet{
+    line-height: 20px;
+}
+.merchantHome_left .createTime,.store_status{
+    display: block;
+}
+.merchantHome .failure_status,.merchantHome .success_status{
+    display: none;
+}

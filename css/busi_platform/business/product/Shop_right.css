@@ -1,0 +1,192 @@
+
+#Shop_Content ul li{
+    list-style:none;
+}
+#Shop_Content a{
+    text-decoration:none;
+    color:black;
+    overflow:hidden;
+}
+.Shop_Infm{
+    position:relative;
+}
+.Shop_Infm>p{
+    position:absolute;
+    left:2%;
+    top:2%;
+}
+.Shop_Infm>ul{
+    text-align:left;
+    margin:1% 35%;
+    overflow:hidden;
+}
+.Shop_Infm>ul>li{
+    display: block;
+    overflow:hidden;
+    margin-bottom:1%;
+}
+.Shop_Infm>ul>li>label>i{
+    font-style: normal;
+}
+.Shop_Infm>ul>li>a{
+  display:inline-block;
+  padding:4px 8px;
+    color:black;
+  background:white;
+  position:relative;
+  border-radius:4px;
+text-align:center;
+    border:1px solid #dbdbdb;
+  overflow:hidden;
+    font-size:12px;
+  text-decoration:none;
+
+}
+
+
+
+.webuploader-pick{
+    cursor: pointer;
+}
+
+#Shop_Content>div{
+    position:relative;
+    border:1px solid #dbdbdb;
+}
+#Shop_Content>div>ul{
+    width:100%;
+    overflow:hidden;
+    background-color:#eeeeee;
+}
+#Shop_Content>div>ul>li{
+    display:inline-block;
+    width:33.3%;
+    text-align:center;
+    float:left;
+    border-bottom:1px solid #dcdcdc;
+}
+#Shop_Content>div>ul>li>a{
+    display:block;
+    padding: 10px 0;
+}
+.Refund_Set1,.Refund_Set2,.Clearn_aptitude{
+    display:none;
+}
+.Shop_Btmbtn{
+    margin-top:1%;
+}
+#Shop_Content .Shop_Btmbtn>a{
+    display: block;
+    text-align: center;
+    background: red;
+    padding: 0.5% 1%;
+    width: 10%;
+    border-radius: 4px;
+    margin: 0.5% 0.5% 0.5% 45%;
+    color: white;
+}
+.Shop_Performance>label{
+    padding-left:5%;
+}
+.Shop_Logo{
+    clear:both;
+    overflow:hidden;
+    position:relative;
+    padding:12px 0;
+}
+.Shop_Logo>label{
+    padding:3px 0 3px 5%;
+}
+.Shop_Logo>ul{
+    position:absolute;
+    right:0;
+    top:0;
+}
+.Shop_Logo>#Shop_Right_img1{
+    margin:auto 20px;
+}
+#Shop_Content .ShopLi_Change_Tab>li.active{
+    border-bottom: 1px white solid;
+    background: white;
+}
+.Refund_Set1>p,.Refund_Set2>div>p{
+    width: 90%;
+    padding: 10px 20px;
+    margin: 1% auto;
+    background-color: #f6f3d4;
+}
+.Refund_Set1>ul{
+    margin: 1% 35%;
+}
+.Refund_Set1>ul>li>label>i{
+    font-style:normal;
+}
+#Shop_Content .Refund_Set2>div>a{
+    margin-left: 5%;
+    display: block;
+    padding: 10px 9px;
+    background: #0d63f4;
+    color: white;
+    width: 14%;
+    border-radius: 7px;
+    text-align: center;
+}
+.Refund_Set2>div>table{
+    min-width: 96%;
+    margin: 10px auto;
+}
+.Shop_Tabe_action,.Shop_Tabe_conten{
+    overflow:hidden;
+}
+.Shop_Change_Tab input::-webkit-outer-spin-button,
+.Shop_Change_Tab input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+.Shop_Change_Tab input[type="number"]{-moz-appearance:textfield;}
+#Shop_Content .Shop_Tabe_action>p>a{
+    color:#2a6496;
+}
+
+#Shop_Inm_PhoneNum1{
+    width:15%;
+}
+
+.Shop_Make_Infm,.Shop_Accout_Infm{
+    position:relative;
+}
+.Shop_Make_Infm>p,.Shop_Accout_Infm>p{
+    position:absolute;
+}
+.Shop_Make_Infm>ul,.Shop_Accout_Infm>ul{
+    padding: 2% 0 0 35%;
+    width: 90%;
+}
+.Shop_Accout_Img div{
+    overflow:hidden;
+}
+.Shop_Accout_Img div dl{
+    width: 50%;
+    float: left;
+    overflow:hidden;
+
+}
+.Shop_Accout_Img div dl dt{
+    width: 19%;
+    text-align: right;
+    float: left;
+    display: block;
+    margin-left: 4%;
+}
+.Shop_Accout_Img div dl dd{
+    overflow: hidden;
+    width: 40%;
+    margin-left: 24%;
+}
+.Shop_Accout_Img div dl dd img{
+    width:175px;height:150px;
+}
+/*资质图片上传区域样式*/
+#Shop_business_license2 label{
+    z-index:999;
+}

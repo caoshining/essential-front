@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+textarea{
+    resize: none;
+}
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.clear{
+    zoom: 1;
+}
+.createTheme{
+    width: 100%;
+}
+.createTheme h5{
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+body{
+    font-size: 14px;
+}
+.createThemeBox{
+    border: 1px solid #e4e4e4;
+}
+.createThemeBox .createThemeTab{
+    width: 100%;
+    line-height: 50px;
+}
+.createThemeTab span{
+    float: left;
+    width: 50%;
+    border: 1px solid #e4e4e4;
+    border-top: none;
+    border-left: none;
+    box-sizing: border-box;
+    text-align: center;
+    background: #f2f2f2;
+    font-size: 14px;
+}
+.createThemeTab span:nth-of-type(2){
+    border-right: none;
+}
+
+.createThemeTab .selected{
+    background: white;
+    font-weight: bold;
+    border-bottom: none;
+}
+.goCreateTheme{
+    padding-top: 10px;
+    /*padding-left: 30px;*/
+}
+.editorBox td{
+    padding: 0px;
+    padding-bottom: 20px;
+    border: none;
+    width: 50%;
+    font-size: 14px;
+}
+.editorBox input[type = radio]{
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.editorBox{
+    width:100%;
+}
+.editorBox input{
+    width: auto;
+}
+.editorBox .CreateThemeTitle,.editorBox .CreateThemeAuthor{
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px !important;
+}
+.editorBox .CreateThemeAbstract{
+    width: 300px;
+    height:80px;
+    text-align: center;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px !important;
+}
+.editorBox .CreateThemeDescription{
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px !important;
+}
+.editorBox td:nth-child(2n+1){
+    text-align: right;
+    padding-right: 10px;
+}
+.nextBox,.prevBox{
+    width: 100%;
+    text-align: center;
+    height: 44px;
+    padding: 7px 0;
+    background: #f2f2f2;
+}
+.nextBox .nextButton,.nextBox .nextButton1,.prevBox .prevButton,.prevBox .prevButton1,.prevBox .save,.prevBox .save1{
+    width: 60px;
+    height: 30px;
+    background: red;
+    border: none;
+    color: white;
+    border-radius: 6px;
+}
+.prevBox .prevButton{
+    margin-right: 20px;
+}
+.ProductsScreening{
+    width: 100%;
+}
+.ProductsScreening .screeningStyle{
+    width: 100%;
+}
+.ProductsScreening{
+    background: #f8f8f8;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.screeningStyle td{
+    padding-bottom: 10px;
+    border: none;
+}
+.screeningStyle input,.screeningStyle select{
+    width: 200px;
+    height: 40px;
+    border: 1px solid #cccccc;
+    border-radius: 5px !important;
+}
+.screeningStyle .price_d,.screeningStyle .price_g{
+    width: 83px;
+}
+.relatedProductsList{
+    width: 100%;
+}
+.relatedProductsList input,.relatedProductsList .imgBox,.relatedProductsList .describeBox{
+    float: left;
+    text-align: left;
+}
+.imgBox img{
+    width: 80px;
+    height: 80px;
+    border: 1px solid #dbdbdb;
+    margin-right: 10px;
+}
+
+.relatedProductsList th{
+    text-align: center;
+    border: none;
+    background: #f2f2f2;
+    height: 50px;
+    font-weight: bold;
+}
+
+.relatedProductsList td{
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 10px 0;
+    color: #333333;
+}
+.relatedProductsList .time{
+    color: #999999;
+}
+.relatedProductsList input{
+    width: auto;
+    margin-top: 30px;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    margin-left: 12px;
+    border: 1px solid #dcdcdc;
+}
+.relatedProductsList .lookProduct,.relatedProductsList .add{
+    color: #0c63f1;
+    line-height: 26px;
+    cursor: pointer;
+}
+.add_p{
+    display: inline-block;
+    width: 58px;
+    line-height: 28px;
+    border: 1px solid #dbdbdb;
+    color: #333333;
+    text-align: center;
+    margin-left: 33px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.allCheckedBox{
+    padding-top: 10px;
+}
+.allCheckedBox input{
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 14px;
+    height: 14px;
+}
+.screening{
+    width: 60px;
+    height: 30px;
+    position: absolute;
+    bottom: 10px;
+    margin-left: -30px;
+    left: 50%;
+    background: red;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+.describeBox .discount_price{
+    text-decoration:line-through;
+    color: #999;
+    margin-left: 6px;
+}
+.discount_icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: #b71111;
+    margin-left: 5px;
+    color: white;
+}
+.describeBox p:nth-child(2){
+    color: red;
+}
+.pagination1 span,.pagination1 em,.pagination1 a{
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.pagination4 span,.pagination4 em,.pagination4 a{
+    margin-right: 2px;
+    margin-left: 2px;
+}

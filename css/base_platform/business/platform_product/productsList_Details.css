@@ -1,0 +1,210 @@
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+img{
+    border:0;
+}
+
+#productDetails_layout{
+    width:100%;
+    padding:0 20px;
+}
+/*基本信息*/
+#productDetails_layout .BasicInformation,#productDetails_layout .standardRepertory,
+#productDetails_layout .godsMessage,#productDetails_layout .oneWordsDescribe,#productDetails_layout .DetailsDescribe{
+    width:100%;
+    min-height:50px;
+    background: #eee;
+    border-bottom:2px #fff solid;
+    clear: both;
+    overflow: hidden;
+}
+
+#productDetails_layout .BasicInformation div:nth-of-type(1){
+    width:20%;
+    text-align: center;
+    line-height:50px;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+#productDetails_layout .BasicInformation div:nth-of-type(2){
+    width:80%;
+    line-height:50px;
+    font-size: 15px;
+    padding-left: 20px;
+    border-left:2px #fff solid;
+}
+
+/*规格*/
+#productDetails_layout .standardRepertory div:nth-of-type(1){
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: bold;
+    width:20%;
+
+}
+#productDetails_layout .standardRepertory div:nth-of-type(2){
+    width:80%;
+    font-size: 15px;
+    padding: 20px 20px 30px 20px;
+    border-left:2px #fff solid;
+}
+#productDetails_layout .standardRepertory div:nth-of-type(2) table{
+    width:100%;
+    background: #fff;
+}
+#productDetails_layout .standardRepertory div:nth-of-type(2) table tr{
+    height:40px;
+}
+#productDetails_layout .standardRepertory div:nth-of-type(2) table thead tr td{
+    border:0;
+}
+#productDetails_layout .standardRepertory div:nth-of-type(2) table tr td{
+    border:1px #eee solid;
+    text-align: center;
+}
+
+#productDetails_layout .standardRepertory div:nth-of-type(2) span.stockCount{
+    display: inline-block;
+    width:80px;
+    height:35px;
+    background: #ddd;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    text-align: center;
+    line-height: 35px;
+}
+#productDetails_layout .standardRepertory div:nth-of-type(2) p:nth-of-type(1){
+    margin-bottom: 20px;
+}
+
+/*商品信息*/
+#productDetails_layout .godsMessage div:nth-of-type(1){
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: bold;
+    width:20%;
+}
+#productDetails_layout .godsMessage div:nth-of-type(2){
+    width:80%;
+    font-size: 15px;
+    padding: 20px 20px 30px 20px;
+    border-left:2px #fff solid;
+}
+#productDetails_layout .godsMessage div:nth-of-type(2) span{
+    display: block;
+    margin-bottom: 10px;
+}
+#productDetails_layout .godsMessage div:nth-of-type(2) span img{
+    width:110px;
+    height:110px;
+    margin:5px;
+}
+
+/*一句话描述*/
+
+#productDetails_layout .oneWordsDescribe div:nth-of-type(1){
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+    font-weight: bold;
+    width:20%;
+}
+#productDetails_layout .oneWordsDescribe div:nth-of-type(2){
+    width:80%;
+    font-size: 15px;
+    padding: 20px 20px 30px 20px;
+    border-left:2px #fff solid;
+}
+#productDetails_layout .oneWordsDescribe div:nth-of-type(2) span{
+    display: block;
+    background: #fff;
+    width:50%;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+/*商品详情描述*/
+#productDetails_layout .DetailsDescribe .GodsInstructions{
+    min-height: 100px;
+}
+#productDetails_layout .DetailsDescribe .GodsTitle{
+    padding: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    width:20%;
+}
+#productDetails_layout .DetailsDescribe .GodsContain{
+    width:80%;
+    font-size: 15px;
+    padding: 20px 20px 30px 20px;
+    border-left:2px #fff solid;
+}
+#productDetails_layout .DetailsDescribe .GodsContain ul{
+    width:100%;
+    clear: both;
+    overflow: hidden;
+}
+#productDetails_layout .DetailsDescribe .GodsContain ul li{
+    width:50%;
+    background: #eee;
+    border:1px #ccc solid;
+    float: left;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#productDetails_layout .DetailsDescribe .GodsContain ul li.active:nth-of-type(1){
+    border-right:0;
+}
+#productDetails_layout .DetailsDescribe .GodsContain ul li.active:nth-of-type(2){
+    border-left: 0;
+}
+#productDetails_layout .DetailsDescribe .GodsContain ul li.active{
+    background: #fff;
+    border-bottom: 0;
+}
+#productDetails_layout .DetailsDescribe .GodsContain div{
+    width:100%;
+    background: #fff;
+    min-height:100px;
+    border:1px #ccc solid;
+    border-top: 0;
+    padding:0 10px;
+}
+#productDetails_layout .DetailsDescribe .GodsContain div img{
+    width:100%;
+}
+#productDetails_layout .returnPrev{
+    width:100%;
+    background: #eee;
+    margin: 10px 0;
+    text-align: center;
+    height:50px;
+    padding:10px 0;
+
+}
+#productDetails_layout .returnPrev>span{
+    display: block;
+    background: red;
+    color: #fff;
+    width:70px;
+    height:30px;
+    line-height: 30px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    cursor: pointer;
+    margin:0 auto;
+}

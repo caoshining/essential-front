@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/base_platform/business/platform_order/NotGenerate_RefundDetails.css">
+</head>
+<body>
+<div id="NotRefundDetails_Info">
+</div>
+<script type="text/x-jsrender" id="NotRefundDetails_Tmple">
+        <!--订单流程-->
+        <div class="OrderProcess" id="Not_Refund">
+            <ul class="wizard-steps">
+                <li class="active">
+                    <span class="wizeard-Top">买家提交退款申请</span>
+                    <span class="step">1</span>
+                    <span class="title"><time>{{:createTime}}</time></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">商家同意退款申请</span>
+                    <span class="step">2</span>
+                    <span class="title"></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">平台同意申请付款</span>
+                    <span class="step">3</span>
+                    <span class="title"></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">退款完成</span>
+                    <span class="step">4</span>
+                    <span class="title"></span>
+                </li>
+            </ul>
+        </div>
+            <!--订单流程-->
+            <!--订单信息-->
+        <div class="NotRefund_Messages">
+            <div class="fl OrderDetail_Messages">
+                <div>
+                    <h4>退款信息</h4>
+                    <span>申请退款时间：<time>{{:createTime}}</time></span>
+                    <span>退款金额：￥{{:refundTotalMoney}}</span>
+                    <span data-Order="{{:returnRefundOrderId}}" class="Refund_Mony_order">退款单号：{{:returnRefundOrderNumber}}</span>
+                    <span>退款理由：{{:returnRefundAttr1}}</span>
+                    {{if returnRefundStatusItemId!=8}}
+                        <a href="###">查看图片</a>
+                    {{/if}}
+                </div>
+                <div>
+                    <h4>订单信息</h4>
+                    <span >订单编号：{{:orderNumber}}</span>
+                    <span>成交时间：<time>{{:modifyTime}}</time></span>
+                    <span>收件人：{{:addresse}}</span>
+                    <span>联系电话：{{:userPhone}}</span>
+                    <span>收货地址：{{:address}}</span>
+                </div>
+            </div>
+            <div class="fl OrderStatus_note">
+                <div class="Order_Status">
+                    {{if returnRefundLatestStatus===4}}
+                     <h4>订单状态：待平台退款</h4>
+                    {{/if}}
+
+                </div>
+                <div class="Message_note">
+                    <h4>留言/备注</h4>
+                    <span>买家留言：{{:returnRefundAttr1}}</span>
+                    <span>商家备注：{{:returnRefundAttr2}}</span>
+                    <a>备注</a>
+                </div>
+            </div>
+        </div>
+            <!--订单信息-->
+            <!--订单列表-->
+        <div class="NotRefundMessage_List">
+                <h5>商品信息</h5>
+            <div class="tab GoodsMessage_List">
+                <table cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>商品信息</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>售后</th>
+                            <th>买家</th>
+                            <th>商家</th>
+                            <th>退款金额</th>
+                            <th>支付方式</th>
+                        </tr>
+                    </thead>
+                    <tbody id="GoodsMessage_List">
+                    {{for ~payType=payType ~name=name orderProducts ~length=orderProducts.length ~userNickname=userNickname ~refundTotalMoney=refundTotalMoney ~returnRefundLatestStatus=returnRefundLatestStatus ~returnRefundStatusItemName=returnRefundStatusItemName}}
+                        <tr>
+                        <td width="26%" class="Refund_shop">
+                            <img src="{{:productPic}}" class="fl Refund_image">
+                            <a class="fl" href="javascript:;">
+                                <span>{{:brandName}}</span>
+                                <span>{{:productName}}</span>
+                                <span>{{:productSpecification}}</span>
+                                <span>商品代码{{:articleNumber}}</span>
+                            </a>
+                        </td>
+                        <td width="10%">￥{{:productPrice}}</td>
+                        <td width="8%">{{:productCount}}</td>
+
+                    {{if #getIndex()===0}}
+                        <!--判断订单状态-->
+                        {{if ~returnRefundLatestStatus===4}}
+                            <td width="13%" rowspan="{{:~length}}">
+                                <span>待平台退款</span>
+                                <a href="javascript:;" class="createRefund" id="createRefund">生成退款单</a>
+                            </td>
+                        {{/if}}
+                        <!--判断订单状态-->
+                        <td width="11%" rowspan="{{:~length}}">{{:~userNickname}}</td>
+                        <td width="10%" rowspan="{{:~length}}">{{:~name}}</td>
+                        <td width="11%" rowspan="{{:~length}}">￥{{:~refundTotalMoney}}</td>
+                            {{if ~payType===1}}
+                                <td width="7%" rowspan="{{:~length}}">支付宝</td>
+                                {{else ~payType===2}}
+                                    <td width="7%" rowspan="{{:~length}}">微信</td>
+                                    {{else ~payType===3}}
+                                        <td width="7%" rowspan="{{:~length}}">银联</td>
+                            {{/if}}
+                    {{/if}}
+                    </tr>
+                    {{/for}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--订单列表-->
+
+</script>
+<script src="js/base_platform/platform_order/NotRefund_Details.js"></script>
+
+<script type="text/javascript" src="plugins/timeControl/jedate.min.js"></script>
+</body>
+</html>

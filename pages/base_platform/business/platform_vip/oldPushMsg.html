@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="plugins/pagination/pagination_c.css">
+    <link rel="stylesheet" href="plugins/timeControl/skin/jedate.css">
+    <link rel="stylesheet" href="css/base_platform/business/platform_vip/oldPushMsg.css">
+</head>
+<body>
+
+<div class="oldPushMsg_list">
+    <h6>会员管理>推送消息>历史推送消息</h6>
+    <div class="oldPushMsg_screening clear">
+        <table class="screeningLeft">
+            <tr>
+                <td>消息类型：</td>
+                <td>
+                    <select class="allType">
+                        <option value="10">全部类型</option>
+                        <option value="3">商品</option>
+                        <option value="0">专栏</option>
+                        <option value="5">品牌</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>推送对象：</td>
+                <td><input type="text" class="push_object"></td>
+            </tr>
+            <tr>
+                <td>创建人：</td>
+                <td><input type="text" class="create_user"></td>
+            </tr>
+        </table>
+        <table class="screeningRight">
+            <tr>
+                <td>内容：</td>
+                <td>
+                    <input type="text" class="push_content">
+                </td>
+            </tr>
+            <tr>
+                <td>创建时间：</td>
+                <td><label><input type="text" id="Refund_modifyStartTime" class="createTime_d time"></label>  至  <label><input type="text" id="Refund_modifyEndTime" class="createTime_g time"></label></td>
+            </tr>
+            <tr>
+                <td>推送时间：</td>
+                <td><input type="text" class="sendTime_d">  至  <input type="text" class="sendTime_g"></td>
+            </tr>
+        </table>
+        <button class="screeningButton">筛选</button>
+    </div>
+    <table class="pushMsgList">
+        <thead>
+            <tr>
+                <th>标题</th>
+                <th>消息类型</th>
+                <th>内容</th>
+                <th>推送对象</th>
+                <th>创建时间</th>
+                <th>推送时间</th>
+                <th>创建人</th>
+            </tr>
+        </thead>
+        <tbody>
+           <!-- <tr>
+                <td>测试开始使用</td>
+                <td>商品</td>
+                <td>
+                    <div class="img_box">
+                        <img src = "../../../../images/base_platform/logo.jpg">
+                        <span>WIWJ8123</span>
+                    </div>
+                    <div class="text_box">
+                        <span>经典款经典款经典款经典款</span>
+                        <p>￥2880.00</p>
+                    </div>
+                </td>
+                <td>
+                    全部用户
+                </td>
+                <td>
+                    2016/2/3 19:28:23
+                </td>
+                <td>2016/2/3 19:28:23</td>
+                <td>管理员A</td>
+            </tr>
+            <tr>
+                <td>测试开始使用</td>
+                <td>专栏</td>
+                <td>
+                    你必须拥有5双鞋
+                </td>
+                <td>
+                    全部用户
+                </td>
+                <td>
+                    2016/2/3 19:28:23
+                </td>
+                <td>2016/2/3 19:28:23</td>
+                <td>管理员A</td>
+            </tr>
+            <tr>
+                <td>测试开始使用</td>
+                <td>品牌页</td>
+                <td>
+                    Paraboot
+                </td>
+                <td>
+                    全部用户
+                </td>
+                <td>
+                    2016/2/3 19:28:23
+                </td>
+                <td>2016/2/3 19:28:23</td>
+                <td>管理员A</td>
+            </tr>-->
+        </tbody>
+    </table>
+
+    <div style="text-align: right"><span class="pagination_span1" style="font-size: 12px"></span><div class="pagination"></div></div>
+
+</div>
+
+
+<script type="text/javascript" src = "js/common/conf.js"></script>
+<script type="text/javascript" src="plugins/timeControl/jedate.min.js"></script>
+<script src = "js/base_platform/common/base_common.js"></script>
+<!--<script src="plugins/pagination/jquery.pagination.js"></script>-->
+<script src="plugins/jquery.paging.min.js"></script>
+<script src = "js/base_platform/platform_vip/oldPushMsg.js"></script>
+</body>
+</html>

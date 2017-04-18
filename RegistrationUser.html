@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <meta charset="utf-8">
+    <title>注册</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="plugins/LogAndReg/css/reset.css">
+    <link rel="stylesheet" href="plugins/LogAndReg/css/supersized.css">
+    <link rel="stylesheet" href="plugins/LogAndReg/css/style.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="plugins/LogAndReg/js/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div class="header">
+    <div class="layout">
+        <h2 class="fl">ESSENTIAL</h2>
+        <a href="RegistrationUser.html" class="fr">注册</a><a href="merchantsLoginUser.html" class="fr">登录</a>
+    </div>
+</div>
+<div class="content">
+    <div class="fl bg">
+        <img src="images/busi_platform/business/product/LogAndReg/img/login_bg.png">
+    </div>
+    <div class="page-container fr">
+        <div class="login_box">
+            <p>
+                <strong>*</strong>
+                手机号<input type="text" id="UserName" name="userName" class="userName inputClass" placeholder="请输入您的手机号！">
+            </p>
+            <p>
+                <strong>*</strong>
+                短信验证码<input type="Captcha" id="Captcha" class="Captcha inputClass" name="Captcha" placeholder="请输入验证码！">
+                <a href="javascript:;" id="getMessage_code" class="getMessage_code">获取</a>
+            </p>
+            <p>
+                <strong>*</strong>
+                设置密码<input type="password" id="Password" name="password" class="password inputClass" placeholder="请输入您的用户密码！">
+            </p>
+            <p class="sure">
+                <strong>*</strong>
+                确认密码<input type="password" id="SurePass" class="surePass" name="surePass inputClass" placeholder="请再次输入确认密码！">
+            </p>
+
+           <!-- <p>
+                <label><input type="checkbox" class="autoLogin" id="autoLogin" checked>我已看过并同意《奕赏商家入驻协议》</label>
+            </p>-->
+            <div class="button_box"><button id="submit_button" class="submit_button">注册</button><!--<button class="mark_button"></button>--></div>
+            <div class="error" id="error">
+                <span>+</span>
+                <span class="errorMessage"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Javascript -->
+<script src="plugins/LogAndReg/js/jquery-1.8.2.min.js" ></script>
+<!--<script src="../../../../plugins/LogAndReg/js/supersized.3.2.7.min.js" ></script>-->
+<!--<script src="../../../../plugins/LogAndReg/js/supersized-init.js" ></script>-->
+<script src="plugins/LogAndReg/js/scripts.js" ></script>
+<script type="text/javascript" src="js/common/conf.js"></script>
+<script type="text/javascript" src = "js/busi_platform/common/busi_common.js"></script>
+<script type="text/javascript" src="js/busi_platform/business/product/RegistrationUser.js"></script>
+
+</body>
+<!--<div style="text-align:center;">-->
+<!--</div>-->
+</html>
+<script type="text/javascript">
+
+</script>

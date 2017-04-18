@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品信息</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_recommend/productList_look.css">
+</head>
+<body>
+<div id="productDetails_layout">
+
+</div>
+
+<script type="text/x-jsrender" id="GodsMessage_Tmp">
+    <h5>商品管理>商品列表>查看</h5>
+    <div class="BasicInformation">
+        <div class="fl">基本信息</div>
+        <div class="fr">商品类目：{{:categoryName}}—{{:productTypeName}}—{{:brandName}}</div>
+    </div>
+    <div class="standardRepertory">
+        <div class="fl">库存/规格</div>
+        <div class="fr">
+            <p>商品规格：
+                <table>
+                    <thead>
+                        <tr>
+                            {{for SkuSize}}
+                                <td>{{:keyname}}</td>
+                            {{/for}}
+                            <td>价格（元）</td>
+                            <td>库存</td>
+                            <td>商品代码</td>
+                        </tr>
+                    </thead>
+                    <tbody id="platformProductInfoTbody">
+                        {{for productSkuList}}
+                            <tr>
+                                {{for productSkuRelationList}}
+                                    <td data-id="{{:specificationValueId}}">{{:valueName}}</td>
+                                {{/for}}
+                                <td>{{:prices}}</td>
+                                <td>{{:productskuCount}}</td>
+                                <td>{{:articleNumber}}</td>
+                            </tr>
+                        {{/for}}
+                    </tbody>
+                </table>
+            </p>
+            <p>库存：<span class="stockCount">{{:stock}}</span></p>
+        </div>
+    </div>
+    <div class="godsMessage">
+        <div class="fl">商品信息</div>
+        <div class="fr">
+            <span>商品代码：{{:articleNumber}}</span>
+            <span>商品名称：{{:productName}}</span>
+            <span>价格：￥{{:price}}</span>
+            <span>商品主图：
+                {{for picturePathList}}
+                    <img src="{{:#data}}">
+                {{/for}}
+            </span>
+            <span>
+            {{if freightType==0}}
+                物流/其他：<input type="radio" checked>统一邮费 ￥{{:freightPrice}}
+                {{else freightType==1}}
+                    物流/其他：<input type="radio" checked>模板邮费 ￥{{:freightPrice}}
+            {{/if}}
+            </span>
+        </div>
+    </div>
+    <div class="oneWordsDescribe">
+        <div class="fl">一句话描述</div>
+        <div class="fr">
+            <span>{{:words}}</span>
+        </div>
+    </div>
+    <div class="DetailsDescribe">
+        <div class="fl GodsInstructions GodsTitle">商品详情描述/商品退换货说明</div>
+        <div class="fr GodsInstructions GodsContain">
+            <ul>
+                <li class="active">商品详情描述</li>
+                <li>商品详情退换货说明</li>
+            </ul>
+            <div class="GodsDescribe">
+                {{:productDescribe}}
+            </div>
+            <div style="display: none;" class="GodsDescribe">
+                {{:returnProductExplain}}
+            </div>
+        </div>
+    </div>
+    <div class="returnPrev">
+        <span class="returnPrevList">返回</span>
+    </div>
+</script>
+<script src="js/base_platform/platform_recommend/productList_look.js"></script>
+</body>
+</html>

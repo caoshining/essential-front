@@ -1,0 +1,158 @@
+.CheckBrand_logo{
+    width: 50px;
+    height:auto;
+}
+.Checkbrand_brandDetail{
+    display: none;
+    width:100%;
+    min-height: 100px;
+    padding:0 20px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+.Checkbrand_brandDetail h5{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.Checkbrand_brandDetail .Check_BrandContent{
+    width:100%;
+    min-height:100px;
+    background: #eee;
+    padding: 28px 20px 28px 0;
+    text-align: center;
+}
+.Checkbrand_brandDetail .Check_BrandContent table{
+    width:100%;
+    border-collapse: collapse;
+    border:0;
+}
+.Checkbrand_brandDetail .Check_BrandContent table td{
+    border:0;
+    height:50px;
+}
+.Checkbrand_brandDetail .Check_BrandContent table td span{
+    font-size: 12px;
+    color: red;
+    display: none;
+}
+.Checkbrand_brandDetail .Check_BrandContent table td.leftTd{
+    text-align: right;
+    width: 40%;
+}
+.Checkbrand_brandDetail .Check_BrandContent table td.rightTd{
+    text-align: left;
+    width:60%;
+}
+.Checkbrand_brandDetail .Check_BrandContent table td.rightTd label{
+    margin-right:22px;
+}
+.Checkbrand_brandDetail .Check_BrandContent table td.rightTd input.check_class{
+    width:18px;
+    height:18px;
+    margin-right: 10px;
+    background: #fff;
+}
+
+.Checkbrand_brandDetail .Check_BrandContent table td.upload{
+    font-size: 12px;
+    position: relative;
+}
+.Checkbrand_brandDetail .Check_BrandContent table td.upload p{
+    position: absolute;
+    left:90px;
+    top:5px;
+}
+.Checkbrand_brandDetail .Check_BrandContent table td.rightTd input.inputClass{
+    width:200px;
+    height: 40px;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+}
+
+.Checkbrand_brandDetail  .saveCancel{
+    width:100%;
+    min-height:45px;
+    background: #eee;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+}
+.Checkbrand_brandDetail  .saveCancel input{
+    height:30px;
+    width:60px;
+    border:0;
+    border-radius: 6px;
+}
+.Checkbrand_brandDetail  .saveCancel input.brand_save{
+    background: red;
+    color: #fff;
+    margin-right: 10px;
+}
+.Checkbrand_brandDetail  .saveCancel input.brand_cancel{
+    background: #fff;
+    color: #333;
+    margin-left: 10px;
+}
+.Big_Remark #Refuse_Brand{
+    width: 28%;
+    background: white;
+    position: fixed;
+    top: 30%;
+    left: 40%;
+}
+.CheckBrand_Big_Remark #Refuse_Brand{
+    width: 28%;
+    background: white;
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    border-radius: 10px;
+}
+.Big_Remark #Refuse_Brand ul li textarea{
+    width: 100%;
+}
+.CheckBrand_Big_Remark #Refuse_Brand ul{
+    padding: 3% 10%;
+}
+.CheckBrand_Big_Remark #Refuse_Brand ul li:nth-child(1){
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.CheckBrand_Big_Remark #Refuse_Brand ul li:nth-child(2){
+    margin-top: 10px;
+    position: relative;
+    height: 35px;
+}
+.Big_Remark #Refuse_Brand ul li:nth-child(1){
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.Big_Remark #Refuse_Brand ul li:nth-child(3){
+    position: relative;
+    height: 40px;
+}
+.Big_Remark #Refuse_Brand ul li:nth-child(3) a,.CheckBrand_Big_Remark #Refuse_Brand ul li:nth-child(2) a{
+    position: absolute;
+    text-decoration: none;
+    top: 8px;
+    display: block;
+    background: #3173c1;
+    padding: 3px 20px;
+    border-radius: 5px;
+    color: white;
+}
+.CheckBrand_Big_Remark #Refuse_Brand ul li:nth-child(2) a:nth-child(1){
+    left: 0;
+}
+.CheckBrand_Big_Remark #Refuse_Brand ul li:nth-child(2) a:nth-child(2){
+    right: 0;
+}
+.Big_Remark #Refuse_Brand ul li:nth-child(3) a:nth-child(1){
+    left: 18%;
+}
+.Big_Remark #Refuse_Brand ul li:nth-child(3) a:nth-child(2){
+    right: 18%;
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_coupons/make_coupons.css">
+
+</head>
+
+<body>
+<h5>营销活动>营销活动>优惠券管理</h5>
+<div class="coupons__list_box">
+    <div class="tab_list">
+        <span class="select" couponType = '1'>所有优惠券</span>
+        <span couponType = '2'>未开始</span>
+        <span couponType = '3'>进行中</span>
+        <span couponType = '4'>已结束</span>
+        <div style="clear: both"></div>
+    </div>
+    <button class="go_create_btn">新建优惠券</button>
+    <input type="text" placeholder="搜索" class="search_coupons">
+    <table class="coupons_list">
+        <thead>
+            <tr>
+                <th>优惠券名称</th>
+                <th>优惠券类型</th>
+                <th>满足条件</th>
+                <th>优惠金额</th>
+                <th>有效时间</th>
+                <th>发放范围</th>
+                <th>优惠券状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>中秋券</td>
+                <td>满减</td>
+                <td>满3000元</td>
+                <td>200</td>
+                <td>2016-9-5至2016-9-30</td>
+                <td>全部用户</td>
+                <td>未开始</td>
+                <td>
+                    <span>编辑</span>-<span>删除</span>
+                </td>
+            </tr>
+            <tr>
+                <td>中秋券</td>
+                <td>满减</td>
+                <td>满3000元</td>
+                <td>200</td>
+                <td>2016-9-5至2016-9-30</td>
+                <td>全部用户</td>
+                <td>未开始</td>
+                <td>
+                    <span class="editor">编辑</span>-<span class="delete">删除</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div style="text-align: right;margin-top: 10px;"><span class="pagination_span" style="font-size: 12px;margin-right: 10px"></span><div class="pagination1" style="display: inline-block"></div></div>
+
+</div>
+<script src="plugins/jquery.paging.min.js"></script>
+<script src="js/base_platform/platform_coupons/make_coupons.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+#discuss_total>table img{
+    float: left;
+    width: 18%;
+    height: 55px;
+    margin: 1%;
+    padding: 0;
+}
+#discuss_total>table p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+#discuss_total>table thead{
+    margin-bottom: 10px;
+}
+#discuss_table tr:nth-child(2n-1){
+    background-color: #cccccc;
+}
+#pages_content{
+    float: right;
+    overflow: hidden;
+}
+.fl{
+    float: left;
+}
+#pages_content>.pagination{
+    float: left;
+    padding: 0;
+    margin: 0 10px 0 20px;
+}
+
+#pages_content>.pagination em{
+    font-style: normal;
+}

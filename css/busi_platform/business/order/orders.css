@@ -1,0 +1,515 @@
+*{
+    margin:0;padding: 0;}
+ul li{list-style: none;}
+.fl{
+    float: left;}
+.fr{
+    float: right;}
+
+#order_Manage{
+    width: 100%;
+    padding:0 20px;
+    font-family: "微软雅黑";
+}
+
+#order_Manage  ul li a{
+    color: #333;
+    width:138.7px;
+    height: 50px;
+    text-align: center;
+    border:1px #ccc solid;
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 14px;
+    border-bottom:0;
+    box-shadow: none;
+}
+#order_Manage  ul li.active a{
+    box-shadow: none;
+    border-bottom: 0;
+    background: #ffffff;
+    font-weight: 600;
+}
+#order_Manage h5{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 900;
+}
+#order_Manage .order_content_r .nav-tabs{
+    border-bottom: 0;
+}
+
+/*订单*/
+#order_Manage .order_content .order_content_r{
+    width:100%;
+    min-height:300px;
+    background: #fff;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+/*订单筛选*/
+#order_Manage .order_content_r .search_order{
+    width:100%;
+    min-height: 230px;
+    background: #eeeeee;
+    padding:28px 30px;
+    margin-bottom: 20px;
+}
+#order_Manage .order_content_r .search_order>a{
+    display: inline-block;
+    margin-left: 13px;
+}
+#order_Manage .order_content_r .search_order>a:nth-of-type(2){
+    margin-left: 16px;
+}
+#order_Manage .search_order span{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+#order_Manage .search_order span input{
+    background: #fff;
+    border: 1px #ddd solid;
+    height:40px;
+    font-size: 16px;
+}
+#order_Manage .search_order span:nth-of-type(even){
+    margin-left: 70px;
+}
+#order_Manage .search_order span input{
+    -webkit-border-radius:6px !important;
+    -moz-border-radius:6px !important;
+    border-radius:6px !important;
+}
+
+#order_Manage .search_order span .ipt{
+    width: 200px;
+    height:40px;
+    -webkit-border-radius:6px !important;
+    -moz-border-radius:6px !important;
+    border-radius:6px !important;
+}
+#order_Manage .search_order span .time{
+    width:100px;
+}
+#order_Manage .search_order select{
+    background: #fff;
+    border:1px #ddd solid;
+}
+#order_Manage .search_order .filter{
+    display: block;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    background: #EB0000;
+    border-radius:5px;
+    margin:10px auto 0;
+    border: none;
+    color: #fff;
+}
+#order_Manage .search_order a.filter:hover{
+    text-decoration: none;
+}
+
+/*订单导航*/
+/*全部*/
+
+/*订单列表*/
+#order_Manage .tab-content{
+    width:100%;
+}
+#order_Manage .tab-content .orders{
+    width:103%;
+}
+#order_Manage .orders .tabs{
+    width:100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+
+#order_Manage .orders .tabs tr.order_title{
+    background: #eee;
+    height: 40px;
+    border-bottom: 0;
+    border-top: 0;
+}
+#order_Manage .orders .tabs tr.order_title td:nth-of-type(1){
+    text-align:left;
+    padding-left:10px;
+    border-right:0;
+    border-bottom:0;
+}
+#order_Manage .orders .tabs tr.order_title td:nth-of-type(1) span:nth-of-type(1){
+    margin-right: 15px;
+}
+#order_Manage .orders .tabs tr.order_title td:nth-of-type(2){
+    text-align: right;
+    border-right:0;
+    border-bottom:0;
+}
+#order_Manage .orders .tabs thead tr th{
+    height:50px;
+    border:0;
+    text-align: center;
+    background: #eee;
+    /*font-size: 14px;*/
+}
+#order_Manage .orders .tabs tbody td{
+    border:1px #ddd solid;
+    text-align: center;
+    border-top: 0;
+    border-left: 0;
+}
+#order_Manage .orders .tabs tbody td a.afterSale{
+    color: #0D64F4;
+}
+
+#order_Manage .orders .tabs tbody a.details{
+    font-size: 12px;
+    margin-left:17px;
+    color: #0D64F4;
+}
+#order_Manage .orders .tabs tbody a.details:nth-of-type(2){
+    margin-right: 30px;
+}
+
+/*取消订单*/
+#order_Manage .orders .tabs tbody>tr>td>a.cancel{
+    display: block;
+    border:1px #ddd solid;
+    width: 80px;
+    height:26px;
+    line-height:24px;
+    background: #006dcc;
+    color: #fff;
+    margin:0 auto;
+    cursor: pointer;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+}
+
+#order_Manage .order_image{
+    width:80px;
+    height:80px;
+}
+#order_Manage .orders .tabs tbody td.order_shop{
+    text-align: left;
+}
+#order_Manage .orders .tabs tbody td.order_shop p:nth-of-type(1){
+    margin-bottom: 5px;
+    clear: both;
+    overflow: hidden;
+}
+#order_Manage .orders .tabs tbody td.order_shop a{
+    display: block;
+    width:100px;
+    margin-left: 10px;
+    font-size: 12px;
+}
+#order_Manage .orders .tabs tbody td.order_shop a span{
+    display: block;
+    color: #333;
+}
+#order_Manage .orders .tabs tbody td.order_shop a span:nth-of-type(3){
+    color: #999;
+}
+
+
+
+/*订单详情*/
+
+/*订单流程*/
+.OrderProcess{
+    margin-top:2%;
+}
+.wizard-steps li{
+    position:relative;
+}
+.wizard-steps li span.active{
+    color:#333;
+    font-weight:600;
+}
+.wizeard-Top{
+    position: absolute;
+    top: -23%;
+    width: 100%;
+    left:0;
+}
+/*订单流程*/
+
+/*订单详细信息*/
+.Order_Messages{
+    width:100%;
+    padding:0 30px;
+    clear: both;overflow: hidden;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.Order_Messages .OrderDetail_Messages{
+    width: 36%;
+    min-height: 265px;
+    background: #eee; padding:5px 10px;
+    margin:20px 6px 20px 0;
+}
+.Order_Messages .OrderDetail_Messages span{
+    display: block;
+    color: #666;
+}
+.Order_Messages .OrderDetail_Messages div:nth-of-type(1){
+    margin-bottom: 30px;
+}
+
+.Order_Messages .OrderStatus_note{
+    height:260px;  width: 63%;
+    margin-top: 20px;
+
+}
+.Order_Messages .OrderDetail_Messages h4,.Order_Messages .OrderStatus_note h4{
+    font-family: "微软雅黑";
+    font-size: 16px;
+}
+.Order_Messages .OrderStatus_note .Order_Status{
+    background: #eee;
+    height:160px;
+    padding:5px 10px;
+    position: relative;
+}
+.Order_Messages .OrderStatus_note .Order_Status>a{
+    display: block;
+    text-align: center;
+    width:80px;
+    height: 25px;
+    line-height: 25px;
+    background: mediumslateblue;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.Order_Messages .OrderStatus_note .Order_Status>a:hover,.Order_Messages .OrderStatus_note .Message_note>a{
+    text-decoration: none;cursor: pointer;
+}
+
+.Order_Messages .OrderStatus_note .Message_note{
+    background: #eee;
+    margin-top:6px;
+    position: relative;
+    min-height:99px;
+    padding:5px 10px;
+    height: auto;
+}
+.Order_Messages .OrderStatus_note .Message_note span{
+    display: block;
+    margin-top:10px;
+}
+.Order_Messages .OrderStatus_note .Message_note>a.note{
+    position: absolute;  right:10px;top: 10px;
+    font-size: 12px;
+}
+
+/*订单详细信息*/
+
+/*订单信息列表*/
+.ShopMessage_List{
+    width:100%;
+    padding:0 30px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.ShopMessage_List h5{
+    font-weight: bold;
+    font-family: "微软雅黑";
+    margin-bottom: 10px;
+}
+.ShopMessage_List .GoodsMessage_List{
+    width: 100%;
+}
+.ShopMessage_List .GoodsMessage_List table{
+    width:100%;
+    text-align: center;
+}
+.ShopMessage_List .GoodsMessage_List table>thead>tr{
+    background: #ddd;
+}
+.ShopMessage_List .GoodsMessage_List table td,.ShopMessage_List .GoodsMessage_List table>thead{
+    border:1px #ddd solid;
+}
+.ShopMessage_List .GoodsMessage_List table>thead>tr>th{
+    border:0;
+    text-align: center;
+    font-size: 14px;
+    height:50px;
+}
+.ShopMessage_List .GoodsMessage_List table tbody>tr td:nth-of-type(1){
+    text-align: left;
+}
+.ShopMessage_List .GoodsMessage_List table tbody>tr td:nth-of-type(1) p:nth-of-type(1){
+    clear: both;
+    overflow: hidden;
+}
+.ShopMessage_List .GoodsMessage_List table tbody>tr td:nth-of-type(1) a{
+    display: block;
+    width: 90px;
+    text-align: left;
+    margin-left: 10px;
+    color: #333;
+    font-size: 12px;
+}
+.ShopMessage_List .GoodsMessage_List table tbody>tr td:nth-of-type(1) a span{
+    display: block;
+}
+.ShopMessage_List .GoodsMessage_List table tbody>tr td:nth-of-type(1) a span:nth-of-type(3){
+    color: #999;
+}
+.ShopMessage_List .GoodsMessage_List table tbody>tr>td>a.cancel{
+    display:block;
+    border:1px #eee solid;
+    margin:0 auto;
+    color:#2b7dbc;
+}
+.ShopMessage_List .GoodsMessage_List table tbody>tr td:nth-of-type(1) img{
+    width:80px;height: 80px;
+    float: left;
+}
+
+/*订单信息列表*/
+
+/*订单详情*/
+
+/*分页*/
+.pages{
+    margin:0 2px;
+}
+#order_Manage  .pagination{
+    float: right;
+    margin: 10px 0;
+}
+.excel_content{
+    overflow: hidden;
+}
+#order_Manage .Order_Make_excel{
+    float: right;
+    margin: 10px;
+    text-decoration: none;
+}
+
+/*订单信息列表*/
+
+/*订单详情*/
+
+
+#Plat_Check_pass，#Busic_Check_pass{
+    display:block;
+    background:blue;
+    position: absolute;
+}
+#Busic_Check_pass{
+    position: absolute;
+    bottom: 20%;
+}
+#Busic_Check_refuse{
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+}
+/*退货Btn样式*/
+/*退款中驳回按钮的样式*/
+
+
+/*订单详细信息关闭订单样式*/
+.wizard-steps li.error:before{
+    border-color: red;
+}
+.wizard-steps li.error .step{
+    border-color: red;
+    background: red;
+    color: white;
+}
+#Plat_MonyCheck_pass{
+    margin-right: 10px;
+}
+
+
+/*生成退款单*/
+.index-tab-cont .create_RefundTmp{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    z-index: 99;
+    background: #000;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    display: block;
+}
+ .create_RefundList{
+    width:400px;
+    height:500px;
+    background: #fff;
+    margin:5% auto;
+    z-index: 100;
+    position: absolute;
+    left:35%;
+    top:5%;
+}
+.create_RefundList h4{
+    width:100%;
+    height:35px;
+    line-height: 35px;
+    background: #eee;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-top: -15px;
+}
+.create_RefundList table{
+    width:100%;
+    font-size: 14px;
+    color: #000;
+}
+.create_RefundList table td{
+    border:0;
+}
+.create_RefundList table>tr td:first-child{
+    text-align: right;
+    width:50%;
+}
+.create_RefundList table>tr td:last-child{
+    text-align: left;
+    width:50%;
+}
+.create_RefundList .createRefund{
+    width:100%;
+    height:50px;
+    background: #eee;
+    text-align: center;
+    line-height: 50px;
+    margin-top:20px;
+}
+.create_RefundList .createRefund span{
+    display: inline-block;
+    width:50px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    cursor: pointer;
+}
+.create_RefundList .createRefund span:nth-of-type(1){
+    background: #f00;
+    color: #fff;
+    margin-right: 20px;
+}
+.create_RefundList .createRefund span:nth-of-type(2){
+    background: #fff;
+    color:#000;
+}

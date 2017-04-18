@@ -1,0 +1,173 @@
+#Onsale-Gods,#Onsave-Gods,#Onsellout-Gods{
+    width:100%;
+    background-color:white;
+}
+.Onsale_gods_top,.Onsave_gods_top,.Onsellout_gods_top{
+    background-color:#eeeeee;
+    overflow:hidden;
+    padding:2% 5%;
+}
+#Onsale_GodsList tr td:nth-child(2) figure,
+#Onsellout_GodsList tr td:nth-child(2) figure,
+#Onsave_GodsList  tr td:nth-child(2) figure{
+    overflow: hidden;
+    float: left;
+    text-align: left;
+    display: block;
+    width: 40%;
+}
+
+#Onsale_GodsList tr td:nth-child(2) figure img,
+#Onsellout_GodsList tr td:nth-child(2) figure img,
+#Onsave_GodsList tr td:nth-child(2) figure img{
+    width: 80px;
+    height: 80px;
+}
+
+#Onsale_GodsList tr td:nth-child(2) figure figcaption,
+#Onsellout_GodsList tr td:nth-child(2) figure figcaption,
+#Onsave_GodsList tr td:nth-child(2) figure figcaption{
+    text-align: left;
+}
+
+#Onsale_GodsList tr td:nth-child(2) dl,
+#Onsellout_GodsList tr td:nth-child(2) dl,
+#Onsave_GodsList tr td:nth-child(2) dl{
+    float: left;
+    width:60%;
+    text-align: left;
+    display: block;
+}
+.Onsale_gods_top>div,
+.Onsave_gods_top>div,
+.Onsellout_gods_top>div{
+    overflow:hidden;
+}
+.Onsale_gods_top>div>div,
+.Onsave_gods_top>div>div,
+.Onsellout_gods_top>div>div{
+    float:left;
+    width:50%;
+    padding:1% 0 0 4%;
+}
+.Onsale_gods_top>div>div select,.Onsale_gods_top>div>div input,
+.Onsave_gods_top>div>div select,.Onsave_gods_top>div>div input,
+.Onsellout_gods_top>div>div select,.Onsellout_gods_top>div>div input{
+    width:50%;
+}
+#Onsale_Pric1,#Onsale_Pric2,
+#Onsave_Pric1,#Onsave_Pric2,
+#Onsellout_Pric1,#Onsellout_Pric2{
+    width:19.5%;
+}
+.Onsale_Sear,
+.Onsave_Sear,
+.Onsellout_Sear{
+    text-align: center;
+    padding: 25px;
+    position:relative;
+}
+.Onsale_Sear>a,
+.Onsave_Sear>a,
+.Onsellout_Sear>a{
+    position:absolute;
+    text-decoration:none;
+    color:white;
+    width:13%;
+    border-radius: 4px;
+    display:block;
+    background:red;
+    padding:2px 4px;
+    left: 42.5%;
+    bottom: 22%;
+}
+.Onsale_gods_btm,
+.Onsave_gods_btm,
+.Onsellout_gods_btm{
+    margin-top:1%;
+}
+.Onsale_gods_btm>table,
+.Onsave_gods_btm>table,
+.Onsellout_gods_btm>table{
+    width:100%;
+}
+.Onsale_gods_btm>table>thead tr,
+.Onsave_gods_btm>table>thead tr,
+.Onsellout_gods_btm>table>thead tr{
+    background: #eee;
+    height: 50px;
+}
+.Onsale_gods_btm>table>thead tr th,
+.Onsave_gods_btm>table>thead tr th,
+.Onsellout_gods_btm>table>thead tr th,
+.Onsale_gods_btm>table>tbody td,
+.Onsave_gods_btm>table>tbody td,
+.Onsellout_gods_btm>table>tbody td{
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    border: 0;
+    text-align: center;
+    border-bottom: 1px #eee solid;
+}
+.Chek_btn input{
+    height: 15px;
+    width: 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+.action_btn{
+    float: left;
+    margin: 20px 0;
+}
+.pagination{
+    float: right;
+}
+.pagination em{
+    font-style: normal;
+}
+.Onsale_gods_btm .Img_Load,
+.Onsave_gods_btm .Img_Load,
+.Onsellout_gods_btm .Img_Load{
+    margin:auto 50%;
+}
+.product_discountprice{
+    float: left;
+}
+.product_costprice{
+    float: left;
+    margin:0 2px;
+}
+.product_tag{
+    background: #e62828;
+    color: white;
+    border-radius: 2px;
+}
+.producnt_name{
+    margin:5px 0;
+}
+/*#Onsave_Brand{
+    border: solid 1px #000;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+    padding-right: 14px;
+}
+#Onsale-Gods select::-ms-expand { display: none; }
+*/
+/*
+对下拉框样式修改*/
+
+/*#Onsale_Brand{
+    border: solid 1px #000;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    background: url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll right center transparent;
+    padding-right: 14px;
+}
+#Onsave-Gods select::-ms-expand { display: none; }
+*/
+/*
+对下拉框样式修改*/

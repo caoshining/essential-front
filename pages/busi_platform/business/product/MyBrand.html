@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/busi_platform/business/product/MyBrand.css">
+</head>
+<body>
+<div class="MyBrand_layout" id="MyBrands">
+    <h5>商品>我的品牌</h5>
+    <div class="MyBrand_search">
+        品牌搜索：<input type="text" class="MyBrand_Name">
+        品牌状态：<select class="BrandChecked">
+                    <option value="">全部</option>
+                    <option value="0">已授权</option>
+                    <option value="2">审核中</option>
+                    <option value="1">已驳回</option>
+                </select>
+        <span class="confirmBrand">确认</span>
+    </div>
+    <div class="MyBrand_Lists">
+        <table border="0" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>品牌名称</th>
+                    <th>品牌logo</th>
+                    <th>品牌状态</th>
+                    <th>品牌备注</th>
+                    <th>品牌操作</th>
+                </tr>
+            </thead>
+            <tbody id="MyBrand_tabs"></tbody>
+        </table>
+        <div class="pagination"></div>
+    </div>
+    <script id="MyBrand_Tmpl" type="text/x-jsrender">
+       {{for brandList}}
+           <tr class="firstTr">
+               <td colspan="5">
+                   <span>申请时间:{{:modify_time}}</span>
+               </td>
+           </tr>
+           <tr class="secondTr" data-index="{{:#index}}">
+               <td>{{:brand_name}}</td>
+               <td><img src="{{:logo_path}}" style="width:50px;height:50px;"></td>
+               {{if checked===0}}
+                   <td class="Granted">已授权</td>
+                   {{else checked===1}}
+                       <td class="rejected">已驳回</td>
+                   {{else checked===2}}
+                       <td class="review">审核中</td>
+               {{/if}}
+               <td>{{:remark5}}</td>
+               <td><a href="###" class="check_MyBrand">查看</a></td>
+           </tr>
+       {{/for}}
+    </script>
+</div>
+
+
+<script src="js/busi_platform/business/product/MyBrand.js"></script>
+
+<script src="plugins/jquery.paging.min.js"></script>
+</body>
+</html>

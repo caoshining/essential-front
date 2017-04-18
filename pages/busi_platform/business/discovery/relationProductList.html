@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+    <title>相关商品列表</title>
+    <link rel="stylesheet" href="plugins/pagination/pagination.css" />
+</head>
+<body>
+<div class="mainDiv">
+    <div class="productList">
+        <div class="productSearch">
+
+        </div>
+        <table class="gridtable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>商品信息</th>
+                    <th>商品品牌</th>
+                    <th>分类</th>
+                    <th>商家</th>
+                    <th>库存</th>
+                    <th>销量</th>
+                    <th>创建时间</th>
+                    <th>商品状态</th>
+                    <th>是否自营</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="Essential_Lists">
+
+            </tbody>
+        </table>
+
+    </div>
+    <div class="tcdPageCode" style="margin-top: 100px"></div>
+
+</div>
+<script src="../../../../plugins/LogAndReg/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../../../../js/common/conf.js"></script>
+<script type="text/javascript" src="../../../../js/busi_platform/business/discovery/add.js"></script>
+<script type="text/javascript" src="../../../../plugins/pagination/jquery.page.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        getProductList(1);
+    });
+</script>
+</body>
+</html>

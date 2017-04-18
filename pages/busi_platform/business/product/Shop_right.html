@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>店铺</title>
+    <link rel="stylesheet" href="css/busi_platform/business/product/Shop_right.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/diyUpload.css">
+    <link rel="stylesheet" type="text/css" href="plugins/timeControl/skin/jedate.css">
+
+    <script type="text/javascript" src="plugins/diyUpload/js/webuploader.html5only.min.js"></script>
+    <script type="text/javascript" src="plugins/diyUpload/js/diyUpload.js"></script>
+    <script type="text/javascript" src="plugins/timeControl/jedate.min.js"></script>
+</head>
+<body>
+    <div id="Shop_Content">
+        <h4>店铺设置>店铺信息</h4>
+        <div>
+            <ul class="ShopLi_Change_Tab">
+                <li class="active">
+                    <a href="###">店铺信息
+                        </a></li>
+                <li><a href="###">退货维权设置</a></li>
+                <li><a href="###">结算/资质</a></li>
+            </ul>
+            <div class="Shop_Change_Tab">
+                <div class="Shop_Infm">
+                    <p>基本信息</p>
+                    <ul>
+                        <li>
+                            <label for="">
+                                <i>*</i>
+                                店铺名称：
+                            </label>
+                            <input type="text" shop-data-name="Shop_Name" maxlength="20" placeholder="10个字以内">
+                        </li>
+                        <li>
+                            <label for="">
+                                <i>*</i>
+                                创建时间：
+                            </label>
+                            <time id="Shop_Creattime"></time>
+                        </li>
+                        <li class="Shop_Logo">
+                            <label for="" class="fl">
+                                店铺LOGO：
+                            </label>
+                                <div id="Shop_Right_img1" class="fl">
+                                    <img id="Logo_Img" style="width:175px;height:150px;" src="" alt=""/>
+                                    <div id="Shop_Right_Img2" ></div>
+                                </div>
+                            <div style="clear:both;overflow:hidden;"></div>
+                            <ul>
+                                <li>像素：200X200</li>
+                                <li>大小：小于1MB</li>
+                                <li>格式：JPG.PNG</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <label for="">
+                                <i>*</i>
+                                联系人手机：
+                            </label>
+                            <input type="number" maxlength="11" shop-data-name="Shop_PhoneNum">
+                            <p>
+                                *订单通知短信将发送到该手机号上
+                            </p>
+                        </li>
+                        <li class="Shop_Performance">
+                            <label for="" class="fl">
+                                店铺保证金：
+                            </label>
+                            <p class="fl"></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="Refund_Set1">
+                    <p>
+                        在处理买家退货申请时，系统自动给买家发送您填写的退货地址栏信息。
+                        请确保地址的准确性，若因地址不准确导致的资损由商家自行承担。
+                    </p>
+                    <ul>
+                        <li>
+                            <label for="">
+                                <i>*</i>
+                                收货人&nbsp;：
+                            </label>
+                            <input type="text" placeholder="真实姓名" shop-data-name="ReceiptGods_Name">
+                        </li>
+                        <li>
+                            <label for="">
+                                <i>*</i>
+                                联系电话：
+                            </label>
+                            <input type="number" placeholder="请输入电话号" shop-data-name="ReceiptGods_Phone">
+                        </li>
+                        <li>
+                            <label for="">
+                                <i>*</i>
+                                收货地址：
+                            </label>
+                            <input type="text" placeholder="安福路288号15楼" shop-data-name="ReceiptGods_Address">
+                        </li>
+                    </ul>
+                </div>
+                <div class="Refund_Set2">
+                    <div>
+                        <p>
+                            在处理买家退货申请时，系统自动给买家发送您填写的退货地址栏信息。
+                            请确保地址的准确性，若因地址不准确导致的资损由商家自行承担。
+                        </p>
+                        <a href="###" class="Shop_Add_Address">添加新地址</a>
+                    </div>
+                    <div class="Shop-TbodyDiv">
+                               <!-- <tr>
+                                    <td colspan="5">
+                                        <div style="width:100%;" class="Shop_Tabe_action col-sm-12">
+                                            <time class="fl col-sm-8">
+asdfasdf
+                                            </time>
+                                            <p class="fr col-sm-3">
+                                                <a href="###">删除</a>-
+                                                <a href="###">编辑</a>-
+                                                <a href="###">设为默认</a>
+                                            </p>
+                                        </div>
+                                        <div style="width:100%;" class="Shop_Tabe_conten col-sm-12">
+                                            <p class="col-sm-5">asdfasdfas</p>
+                                            <p class="col-sm-4">sadfasdf</p>
+                                            <p class="col-sm-3">asdfasdf</p>
+                                        </div>
+                                    </td>
+                                </tr>-->
+                    </div>
+                </div>
+                <div class="Clearn_aptitude">
+                    <div class="Shop_Make_Infm">
+                        <p>开票信息</p>
+                        <ul>
+                            <li>
+                                <label for="">
+                                    <i>*</i>
+                                    公司名称：
+                                </label>
+                                <input type="text" shop-data-name="Company_Name" placeholder="">
+                            </li>
+                            <li>
+                                <label for="">
+                                    <i>*</i>
+                                    税务登记号码：
+                                </label>
+                                <input type="text" shop-data-name="CompanyTax_Num" placeholder="">
+                            </li>
+                            <li>
+                                <label for="">
+                                    <i>*</i>
+                                    开户银行：
+                                </label>
+                                <input type="text" BankCount_Id="" maxlength="19" shop-data-name="BankCount_Name">
+                            </li>
+                            <li>
+                                <label for="">
+                                    <i>*</i>
+                                    银行账号：
+                                </label>
+                                <input type="number" maxlength="19" shop-data-name="BankCount_Num">
+                            </li>
+                            <li>
+                                <label for="">
+                                    <i>*</i>
+                                    公司注册地址：
+                                </label>
+                                <input type="text" maxlength="11" shop-data-name="Shop_Inm_Addres">
+                            </li>
+                            <li>
+                                <label for="">
+                                    <i>*</i>
+                                    电话：
+                                    <input type="number" maxlength="4" id="Shop_Inm_PhoneNum1" shop-data-name="Shop_Inm_PhoneNum1" placeholder="区号">-
+                                    <input type="number" maxlength="11" id="Shop_Inm_PhoneNum2" shop-data-name="Shop_Inm_PhoneNum2" placeholder="请输入电话号码">
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Shop_Accout_Infm">
+                        <p>结算信息</p>
+                        <ul>
+                            <li>
+                                <label for="">
+                                    <i>*</i>
+                                    与开票信息中开户银行信息是否相同：
+                                </label>
+                                <div id="IsOr_same">
+                                    <input type="radio" checked="checked" name="Shop_Same" value="1"  shop-data-name="Shop_Same_sttle" >相同
+                                    <input type="radio" name="Shop_Same" value="0" shop-data-name="Shop_disSame_sttle" >不相同
+                                </div>
+                            </li>
+                            <li>
+                                <label for="">
+                                    <i>*</i>
+                                    开户银行：
+                                </label>
+                                <input type="text"  Settle_Id="" maxlength="19" shop-data-name="Settle_BankCount_name" >
+                            </li>
+                            <li>
+                                <label for="">
+                                    <i>*</i>
+                                    银行账号：
+                                </label>
+                                <input type="number" maxlength="19" shop-data-name="Settle_BankCount_code">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Shop_Accout_Img">
+                        <div>
+                            <dl>
+                                <dt>
+                                    公司法人身份证正面
+                                </dt>
+                                <dd>
+                                    <div id="Shop_Corporate_front1" class="fl">
+                                        <img src="" title="公司法人身份证正面"  shop-aptitudes-img="Company_Font"/>
+                                        <div id="Shop_Corporate_front2" ></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    公司法人身份证反面
+                                </dt>
+                                <dd>
+                                    <div id="Shop_Corporate_contrary1" class="fl">
+                                        <img src="" title="公司法人身份证反面" shop-aptitudes-img="Company_opposite" />
+                                        <div id="Shop_Corporate_contrary2" ></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <dl>
+                                <dt>
+                                    营业执照
+                                </dt>
+                                <dd>
+                                    <div id="Shop_business_license1" class="fl">
+                                        <img src="" title="营业执照" shop-aptitudes-img="Company_license" />
+                                        <div id="Shop_business_license2" ></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    税务登记证
+                                </dt>
+                                <dd>
+                                    <div id="Shop_business_tax1" class="fl">
+                                        <img src="" title="税务登记证" shop-aptitudes-img="Company_tax" />
+                                        <div id="Shop_business_tax2" ></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <dl>
+                                <dt>
+                                    组织机构代码证
+                                </dt>
+                                <dd>
+                                    <div id="Shop_Organ_code1" class="fl">
+                                        <img src="" title="组织机构代码证" shop-aptitudes-img="Company_code" />
+                                        <div id="Shop_Organ_code2" ></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    开户许可证
+                                </dt>
+                                <dd>
+                                    <div id="Shop_Permission_open1" class="fl">
+                                        <img src="" title="开户许可证" shop-aptitudes-img="Company_permission" />
+                                        <div id="Shop_Permission_open2" ></div>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Shop_Btmbtn">
+            <a href="###" Next-Step="0">下一步</a>
+        </div>
+    </div>
+<script src="js/busi_platform/business/product/Shop_right.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.H5aboutUs{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 12px;
+}
+.aboutUs_con img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.H5aboutUs .aboutUs_title{
+    font-size:0.6rem;
+    line-height: 0.7rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.aboutUs_con{
+    font-size: 0.37rem;
+    line-height: 0.7rem;
+    box-sizing: border-box;
+    word-break: break-all;
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退货订单</title>
+    <link rel="stylesheet" type="text/css" href="css/busi_platform/business/order/orders.css">
+</head>
+<body>
+<div id="platformRefundGods_details_Info">
+</div>
+<script type="text/x-jsrender" id="platformRefundGods_details_Tmple">
+        <!--订单流程-->
+        <div class="OrderProcess" id="fuelux-wizard">
+
+            <ul class="wizard-steps">
+                <li class="active">
+                    <span class="wizeard-Top">买家提交退货申请</span>
+                    <span class="step">1</span>
+                    <span class="title"><time>{{:createTime}}</time></span>
+                </li>
+                <li>
+                    {{if returnRefundLatestStatus==2}}
+                        <span class="wizeard-Top">商家驳回退货申请</span>
+                    {{/if}}
+                    {{if returnRefundLatestStatus!=2}}
+                        <span class="wizeard-Top">商家同意退货申请</span>
+                    {{/if}}
+                    <span class="step">2</span>
+                    <span class="title"></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">买家退货</span>
+                    <span class="step">3</span>
+                    <span class="title"></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">商家确认收货</span>
+                    <span class="step">4</span>
+                    <span class="title"></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">平台同意退款</span>
+                    <span class="step">5</span>
+                    <span class="title"></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">退款完成</span>
+                    <span class="step">6</span>
+                    <span class="title"></span>
+                </li>
+            </ul>
+        </div>
+            <!--订单流程-->
+            <!--订单信息-->
+        <div class="Order_Messages">
+            <div class="fl OrderDetail_Messages">
+                <div>
+                    <h4>退货信息</h4>
+                    <span>申请退货时间：<time>{{:createTime}}</time></span>
+                    <span>退款金额：￥{{:refundTotalMoney}}</span>
+                    <span>退款单号：{{:returnRefundOrderNumber}}</span>
+                    <span>退货理由：{{:returnRefundAttr1}}</span>
+                    {{if returnRefundStatusItemId!=8}}
+                        <a href="plugins/lookimage/index.html?returnRefundOrderId={{:returnRefundOrderId}}" data-img="{{:orderId}}" target="view_window">查看图片</a>
+                    {{/if}}
+                </div>
+                <div>
+                    <h4>订单信息</h4>
+                    <span data-Order="{{:returnRefundOrderId}}" class="Refund_God_order">订单编号：{{:orderNumber}}</span>
+                    <span>成交时间：<time>{{:modifyTime}}</time></span>
+                    <span>收件人：{{:addresse}}</span>
+                    <span>联系电话：{{:userPhone}}</span>
+                    <span>收货地址：{{:address}}</span>
+                </div>
+            </div>
+            <div class="fl OrderStatus_note">
+                <div class="Order_Status">
+                    {{if returnRefundLatestStatus===1}}
+                     <h4>订单状态：买家提交退款申请，商家待审核</h4>
+
+                         {{else returnRefundLatestStatus===4}}
+                         <h4>订单状态：待平台退款</h4>
+
+                         {{else returnRefundLatestStatus===3}}
+                            <h4>订单状态：待平台审核</h4>
+                            <a href="###" class="fl" id="platform_MonCheck_pass">同意</a>
+                            <a href="###" class="fl" id="platform_MonCheck_refuse">驳回</a>
+
+                     {{else returnRefundLatestStatus===2}}
+                        <h4>订单状态：商家驳回</h4>
+                        <span>驳回理由：{{:returnRefundRejectReason}}</span>
+                     {{else returnRefundLatestStatus===5}}
+                        <h4>订单状态：平台驳回</h4>
+                        {{else returnRefundLatestStatus===6}}
+                        <h4>订单状态：退款完成</h4>
+                            {{else returnRefundLatestStatus===7}}
+                            <h4>订单状态：待买家发货</h4>
+                                {{else returnRefundLatestStatus===8}}
+                                <h4>订单状态：待商家收货</h4>
+                                    {{else returnRefundLatestStatus===9}}
+                                    <h4>订单状态：货品驳回</h4>
+                    {{/if}}
+
+                </div>
+                <div class="Message_note">
+                    <h4>留言/备注</h4>
+                    <span>买家留言：{{:returnRefundAttr1}}</span>
+                    <span>平台备注：{{:platformRemarks}}</span>
+                    <a href="###" data-returnRefundOrderId={{:returnRefundOrderId}} class="RefundGodsdetail_Remark">备注</a>
+                </div>
+            </div>
+        </div>
+            <!--订单信息-->
+            <!--订单列表-->
+        <div class="ShopMessage_List">
+                <h5>商品信息</h5>
+            <div class="tab GoodsMessage_List">
+                <table cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>商品信息</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>售后</th>
+                            <th>买家</th>
+                            <th>商家</th>
+                            <th>退款金额</th>
+                            <th>支付方式</th>
+                        </tr>
+                    </thead>
+                    <tbody id="GoodsMessage_List">
+                    {{for ~payType=payType ~name=name orderProducts ~length=orderProducts.length ~userNickname=userNickname ~refundTotalMoney=refundTotalMoney ~returnRefundLatestStatus=returnRefundLatestStatus ~returnRefundStatusItemName=returnRefundStatusItemName}}
+                    <tr>
+                        <td width="25%" class="Refund_shop">
+                            <img src="{{:productPic}}" class="fl Refund_image">
+                            <a class="fr" href="javascript:;">
+                                <span>{{:productName}}</span>
+                                <span>{{:productSpecification}}</span>
+                                <span>商品代码{{:articleNumber}}</span>
+                            </a>
+                        </td>
+                        <td width="10%">￥{{:productPrice}}</td>
+                        <td width="8%">{{:productCount}}</td>
+
+                        {{if #getIndex()===0}}
+                            <!--判断订单状态-->
+                            {{if ~returnRefundLatestStatus===1}}
+                                <td width="13%" rowspan="{{:~length}}">
+                                     <span>待商家审核</span>
+                                </td>
+                                {{else ~returnRefundLatestStatus===2}}
+                                    <td width="13%" rowspan="{{:~length}}">
+                                        <span>商家驳回</span>
+                                    </td>
+                                {{else ~returnRefundLatestStatus===3}}
+                                    <td width="13%" rowspan="{{:~length}}">
+                                        <span>待平台审核</span>
+                                        <a href="javascript:;" class="cancel Refund_cancel">审核</a>
+                                    </td>
+                                    {{else ~returnRefundLatestStatus===4}}
+                                        <td width="13%" rowspan="{{:~length}}">
+                                            <span>待平台退款</span>
+                                            <a href="javascript:;" class="cancel Refund_cancel refund_List" id="create_RefundGodsList">生成退款单</a>
+                                        </td>
+                                        {{else ~returnRefundLatestStatus===5}}
+                                            <td width="13%" rowspan="{{:~length}}">
+                                                <span>平台驳回</span>
+                                            </td>
+                                            {{else ~returnRefundLatestStatus===6}}
+                                                <td width="13%" rowspan="{{:~length}}">
+                                                    <span>退款完成</span>
+                                                    <a href="javascript:;" class="cancel checkRefund_List">查看退款单</a>
+                                                </td>
+                                                {{else ~returnRefundLatestStatus===7}}
+                                                <td width="13%" rowspan="{{:~length}}">
+                                                    <span>待买家发货</span>
+                                                </td>
+                                                {{else ~returnRefundLatestStatus===8}}
+                                                <td width="13%" rowspan="{{:~length}}">
+                                                    <span>待商家收货</span>
+                                                </td>
+                                                {{else ~returnRefundLatestStatus===9}}
+                                                <td width="13%" rowspan="{{:~length}}">
+                                                    <span>货品驳回</span>
+                                                </td>
+
+                        {{/if}}
+                        <!--判断订单状态-->
+                        <td width="10%" rowspan="{{:~length}}">{{:~userNickname}}</td>
+                        <td width="10%" rowspan="{{:~length}}">{{:~name}}</td>
+                        <td width="11%" rowspan="{{:~length}}">￥{{:~refundTotalMoney}}</td>
+                        <td width="8%" rowspan="{{:~length}}">
+                            {{if ~payType===1}}
+                                支付宝
+                                {{else ~payType===2}}
+                                    微信
+                                    {{else ~payType===3}}
+                                       银联
+                            {{/if}}
+                        </td>
+
+                        {{/if}}
+                    </tr>
+                    {{/for}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--订单列表-->
+
+</script>
+
+<script src="js/base_platform/platform_order/platform_refundGoods_details.js"></script>
+</body>
+</html>

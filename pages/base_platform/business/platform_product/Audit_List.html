@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/platform_Brand.css">
+    <link rel="stylesheet" href="plugins/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/platform_CheckBrand.css">
+</head>
+<body>
+<div>
+    <div class="Audit_List">
+        <h5>商品管理>品牌管理>审核品牌列表</h5>
+        <table id="Audit_table" class="" cellpadding="0" cellspacing="0" style="width: 100%;">
+            <thead id="tHead">
+                <tr>
+                    <th>商家名称</th>
+                    <th>品牌名称</th>
+                    <th>品牌logo</th>
+                    <th>一句话描述</th>
+                    <th>是否新建品牌</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="CheckBrandTab">
+            </tbody>
+        </table>
+        <div class="pagination"></div>
+    </div>
+
+    <div class="Checkbrand_brandDetail">
+
+    </div>
+</div>
+
+<!--品牌列表-->
+<script type="text/x-jsrender" id="CheckBrand_List_Tmp">
+    {{for brandApplyVoList}}
+        <tr  data-index="{{:#index}}">
+            <td>{{:shopName}}</td>
+            <td>{{:brandName}}</td>
+            <td><img class="CheckBrand_logo" src="{{:logoPath}}"></td>
+            <td>{{:pageDesc}}</td>
+            <td>
+                {{if newBrandFlag==1}}
+                    是
+                    {{else}}
+                    否
+                {{/if}}
+            </td>
+            <td>{{:createTime}}</td>
+            <td>
+                <a href="javascript:;" class="CheckBrand_btn">审核</a>
+                <br/>
+                <a href="javascript:;" class="CheckBrand_look">查看</a>
+            </td>
+        </tr>
+    {{/for}}
+</script>
+
+<!--查看详情模板-->
+<script type="text/x-jsrender" id="Check_Brand_details_Tmple">
+<h5>商品管理>品牌管理>审核品牌>查看</h5>
+<div class="Check_BrandContent">
+    <table>
+        <tr>
+            <td class="leftTd">品牌名称:</td>
+            <td class="rightTd">
+                <input type="text" class="inputClass" disabled  value="{{:brandName}}">
+                <span class="addBrand_error"></span>
+            </td>
+        </tr>
+            <!--<tr>-->
+                <!--<td class="leftTd">关联品类:</td>-->
+                <!--<td class="rightTd">-->
+                <!--{{for brandCategoryVoList}}-->
+                    <!--<input type="checkbox" checked class="check_class" disabled>{{:categoryName}}-->
+                    <!--<span class="aboutClass"></span>-->
+                <!--{{/for}}-->
+                <!--</td>-->
+            <!--</tr>-->
+        <tr>
+            <td class="leftTd">品牌logo上传:</td>
+            <td class="rightTd upload">
+                <img src="{{:logoPath}}" alt="" style="width:50px;height:50px;">
+                <div ></div>
+
+            </td>
+        </tr>
+        <!--<tr>-->
+            <!--<td class="leftTd">品牌背景图上传:</td>-->
+            <!--<td class="rightTd upload">-->
+                <!--<img src="{{:picPath}}" alt="" style="width: 80px;height: 80px;">-->
+                <!--<div></div>-->
+            <!--</td>-->
+        <!--</tr>-->
+        <tr>
+            <td class="leftTd" >一句话描述:</td>
+            <td class="rightTd">
+                <input type="text" class="inputClass" disabled placeholder="10个字以内" style="text-align: center" maxlength="10" value="{{:pageDesc}}">
+                <span class="dec_error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftTd">详细介绍:</td>
+            <td class="rightTd">
+                <textarea rows="5" cols="30" disabled>{{:detailedDesc}}</textarea>
+                <span class="detailDesc"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="leftTd">官网地址:</td>
+            <td class="rightTd">
+                <input type="text" class="inputClass" value="{{:remark1}}" disabled>
+                <span class="webAddress"></span>
+            </td>
+        </tr>
+    </table>
+</div>
+</script>
+
+<script src="js/base_platform/platformBusiness/Audit_List.js"></script>
+</body>
+</html>

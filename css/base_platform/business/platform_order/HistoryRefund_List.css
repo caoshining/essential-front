@@ -1,0 +1,152 @@
+
+/*筛选*/
+#HistoryRefund_layout{
+    width:100%;
+    padding:0 20px;
+}
+#HistoryRefund_layout h5{
+    font-family: "微软雅黑";
+    font-weight:bold;
+    margin-bottom:10px;
+}
+#HistoryRefund_layout .filterMethod{
+    width:100%;
+    background: #eee;
+    min-height:250px;
+    padding:28px 30px;
+    font-size: 14px;
+    font-family:"微软雅黑";
+}
+#HistoryRefund_layout .filterMethod>div:nth-of-type(1){
+    clear: both;
+    overflow: hidden;
+}
+#HistoryRefund_layout .filterMethod label{
+    margin-bottom: 10px;
+}
+#HistoryRefund_layout .filterMethod label.applyTime input{
+    width:86px;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+}
+#HistoryRefund_layout .filterMethod label input{
+    width:200px;
+    height:40px;
+    text-align: center;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    margin-left: 13px;
+}
+#HistoryRefund_layout .filterMethod label select{
+    width:200px;
+    height:40px;
+    text-align: center;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+    margin-left: 13px;
+}
+#HistoryRefund_layout .filterMethod label.labSearch:nth-of-type(even){
+    margin-left: 60px;
+}
+#HistoryRefund_layout .filterMethod span.RefundOrder_Filter{
+    display: block;
+    width:70px;
+    height:30px;
+    line-height: 30px;
+    background: red;
+    color: #fff;
+    text-align: center;
+    margin:10px auto 0;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    cursor: pointer;
+}
+#HistoryRefund_layout .filterMethod span.RefundOrder_Filter:hover{
+    background: crimson;
+}
+
+#HistoryRefund_layout .HistoryRefund_List{
+    width:100%;
+    margin-top: 20px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+#HistoryRefund_layout .HistoryRefund_List table{
+    width:100%;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+#HistoryRefund_layout .HistoryRefund_List table thead tr:nth-of-type(1) th{
+    border:0;
+    background: #eee;
+    text-align: center;
+    height:40px;
+}
+#HistoryRefund_layout .HistoryRefund_List table thead tr:nth-of-type(2){
+    height:15px;
+}
+#HistoryRefund_layout .HistoryRefund_List table thead tr:nth-of-type(2) td{
+    border-left:1px #eee solid;
+    border-right:1px #eee solid;
+}
+
+#HistoryRefund_layout .HistoryRefund_List table tbody tr.firstTr{
+    background: #eee;
+    height:35px;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody tr.firstTr td:nth-of-type(1){
+    text-align: left;
+    padding-left: 10px;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody tr.firstTr td:nth-of-type(1) span{
+    margin-right: 15px;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody tr.lastTr{
+    height:10px;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody tr.lastTr td{
+    border-left:1px #eee solid;
+    border-right:1px #eee solid;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody tr:nth-of-type(1) td{
+    border-top: 0;
+}
+
+
+#HistoryRefund_layout .HistoryRefund_List table tbody td{
+
+    text-align: center;
+    border: 1px #eee solid;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody td:nth-of-type(1){
+    clear: both;
+    overflow: hidden;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody td:nth-of-type(1) img{
+    width:80px;
+    height:80px;
+    float: left;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody td:nth-of-type(1) a{
+    display: block;
+    float: left;
+    margin-left: 10px;
+    text-align: left;
+    width:110px;
+    color: #333;
+    font-size: 12px;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody td:nth-of-type(1) a span{
+    display: block;
+}
+#HistoryRefund_layout .HistoryRefund_List table tbody td:nth-of-type(1) a span:nth-of-type(3){
+    color: #999;
+}
+
+.pagination{
+    float: right;
+}

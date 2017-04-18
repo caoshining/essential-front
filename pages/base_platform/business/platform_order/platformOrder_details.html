@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/base_platform/business/platform_order/Platform_allOrder.css">
+</head>
+<body>
+<div id="platformDetails_Info">
+
+</div>
+<script type="text/x-jsrender" id="platform_OrderMessage_Tmple">
+        <!--订单流程-->
+        <div class="OrderProcess" id="fuelux-wizard">
+            <ul class="wizard-steps">
+                <li class="active">
+                    <span class="wizeard-Top">买家下单</span>
+                    <span class="step">1</span>
+                    <span class="title"><time>{{:createTime}}</time></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">买家付款</span>
+                    <span class="step">2</span>
+                    <span class="title"></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">商家发货</span>
+                    <span class="step">3</span>
+                    <span class="title"></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">买家确认收货</span>
+                    <span class="step">4</span>
+                    <span class="title"></span>
+                </li>
+                <li>
+                    <span class="wizeard-Top">订单完成</span>
+                    <span class="step">5</span>
+                    <span class="title"></span>
+                </li>
+            </ul>
+        </div>
+            <!--订单流程-->
+
+            <!--订单信息-->
+        <div class="Orders_Messages">
+            <div class="fl OrderDetail_Messages">
+                <div>
+                    <h4>订单信息</h4>
+                    <span>订单编号：{{:orderNumber}}</span>
+                    <span>下单时间：{{:createTime}}</span>
+                    {{if activityPrice+freight != totalPrice||couponFlag==1}}
+                        <span>原价：￥{{:totalPrice}}</span>
+                    {{/if}}
+
+                    {{if activityPrice+freight != totalPrice}}
+                         <span>折扣价：￥{{:(activityPrice*100+freight*100)/100}}</span>
+                    {{/if}}
+
+                    {{if couponFlag==1}}
+                        <span>优惠券类型：
+                            {{if couponType == 2}}
+                                代金券
+                                {{else couponType==1}}
+                                满{{:minimumAmount}}减{{:couponAmount}}元
+                            {{/if}}
+                        </span>
+                        <span>优惠券金额：
+                            {{:couponAmount}}
+                        </span>
+                        <span>
+                            实付款：
+                            {{:finalPrice}}元
+                            {{if freight!=0}}
+                                （含邮费{{:freight}}元）
+                            {{/if}}
+                        </span>
+                        {{else}}
+                             <span>订单金额：￥{{:finalPrice}}</span>
+                    {{/if}}
+                </div>
+                <div>
+                    <h4>收货信息</h4>
+                    <span>收件人：{{:addresse}}</span>
+                    <span>联系电话：{{:userPhone}}</span>
+                    <span>收货地址：{{:address}}</span>
+                </div>
+            </div>
+            <div class="fl OrderStatus_note">
+                <div class="Order_Status">
+                    {{if orderStatus===1}}
+                    <h4>订单状态：买家未付款</h4>
+                        <span class="countDown">距离订单超时关闭还剩：</span>
+                        {{else orderStatus===2}}
+                         <h4>订单状态：等待商家发货</h4>
+                            {{else orderStatus===3}}
+                            <h4>订单状态：商家已发货</h4>
+                                <span class="confirmGods">买家还有 天 时 分 秒来确认收货，超时订单将自动确认收货</span>
+                                <a href="javascript:void(0);" class="checkLogistics">查看物流</a>
+                                {{else orderStatus===4}}
+                                    <h4>订单状态：订单完成</h4>
+                                    <a href="javascript:void(0);" class="checkLogistics">查看物流</a>
+                                    {{else}}
+                                    <h4>订单状态：订单关闭</h4>
+                    {{/if}}
+                </div>
+                <div class="Message_note">
+                    <h4>留言/备注</h4>
+                    <span>买家留言：{{:buyerNote}}</span>
+                    <span>平台备注：{{:platformRemarks}}</span>
+                    <a class="note" data-orderId={{:orderId}} id="Order_detail_note">备注</a>
+                </div>
+            </div>
+        </div>
+            <!--订单信息-->
+            <!--订单列表-->
+        <div class="ShopMessage_Lists">
+                <h5>商品信息</h5>
+            <div class="tab GoodsMessage_List" href="javascript:;">
+                <table cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>商品信息</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>售后</th>
+                            <th>买家</th>
+                            <th>商家</th>
+                            <th>订单状态</th>
+                            <th>实付金额</th>
+                            <th>支付方式</th>
+                        </tr>
+                    </thead>
+                    <tbody id="GoodsMessage_List">
+                    {{for orderProducts ~name=name ~payType=payType ~length=orderProducts.length ~userNickname=userNickname ~finalPrice=finalPrice ~orderStatus=orderStatus ~orderStatusItemName=orderStatusItemName}}
+                        <tr>
+                            <td width="27%">
+                                <img src="{{:productPic}}" class="fl"/>
+                                <a href="javascript:;" class="fr">
+                                    <span>{{:brandName}}</span>
+                                    <span>{{:productName}}</span>
+                                    <span>{{:productSpecification}}</span>
+                                    <span>商品代码{{:articleNumber}}</span>
+                                </a>
+                            </td>
+                            <td width="8%">￥{{:productPrice}}</td>
+                            <td width="8%">{{:productCount}}</td>
+                            <td width="10%">{{:returnRefundStatus===0?"无"
+                                :returnRefundStatus===999?"无"
+                                :returnRefundStatus%10===1?"待商家审核"
+                                :returnRefundStatus%10===2?"商家驳回"
+                                :returnRefundStatus%10===3?"待平台审核"
+                                :returnRefundStatus%10===4?"待平台处理"
+                                :returnRefundStatus%10===5?"平台驳回"
+                                :returnRefundStatus%10===6?"退款完成"
+                                :returnRefundStatus%10===7?"待买家发货"
+                                :returnRefundStatus%10===8?"待商家收货"
+                                :returnRefundStatus%10===9?"商家驳回":"无"}}</td>
+                            {{if #index===0}}
+                                <td width="9%" rowspan="{{:~length}}">{{:~userNickname}}</td>
+                                <td width="9%" rowspan="{{:~length}}">{{:~name}}</td>
+
+                                {{if ~orderStatus===1}}
+                                    <td width="10%" rowspan="{{:~length}}" data-orderid={{:~orderId}}>
+                                         <span>{{:~orderStatusItemName}}</span>
+                                    </td>
+                                    {{else ~orderStatus===2}}
+                                        <td width="10%" rowspan="{{:~length}}">
+                                            <span>{{:~orderStatusItemName}}</span>
+                                        </td>
+                                    {{else ~orderStatus===0}}
+                                        <td width="10%" rowspan="{{:~length}}">
+                                            <span>订单关闭</span>
+                                        </td>
+                                    {{else}}
+                                        <td width="10%" rowspan="{{:~length}}">
+                                            <span>{{:~orderStatusItemName}}</span>
+                                        </td>
+                                {{/if}}
+                                <td width="10%" rowspan="{{:~length}}">￥{{:~finalPrice}}</td>
+                                {{if ~payType===1}}
+                                    <td width="8%" rowspan="{{:~length}}">支付宝</td>
+                                    {{else ~payType===2}}
+                                        <td width="8%" rowspan="{{:~length}}">微信</td>
+                                    {{else ~payType===3}}
+                                        <td width="8%" rowspan="{{:~length}}">银联</td>
+                                {{/if}}
+                            {{/if}}
+                        </tr>
+                        {{/for}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--订单列表-->
+</script>
+
+<script src="js/base_platform/platform_order/platformOrder_details.js"></script>
+
+</body>
+</html>

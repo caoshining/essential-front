@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="css/busi_platform/business/product/BrandApply.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/webuploader.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/diyUpload.css">-->
+    <!--<script type="text/javascript" src="plugins/diyUpload/js/webuploader.html5only.min.js"></script>-->
+    <!--<script type="text/javascript" src="plugins/diyUpload/js/diyUpload.js"></script>-->
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/addBrand.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="plugins/diyUpload/css/diyUpload.css">
+    <script type="text/javascript" src="plugins/diyUpload/js/webuploader.html5only.min.js"></script>
+    <script type="text/javascript" src="plugins/diyUpload/js/diyUpload.js"></script>
+</head>
+<body>
+<!--<div class="BrandApply">-->
+    <!--<h5>商品>我的品牌>品牌申请</h5>-->
+    <!--<div class="BrandApply_List">-->
+        <!--<table>-->
+            <!--<tr>-->
+                <!--<td>品牌名称：</td>-->
+                <!--<td>-->
+                    <!--<input type="text" class="BrandName">-->
+                    <!--<span class="BrandName_error error"></span>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>品牌logo：</td>-->
+                <!--<td class="uploadBrand_logo">-->
+                    <!--<img src="" alt="" style="width: 80px;height: 80px;">-->
+                    <!--<p>请上传jpg,jpeg,bmp格式<br>文件大小小于1M,像素大于800*800</p>-->
+                    <!--<div id="BrandApply_logoPath"></div>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>一句话描述：</td>-->
+                <!--<td>-->
+                    <!--<input type="text" placeholder="10字以内" id="oneWords">-->
+                    <!--<span class="dec_error error"></span>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>详细描述：</td>-->
+                <!--<td>-->
+                    <!--<textarea cols="25" rows="5" placeholder="300字以内" id="bandDetails"></textarea>-->
+                    <!--<span class="bandDetails_error error"></span>-->
+                <!--</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    <!--</div>-->
+    <!--<div class="applyAudit">-->
+        <!--<span id="Apply_Audit">申请审核</span>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="addBrand">
+    <h5>商品>我的品牌>品牌申请</h5>
+    <form action="" method="post">
+        <div class="addBrandContent">
+            <table>
+                <tr>
+                    <td class="leftTd">品牌名称:</td>
+                    <td class="rightTd">
+                        <input type="text" class="inputClass" id="brandName">
+                        <span class="addBrand_error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">关联品类:</td>
+                    <td class="rightTd check_class aboutLength">
+                        <span class="aboutClass"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">品牌logo上传:</td>
+                    <td class="rightTd upload">
+                        <img src="" alt="" style="width: 80px;height: 80px;">
+                        <p>请上传jpg,jpeg,bmp格式<br>文件大小小于1M,像素大于800*800</p>
+                        <div id="Brand_logoPath"></div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">品牌背景图上传:</td>
+                    <td class="rightTd upload">
+                        <img src="" alt="" style="width: 80px;height: 80px;">
+                        <p>请上传jpg,jpeg,bmp格式<br>文件大小小于1M,像素大于800*800</p>
+                        <div id="Brand_BgPath"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd" >一句话描述:</td>
+                    <td class="rightTd">
+                        <input type="text" class="inputClass" placeholder="10个字以内" style="text-align: center" id="wordDesc">
+                        <span class="dec_error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">详细介绍:</td>
+                    <td class="rightTd">
+                        <textarea rows="7" cols="35" id="detailDesc" placeholder="300个字以内"></textarea>
+                        <span class="detailDesc"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="leftTd">官网地址:</td>
+                    <td class="rightTd">
+                        <input type="text" class="inputClass" id="webAddress">
+                        <span class="webAddress"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="saveCancel">
+            <input type="button" value="保存" class="brand_save" id="brand_save">
+            <input type="button" value="取消" class="brand_cancel" id="brand_cancel">
+        </div>
+    </form>
+    <script id="check_classTmpl" type="text/x-jsrender">
+    {{for info}}
+        <input type="checkbox" id="{{:categoryId}}" class="check_class"><label for="ck1">{{:categoryName}}</label>
+    {{/for}}
+    </script>
+</div>
+<script type="text/javascript" src="assets/js/jsRender.js"></script>
+<script src="js/busi_platform/business/product/NewBrand_apply.js"></script>
+</body>
+</html>

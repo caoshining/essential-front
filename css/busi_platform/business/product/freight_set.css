@@ -1,0 +1,78 @@
+.Freight_box{
+    width: 100%;
+    margin-top: 5%;
+}
+.Freight_set input{
+    width: 125px !important;
+}
+.Freight_box .Freight_set{
+    width: 100%;
+}
+.Freight_set td{
+    border: none;
+    padding: 5px 0;
+    font-size: 14px;
+}
+.Freight_set td:nth-child(n){
+    text-align: right;
+    padding-right: 5px;
+}
+.Freight_set td:nth-child(2n){
+    text-align: left;
+}
+.Freight_set .Freight_name{
+    width: 130px;
+    height: 26px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.Freight_set .time_f,.Freight_set .time_t{
+    width: 70px;
+    height: 26px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.Freight_set .meet,.Freight_set .amount{
+    width: 50px;
+    height: 26px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.Freight_set .conversion_code{
+    width: 112px;
+    height: 26px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.btn_group{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.btn_group button{
+    width: 72px;
+    height: 32px;
+    background: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:0 50px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+.Makelose_btn{
+    background: #0066ff;
+    border: none;
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+}

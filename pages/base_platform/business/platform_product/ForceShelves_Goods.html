@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base_platform/business/platform_product/ForceShelves_Goods.css">
+</head>
+<body>
+<div id="forceShelves_layout">
+    <h5>商品管理>强制下架商品></h5>
+    <div class="forceShelves_Gods">
+        <div>
+            <label class="fl">商品名称:<input type="text" id="productName"></label>
+            <label class="fr">商品代码:<input type="text" id="articleNumber"></label>
+            <label class="fl">商品分类:<select class="AllCategory">
+                    <option value="">所有分类</option>
+                </select>
+            </label>
+            <label class="fr">商家名称:<select>
+                    <option>所有商家</option>
+                </select>
+            </label>
+            <label class="fl">商品品牌:<select class="AllBrands">
+                    <option value="">所有品牌</option>
+                </select>
+            </label>
+            <label class="fr">价格区间:<input type="text" class="priceRange">
+                到 <input type="text" class="priceRange">
+            </label>
+        </div>
+        <span class="forceShelves_Filter">筛选</span>
+    </div>
+    <div class="forceShelves_Lists">
+        <table>
+            <thead>
+            <tr>
+                <th>商品信息</th>
+                <th>商品品牌</th>
+                <th>分类</th>
+                <th>商家</th>
+                <th>库存</th>
+                <th>销量</th>
+                <th>创建时间</th>
+                <th>商品状态</th>
+                <th>是否自营</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="forceShelves_Tab"></tbody>
+        </table>
+        <div class="pagination"></div>
+    </div>
+</div>
+
+<!--强制下架商品列表-->
+<script type="text/x-jsrender" id="forceShelves_Tmp">
+    {{for productPlatformList}}
+    <tr data-index="{{:#index}}">
+        <td>
+            <div>
+                <img src="{{:path}}" class="fl">
+                <a class="fl" href="javascript:;">
+                    <span>{{:productName}}</span>
+                    <span>￥{{:price}}</span>
+                </a>
+            </div>
+            <p>{{:articleNumber}}</p>
+        </td>
+        <td>{{:brandName}}</td>
+        <td>{{:categoryName}}</td>
+        <td>{{:shopName}}</td>
+        <td>{{:stock}}</td>
+        <td>{{:saleNum}}</td>
+        <td style="width:100px;">{{:createTime}}</td>
+        <td>{{:productStatusName}}</td>
+        <td>{{:selfName}}</td>
+        <td>
+            <a href="javascript:;">查看</a><br/>
+            <a href="javascript:;" class="revocation">撤销</a>
+        </td>
+
+    </tr>
+{{/for}}
+</script>
+
+<!--所有品牌-->
+<script type="text/x-jsrender" id="shop_BrandsTmp">
+    {{for brandVoList}}
+        <option value={{:brandId}}>{{:brandName}}</option>
+    {{/for}}
+</script>
+
+<!--所有分类-->
+<script type="text/x-jsrender" id="shopCategory_Tmp">
+    {{for info}}
+        <option value={{:categoryId}}>{{:categoryName}}</option>
+    {{/for}}
+</script>
+<script src="js/base_platform/platformBusiness/ForceShelves_Goods.js"></script>
+</body>
+</html>

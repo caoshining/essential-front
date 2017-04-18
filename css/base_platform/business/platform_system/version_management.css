@@ -1,0 +1,26 @@
+.version_management{
+    width: 100%;
+}
+h5{
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.version_management .content{
+    width: 100%;
+}
+.version_management table{
+    width: 100%;
+}
+.version_management th{
+    height: 50px;
+    background: #eeeeee;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+.version_management td{
+    height: 88px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-left: 70px;
+}

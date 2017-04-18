@@ -1,0 +1,81 @@
+.column{
+    width:100%;
+    padding:0 20px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+.column h5{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.column .columnSearch{
+    width:100%;
+    min-height:100px;
+    background: #eee;
+    padding:28px 90px;
+
+}
+.column .columnSearch .FilterContent{
+    width:100%;
+    /*min-height:100px;*/
+    margin-bottom: 20px;
+    clear: both;overflow: hidden;
+}
+.column .columnSearch .FilterContent input,.column .columnSearch select{
+    width:200px;
+    height:40px;
+    -webkit-border-radius: 6px !important;
+    -moz-border-radius: 6px !important;
+    border-radius: 6px !important;
+}
+.column .columnSearch .FilterContent label:nth-of-type(1){
+    float: left;
+}
+.column .columnSearch .FilterContent label:nth-of-type(2){
+    float: right;
+}
+.column .columnSearch span.columnFilter{
+    display: block;
+    width:80px;
+    height:35px;
+    line-height: 35px;
+    text-align: center;
+    background: red;
+    color: #fff;
+    font-size: 14px;
+    margin:0 auto;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    cursor: pointer;
+}
+.column .columnSearch span:hover{
+    background: indianred;
+}
+
+/*文章列表*/
+.column .columnList{
+    width:100%;
+    min-height:100px;
+    margin-top: 10px;
+}
+.column .columnList table{
+    width:100%;
+}
+.column .columnList table thead tr{
+    background: #eee;
+    border-bottom: 1px #eee solid;
+    height:40px;
+    font-size: 14px;
+}
+.column .columnList table thead th,.column .columnList table tbody td{
+    border:0;
+    text-align: center;
+    border-bottom: 1px #eee solid;
+
+}
+
+/*分页*/
+.pages{
+    margin:0 2px;
+}
